@@ -1,3 +1,4 @@
+
 import pandas as pd
 import os
 from datetime import datetime, timedelta
@@ -31,3 +32,4 @@ while start_date <= end_date:
 
 
     start_date += delta
+f.close()
