@@ -1,4 +1,4 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="6/4/2024 11:18:16 AM"
@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="125"
-  DTS:VersionGUID="{313826BA-B50A-4DDF-B31F-172421391A24}">
+  DTS:VersionBuild="123"
+  DTS:VersionGUID="{7019871D-C37E-4F37-96F1-96805EFD5D54}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -5642,13 +5642,6 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <AnnotationLayout
-          Text="jest jakiś problem z lookupem, bo nie wykrywa duplikatów danych, &#xD;&#xA;kilka razy może załadować te same dane,&#xD;&#xA;jak zadziała, to zmatchowane rekordy trzeba będzie po prostu nadpisywać&#xD;&#xA;bo to SCD1"
-          ParentId="Package\Load DimLocation"
-          FontInfo="{assembly:Null}"
-          Size="421,88"
-          Id="acca3ea8-03ce-4c1d-b71b-de65f1cd2818"
-          TopLeft="264,334" />
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
