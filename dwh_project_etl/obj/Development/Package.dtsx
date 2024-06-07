@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="166"
-  DTS:VersionGUID="{D134AC84-BE11-49CD-A680-BE0AD8095236}">
+  DTS:VersionBuild="188"
+  DTS:VersionGUID="{F55A7B22-616B-47E5-B295-CAC1A701A529}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -261,7 +261,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=localhost;Initial Catalog=dwh_project_star;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{77752E88-3A35-4A77-91E8-FCBC91E26FC5}localhost.dwh_project_star;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=dwh_project_star;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{77752E88-3A35-4A77-91E8-FCBC91E26FC5}localhost.dwh_project_star;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -537,6 +537,267 @@
         <pipeline
           version="1">
           <components>
+            <component
+              refId="Package\Load DimCompany\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load DimCompany\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load DimCompany\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Load DimCompany\Data Conversion.Inputs[Data Conversion Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load DimCompany\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Load DimCompany\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load DimCompany\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load DimCompany\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load DimCompany\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load DimCompany\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load DimCompany\DimCompany Insert"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="DimCompany Insert"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DimCompany]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load DimCompany\DimCompany Insert.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.dwh_project_star]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.dwh_project_star]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load DimCompany\DimCompany Insert.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load DimCompany\DimCompany Insert.Inputs[OLE DB Destination Input].ExternalColumns[CompanyKey]"
+                      dataType="i4"
+                      name="CompanyKey" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimCompany\DimCompany Insert.Inputs[OLE DB Destination Input].ExternalColumns[CompanyName]"
+                      dataType="wstr"
+                      length="50"
+                      name="CompanyName" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimCompany\DimCompany Insert.Inputs[OLE DB Destination Input].ExternalColumns[CompanySize]"
+                      dataType="i4"
+                      name="CompanySize" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimCompany\DimCompany Insert.Inputs[OLE DB Destination Input].ExternalColumns[Sector]"
+                      dataType="wstr"
+                      length="50"
+                      name="Sector" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimCompany\DimCompany Insert.Inputs[OLE DB Destination Input].ExternalColumns[Industry]"
+                      dataType="wstr"
+                      length="50"
+                      name="Industry" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimCompany\DimCompany Insert.Inputs[OLE DB Destination Input].ExternalColumns[Listed]"
+                      dataType="bool"
+                      name="Listed" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimCompany\DimCompany Insert.Inputs[OLE DB Destination Input].ExternalColumns[ActiveFrom]"
+                      dataType="wstr"
+                      length="10"
+                      name="ActiveFrom" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimCompany\DimCompany Insert.Inputs[OLE DB Destination Input].ExternalColumns[ActiveTo]"
+                      dataType="wstr"
+                      length="10"
+                      name="ActiveTo" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimCompany\DimCompany Insert.Inputs[OLE DB Destination Input].ExternalColumns[Active]"
+                      dataType="bool"
+                      name="Active" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load DimCompany\DimCompany Insert.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Load DimCompany\DimCompany Insert.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load DimCompany\DimCompany Insert.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load DimCompany\DimCompany Insert.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load DimCompany\DimCompany Insert.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load DimCompany\DimCompany Insert.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load DimCompany\DimCompany Update"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="DimCompany Update"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load DimCompany\DimCompany Update.Connections[OleDbConnection]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load DimCompany\DimCompany Update.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <externalMetadataColumns
+                    isUsed="True" />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load DimCompany\DimCompany Update.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\Load DimCompany\DimCompany Update.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load DimCompany\DimCompany Update.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\Load DimCompany\DimCompany Update.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load DimCompany\DimCompany Update.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load DimCompany\DimCompany Update.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load DimCompany\DimCompany Update.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load DimCompany\DimCompany Update.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
             <component
               refId="Package\Load DimCompany\Extrant Company Name"
               componentClassID="Microsoft.DerivedColumn"
@@ -914,20 +1175,6 @@
                           name="InputColumnID">#{Package\Load DimCompany\Inner Join Companies.Inputs[Merge Join Right Input].Columns[company_size]}</property>
                       </properties>
                     </outputColumn>
-                    <outputColumn
-                      refId="Package\Load DimCompany\Inner Join Companies.Outputs[Merge Join Output].Columns[company_name_new (1)]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\Load DimCompany\Inner Join Companies.Outputs[Merge Join Output].Columns[company_name_new (1)]"
-                      name="company_name_new (1)">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Load DimCompany\Inner Join Companies.Inputs[Merge Join Right Input].Columns[company_name_new]}</property>
-                      </properties>
-                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -1187,6 +1434,176 @@
               </outputs>
             </component>
             <component
+              refId="Package\Load DimCompany\Manage Nulls"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Manage Nulls"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load DimCompany\Manage Nulls.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load DimCompany\Manage Nulls.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Load DimCompany\Manage Nulls.Inputs[Derived Column Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load DimCompany\Manage Nulls.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Load DimCompany\Manage Nulls.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load DimCompany\Manage Nulls.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load DimCompany\Manage Nulls.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load DimCompany\Manage Nulls.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load DimCompany\Manage Nulls.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load DimCompany\Select Unique Rows"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Select Unique Rows"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml"></property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load DimCompany\Select Unique Rows.Connections[OleDbConnection]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load DimCompany\Select Unique Rows.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Load DimCompany\Select Unique Rows.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load DimCompany\Select Unique Rows.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Load DimCompany\Select Unique Rows.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Load DimCompany\Select Unique Rows.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\Load DimCompany\Sort By Company Name"
               componentClassID="Microsoft.Sort"
               contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
@@ -1197,7 +1614,7 @@
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the Sort transformation removes rows with duplicate sort values."
-                  name="EliminateDuplicates">false</property>
+                  name="EliminateDuplicates">true</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the maximum number of threads to use for sorting."
@@ -1399,7 +1816,7 @@
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the Sort transformation removes rows with duplicate sort values."
-                  name="EliminateDuplicates">false</property>
+                  name="EliminateDuplicates">true</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the maximum number of threads to use for sorting."
@@ -1776,6 +2193,11 @@
           </components>
           <paths>
             <path
+              refId="Package\Load DimCompany.Paths[Data Conversion Output]"
+              endId="Package\Load DimCompany\Select Unique Rows.Inputs[Lookup Input]"
+              name="Data Conversion Output"
+              startId="Package\Load DimCompany\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
               refId="Package\Load DimCompany.Paths[Derived Column Output]"
               endId="Package\Load DimCompany\Sort By Company Name 2.Inputs[Sort Input]"
               name="Derived Column Output"
@@ -1786,6 +2208,11 @@
               name="Derived Column Output"
               startId="Package\Load DimCompany\Extrant Company Name.Outputs[Derived Column Output]" />
             <path
+              refId="Package\Load DimCompany.Paths[Derived Column Output2]"
+              endId="Package\Load DimCompany\Data Conversion.Inputs[Data Conversion Input]"
+              name="Derived Column Output"
+              startId="Package\Load DimCompany\Manage Nulls.Outputs[Derived Column Output]" />
+            <path
               refId="Package\Load DimCompany.Paths[Flat File Source Output]"
               endId="Package\Load DimCompany\Extrant Company Name.Inputs[Derived Column Input]"
               name="Flat File Source Output"
@@ -1795,6 +2222,21 @@
               endId="Package\Load DimCompany\Extrant Company Name 2.Inputs[Derived Column Input]"
               name="Flat File Source Output"
               startId="Package\Load DimCompany\JustIT.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Load DimCompany.Paths[Lookup Match Output]"
+              endId="Package\Load DimCompany\DimCompany Update.Inputs[OLE DB Command Input]"
+              name="Lookup Match Output"
+              startId="Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Load DimCompany.Paths[Lookup No Match Output]"
+              endId="Package\Load DimCompany\DimCompany Insert.Inputs[OLE DB Destination Input]"
+              name="Lookup No Match Output"
+              startId="Package\Load DimCompany\Select Unique Rows.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\Load DimCompany.Paths[Merge Join Output]"
+              endId="Package\Load DimCompany\Manage Nulls.Inputs[Derived Column Input]"
+              name="Merge Join Output"
+              startId="Package\Load DimCompany\Inner Join Companies.Outputs[Merge Join Output]" />
             <path
               refId="Package\Load DimCompany.Paths[Sort Output]"
               endId="Package\Load DimCompany\Inner Join Companies.Inputs[Merge Join Left Input]"
@@ -2012,11 +2454,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\Load DimLocation\DimLocation"
+              refId="Package\Load DimLocation\DimLocation Insert"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
-              name="DimLocation"
+              name="DimLocation Insert"
               usesDispositions="true"
               version="4">
               <properties>
@@ -2069,7 +2511,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Load DimLocation\DimLocation.Connections[OleDbConnection]"
+                  refId="Package\Load DimLocation\DimLocation Insert.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[localhost.dwh_project_star]"
                   connectionManagerRefId="Package.ConnectionManagers[localhost.dwh_project_star]"
                   description="The OLE DB runtime connection used to access the database."
@@ -2077,78 +2519,78 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Load DimLocation\DimLocation.Inputs[OLE DB Destination Input]"
+                  refId="Package\Load DimLocation\DimLocation Insert.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Load DimLocation\DimLocation.Inputs[OLE DB Destination Input].Columns[Street]"
+                      refId="Package\Load DimLocation\DimLocation Insert.Inputs[OLE DB Destination Input].Columns[Street]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Street"
                       cachedSortKeyPosition="5"
-                      externalMetadataColumnId="Package\Load DimLocation\DimLocation.Inputs[OLE DB Destination Input].ExternalColumns[Street]"
+                      externalMetadataColumnId="Package\Load DimLocation\DimLocation Insert.Inputs[OLE DB Destination Input].ExternalColumns[Street]"
                       lineageId="Package\Load DimLocation\Select Unique Rows.Outputs[Sort Output].Columns[Street]" />
                     <inputColumn
-                      refId="Package\Load DimLocation\DimLocation.Inputs[OLE DB Destination Input].Columns[City]"
+                      refId="Package\Load DimLocation\DimLocation Insert.Inputs[OLE DB Destination Input].Columns[City]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="City"
                       cachedSortKeyPosition="4"
-                      externalMetadataColumnId="Package\Load DimLocation\DimLocation.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                      externalMetadataColumnId="Package\Load DimLocation\DimLocation Insert.Inputs[OLE DB Destination Input].ExternalColumns[City]"
                       lineageId="Package\Load DimLocation\Select Unique Rows.Outputs[Sort Output].Columns[City]" />
                     <inputColumn
-                      refId="Package\Load DimLocation\DimLocation.Inputs[OLE DB Destination Input].Columns[CountryCode]"
+                      refId="Package\Load DimLocation\DimLocation Insert.Inputs[OLE DB Destination Input].Columns[CountryCode]"
                       cachedDataType="wstr"
                       cachedLength="10"
                       cachedName="CountryCode"
                       cachedSortKeyPosition="3"
-                      externalMetadataColumnId="Package\Load DimLocation\DimLocation.Inputs[OLE DB Destination Input].ExternalColumns[CountryCode]"
+                      externalMetadataColumnId="Package\Load DimLocation\DimLocation Insert.Inputs[OLE DB Destination Input].ExternalColumns[CountryCode]"
                       lineageId="Package\Load DimLocation\Select Unique Rows.Outputs[Sort Output].Columns[CountryCode]" />
                     <inputColumn
-                      refId="Package\Load DimLocation\DimLocation.Inputs[OLE DB Destination Input].Columns[Latitude]"
+                      refId="Package\Load DimLocation\DimLocation Insert.Inputs[OLE DB Destination Input].Columns[Latitude]"
                       cachedDataType="r4"
                       cachedName="Latitude"
                       cachedSortKeyPosition="2"
-                      externalMetadataColumnId="Package\Load DimLocation\DimLocation.Inputs[OLE DB Destination Input].ExternalColumns[Latitude]"
+                      externalMetadataColumnId="Package\Load DimLocation\DimLocation Insert.Inputs[OLE DB Destination Input].ExternalColumns[Latitude]"
                       lineageId="Package\Load DimLocation\Select Unique Rows.Outputs[Sort Output].Columns[Latitude]" />
                     <inputColumn
-                      refId="Package\Load DimLocation\DimLocation.Inputs[OLE DB Destination Input].Columns[Longitude]"
+                      refId="Package\Load DimLocation\DimLocation Insert.Inputs[OLE DB Destination Input].Columns[Longitude]"
                       cachedDataType="r4"
                       cachedName="Longitude"
                       cachedSortKeyPosition="1"
-                      externalMetadataColumnId="Package\Load DimLocation\DimLocation.Inputs[OLE DB Destination Input].ExternalColumns[Longitude]"
+                      externalMetadataColumnId="Package\Load DimLocation\DimLocation Insert.Inputs[OLE DB Destination Input].ExternalColumns[Longitude]"
                       lineageId="Package\Load DimLocation\Select Unique Rows.Outputs[Sort Output].Columns[Longitude]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Load DimLocation\DimLocation.Inputs[OLE DB Destination Input].ExternalColumns[LocationKey]"
+                      refId="Package\Load DimLocation\DimLocation Insert.Inputs[OLE DB Destination Input].ExternalColumns[LocationKey]"
                       dataType="i4"
                       name="LocationKey" />
                     <externalMetadataColumn
-                      refId="Package\Load DimLocation\DimLocation.Inputs[OLE DB Destination Input].ExternalColumns[Street]"
+                      refId="Package\Load DimLocation\DimLocation Insert.Inputs[OLE DB Destination Input].ExternalColumns[Street]"
                       dataType="wstr"
                       length="50"
                       name="Street" />
                     <externalMetadataColumn
-                      refId="Package\Load DimLocation\DimLocation.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                      refId="Package\Load DimLocation\DimLocation Insert.Inputs[OLE DB Destination Input].ExternalColumns[City]"
                       dataType="wstr"
                       length="50"
                       name="City" />
                     <externalMetadataColumn
-                      refId="Package\Load DimLocation\DimLocation.Inputs[OLE DB Destination Input].ExternalColumns[CountryCode]"
+                      refId="Package\Load DimLocation\DimLocation Insert.Inputs[OLE DB Destination Input].ExternalColumns[CountryCode]"
                       dataType="wstr"
                       length="10"
                       name="CountryCode" />
                     <externalMetadataColumn
-                      refId="Package\Load DimLocation\DimLocation.Inputs[OLE DB Destination Input].ExternalColumns[Latitude]"
+                      refId="Package\Load DimLocation\DimLocation Insert.Inputs[OLE DB Destination Input].ExternalColumns[Latitude]"
                       dataType="r4"
                       name="Latitude" />
                     <externalMetadataColumn
-                      refId="Package\Load DimLocation\DimLocation.Inputs[OLE DB Destination Input].ExternalColumns[Longitude]"
+                      refId="Package\Load DimLocation\DimLocation Insert.Inputs[OLE DB Destination Input].ExternalColumns[Longitude]"
                       dataType="r4"
                       name="Longitude" />
                   </externalMetadataColumns>
@@ -2156,22 +2598,215 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Load DimLocation\DimLocation.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Load DimLocation\DimLocation Insert.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Load DimLocation\DimLocation.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Load DimLocation\DimLocation Insert.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load DimLocation\DimLocation.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Load DimLocation\DimLocation Insert.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Load DimLocation\DimLocation.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Load DimLocation\DimLocation Insert.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Load DimLocation\DimLocation.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Load DimLocation\DimLocation Insert.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Load DimLocation\DimLocation.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Load DimLocation\DimLocation Insert.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load DimLocation\DimLocation Update"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="DimLocation Update"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE       DimLocation
+SET                Street = ?, City = ?, CountryCode = ?, Latitude = ?, Longitude = ?
+WHERE        (LocationKey = ?)</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load DimLocation\DimLocation Update.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.dwh_project_star]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.dwh_project_star]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load DimLocation\DimLocation Update.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load DimLocation\DimLocation Update.Inputs[OLE DB Command Input].Columns[Street]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Street"
+                      cachedSortKeyPosition="5"
+                      externalMetadataColumnId="Package\Load DimLocation\DimLocation Update.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\Load DimLocation\Select Unique Rows.Outputs[Sort Output].Columns[Street]" />
+                    <inputColumn
+                      refId="Package\Load DimLocation\DimLocation Update.Inputs[OLE DB Command Input].Columns[City]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="City"
+                      cachedSortKeyPosition="4"
+                      externalMetadataColumnId="Package\Load DimLocation\DimLocation Update.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\Load DimLocation\Select Unique Rows.Outputs[Sort Output].Columns[City]" />
+                    <inputColumn
+                      refId="Package\Load DimLocation\DimLocation Update.Inputs[OLE DB Command Input].Columns[CountryCode]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="CountryCode"
+                      cachedSortKeyPosition="3"
+                      externalMetadataColumnId="Package\Load DimLocation\DimLocation Update.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      lineageId="Package\Load DimLocation\Select Unique Rows.Outputs[Sort Output].Columns[CountryCode]" />
+                    <inputColumn
+                      refId="Package\Load DimLocation\DimLocation Update.Inputs[OLE DB Command Input].Columns[Latitude]"
+                      cachedDataType="r4"
+                      cachedName="Latitude"
+                      cachedSortKeyPosition="2"
+                      externalMetadataColumnId="Package\Load DimLocation\DimLocation Update.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      lineageId="Package\Load DimLocation\Select Unique Rows.Outputs[Sort Output].Columns[Latitude]" />
+                    <inputColumn
+                      refId="Package\Load DimLocation\DimLocation Update.Inputs[OLE DB Command Input].Columns[Longitude]"
+                      cachedDataType="r4"
+                      cachedName="Longitude"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Load DimLocation\DimLocation Update.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                      lineageId="Package\Load DimLocation\Select Unique Rows.Outputs[Sort Output].Columns[Longitude]" />
+                    <inputColumn
+                      refId="Package\Load DimLocation\DimLocation Update.Inputs[OLE DB Command Input].Columns[LocationKey]"
+                      cachedDataType="i4"
+                      cachedName="LocationKey"
+                      externalMetadataColumnId="Package\Load DimLocation\DimLocation Update.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
+                      lineageId="Package\Load DimLocation\Select New Rows.Outputs[Lookup Match Output].Columns[LocationKey]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load DimLocation\DimLocation Update.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="wstr"
+                      length="50"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Load DimLocation\DimLocation Update.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="wstr"
+                      length="50"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Load DimLocation\DimLocation Update.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      dataType="wstr"
+                      length="10"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Load DimLocation\DimLocation Update.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      dataType="r4"
+                      name="Param_3">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Load DimLocation\DimLocation Update.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                      dataType="r4"
+                      name="Param_4">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Load DimLocation\DimLocation Update.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
+                      dataType="i4"
+                      name="Param_5">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load DimLocation\DimLocation Update.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\Load DimLocation\DimLocation Update.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load DimLocation\DimLocation Update.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\Load DimLocation\DimLocation Update.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load DimLocation\DimLocation Update.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load DimLocation\DimLocation Update.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load DimLocation\DimLocation Update.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load DimLocation\DimLocation Update.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -2746,6 +3381,7 @@
     City,
     CountryCode
 
+, LocationKey
 FROM 
     DimLocation</property>
                 <property
@@ -2760,6 +3396,7 @@ FROM
     City,
     CountryCode
 
+, LocationKey
 FROM 
     DimLocation) [refTable]
 where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryCode] = ?</property>
@@ -2793,7 +3430,7 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="LatitudeString" dataType="DT_STR" length="8000" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="LongitudeString" dataType="DT_STR" length="8000" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="Street" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="City" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CountryCode" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="LatitudeString" dataType="DT_STR" length="8000" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="LongitudeString" dataType="DT_STR" length="8000" precision="0" scale="0" codePage="1250"/&gt;&lt;referenceColumn name="Street" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="City" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CountryCode" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="LocationKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -2886,6 +3523,22 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
                   exclusionGroup="1"
                   name="Lookup Match Output"
                   synchronousInputId="Package\Load DimLocation\Select New Rows.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load DimLocation\Select New Rows.Outputs[Lookup Match Output].Columns[LocationKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Load DimLocation\Select New Rows.Outputs[Lookup Match Output].Columns[LocationKey]"
+                      name="LocationKey"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">LocationKey</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
                   <externalMetadataColumns />
                 </output>
                 <output
@@ -3137,8 +3790,13 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
               name="Flat File Source Output"
               startId="Package\Load DimLocation\JustIT.Outputs[Flat File Source Output]" />
             <path
+              refId="Package\Load DimLocation.Paths[Lookup Match Output]"
+              endId="Package\Load DimLocation\DimLocation Update.Inputs[OLE DB Command Input]"
+              name="Lookup Match Output"
+              startId="Package\Load DimLocation\Select New Rows.Outputs[Lookup Match Output]" />
+            <path
               refId="Package\Load DimLocation.Paths[Lookup No Match Output]"
-              endId="Package\Load DimLocation\DimLocation.Inputs[OLE DB Destination Input]"
+              endId="Package\Load DimLocation\DimLocation Insert.Inputs[OLE DB Destination Input]"
               name="Lookup No Match Output"
               startId="Package\Load DimLocation\Select New Rows.Outputs[Lookup No Match Output]" />
             <path
@@ -3216,7 +3874,7 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
     design-time-name="Package\Load DimCompany">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="191,42"
           Id="Package\Load DimCompany\Sort By Company Name"
@@ -3416,19 +4074,205 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
           Id="68940ec9-1d44-4e39-ae2d-d0b8712ce0e1"
           TopLeft="734.846143805064,186.76922878623" />
         <AnnotationLayout
-          Text="trzeba zachować kolumny,&#xA;po których będziemy łączyć fakty z wymiarami,&#xA;dla ofert oryginalne company_name,&#xA;dla giełdy symbol,&#xD;&#xA;trzeba jeszcze dodać te dwie kolumny do hurtowni"
+          Text="trzeba zachować kolumny,&#xA;po których będziemy łączyć fakty z wymiarami,&#xA;dla ofert oryginalne company_name,&#xA;dla giełdy symbol&#xD;&#xA;TODO: trzeba jeszcze dodać te dwie kolumny do hurtowni,&#xD;&#xA;CompanyName już mamy, czyli company_name_new będzie tylko &#xD;&#xA;na potrzeby merga, do dwh ładujemy zwykłe company_name"
           ParentId="Package\Load DimCompany"
           FontInfo="{assembly:Null}"
-          Size="297,104"
+          Size="378,136"
           Id="00208c28-b080-45db-91ad-0a45ccbc4a15"
           TopLeft="637,366" />
         <AnnotationLayout
-          Text="obsłużyć nulle"
+          Text="TODO: obsłużyć nulle i kolumnę company_size"
           ParentId="Package\Load DimCompany"
           FontInfo="{assembly:Null}"
-          Size="104,60"
+          Size="274,60"
           Id="ff4800f1-50c4-41e8-9b5a-81d0e7f6e223"
-          TopLeft="586,509" />
+          TopLeft="529,492" />
+        <AnnotationLayout
+          Text="od razu przy sortowaniu usuwam duplikaty"
+          ParentId="Package\Load DimCompany"
+          FontInfo="{assembly:Null}"
+          Size="256,60"
+          Id="870db7b5-e8aa-43c5-96bf-1d19d2e6564a"
+          TopLeft="673,306" />
+        <NodeLayout
+          Size="142,42"
+          Id="Package\Load DimCompany\Manage Nulls"
+          TopLeft="336,489" />
+        <EdgeLayout
+          Id="Package\Load DimCompany.Paths[Merge Join Output]"
+          TopLeft="409.25,451">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,38"
+              Start="0,0"
+              End="0,30.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Load DimCompany\Data Conversion"
+          TopLeft="326,565" />
+        <EdgeLayout
+          Id="Package\Load DimCompany.Paths[Derived Column Output2]"
+          TopLeft="405.5,531">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34"
+              Start="0,0"
+              End="0,26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <AnnotationLayout
+          Text="TODO: zmienić typy danych"
+          ParentId="Package\Load DimCompany"
+          FontInfo="{assembly:Null}"
+          Size="175,60"
+          Id="79f2f607-ace6-4d00-9412-c9c041f63c72"
+          TopLeft="536,574" />
+        <NodeLayout
+          Size="172,42"
+          Id="Package\Load DimCompany\Select Unique Rows"
+          TopLeft="314,649" />
+        <EdgeLayout
+          Id="Package\Load DimCompany.Paths[Data Conversion Output]"
+          TopLeft="402,607">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,42"
+              Start="0,0"
+              End="0,34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <AnnotationLayout
+          Text="TODO: wybrać tylko nowe rekordy i je dodać,&#xD;&#xA;a na starych zrobić update (w sensie dodać nowe wiersze, ustawić na aktywne,&#xD;&#xA;a stare na nieaktywne, trzeba chyba jeszcze jakiś kafelek tu dołożyć, żeby to zrobić),&#xD;&#xA;wybór można robić lookupem (trochę sporo to trwa,&#xD;&#xA;ale jest tylko jeden blok), ale można też chyba mergem &#xD;&#xA;i później szukać jakichś nulli dla niezmergowanych"
+          ParentId="Package\Load DimCompany"
+          FontInfo="{assembly:Null}"
+          Size="469,120"
+          Id="833cc555-dc98-4fad-aaaf-c6cd2621d3b2"
+          TopLeft="641,648" />
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Load DimCompany\DimCompany Insert"
+          TopLeft="160,741" />
+        <EdgeLayout
+          Id="Package\Load DimCompany.Paths[Lookup No Match Output]"
+          TopLeft="400,691">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-153.5,50"
+              Start="0,0"
+              End="-153.5,42.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21"
+                    Point2="0,25"
+                    Point3="-4,25" />
+                  <mssgle:LineSegment
+                    End="-149.5,25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-149.5,25"
+                    Point2="-153.5,25"
+                    Point3="-153.5,29" />
+                  <mssgle:LineSegment
+                    End="-153.5,42.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-132.55638671875,30,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <AnnotationLayout
+          Text="TODO: załadować dane"
+          ParentId="Package\Load DimCompany"
+          FontInfo="{assembly:Null}"
+          Size="152,60"
+          Id="ba1e7ce9-cae2-478b-bf3e-7c0541274d58"
+          TopLeft="329,778" />
+        <NodeLayout
+          Size="178,42"
+          Id="Package\Load DimCompany\DimCompany Update"
+          TopLeft="463,746" />
+        <EdgeLayout
+          Id="Package\Load DimCompany.Paths[Lookup Match Output]"
+          TopLeft="427.333333333333,691">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="124.666666666667,55"
+              Start="0,0"
+              End="124.666666666667,47.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.3041474654378" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.3041474654378"
+                    Point2="0,22.3041474654378"
+                    Point3="4,22.3041474654378" />
+                  <mssgle:LineSegment
+                    End="120.666666666667,22.3041474654378" />
+                  <mssgle:CubicBezierSegment
+                    Point1="120.666666666667,22.3041474654378"
+                    Point2="124.666666666667,22.3041474654378"
+                    Point3="124.666666666667,26.3041474654378" />
+                  <mssgle:LineSegment
+                    End="124.666666666667,47.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="14.1419466145833,27.3041474654378,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -3442,9 +4286,9 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
           Id="Package\Load DimLocation\Select New Rows"
           TopLeft="80.714287514589,408.294119502434" />
         <NodeLayout
-          Size="137,42"
-          Id="Package\Load DimLocation\DimLocation"
-          TopLeft="91.857144012743,509.82353256483" />
+          Size="168,42"
+          Id="Package\Load DimLocation\DimLocation Insert"
+          TopLeft="77.857144012743,509.82353256483" />
         <NodeLayout
           Size="172,42"
           Id="Package\Load DimLocation\Select Unique Rows"
@@ -3484,14 +4328,12 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load DimLocation.Paths[Lookup No Match Output]"
-          TopLeft="160.535715763666,450.294119502434">
+          TopLeft="161.285715763666,450.294119502434">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -3532,9 +4374,7 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -3556,9 +4396,7 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -3580,9 +4418,7 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -3604,95 +4440,133 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <AnnotationLayout
           Text="ustalić stałą nazwę źródła &#xA;i wybrać istotne kolumny - ok"
           ParentId="Package\Load DimLocation"
           FontInfo="{assembly:Null}"
-          Size="185,NaN"
+          Size="185,56"
           Id="12e8263c-e38a-4880-8842-841d7106f026"
           TopLeft="752.142861777423,88.7058826854072" />
         <AnnotationLayout
           Text="SCD1 - nie trzeba się martwić aktualizacją danych&#xA;trzeba wybrać tylko  nowe wiersze, resztę zignorować"
           ParentId="Package\Load DimLocation"
           FontInfo="{assembly:Null}"
-          Size="310,NaN"
+          Size="310,56"
           Id="cd78e446-4787-425f-baad-198fec4303da"
-          TopLeft="261.428576561869,404.94117825089" />
+          TopLeft="259.428576561869,389.94117825089" />
         <AnnotationLayout
           Text="dogenerować klucz główny (jakoś), &#xA;trzeba by jeszcze podłączyć się pod bazkę i przeanalizować tamte klucze - ok"
           ParentId="Package\Load DimLocation"
           FontInfo="{assembly:Null}"
-          Size="435,NaN"
+          Size="435,56"
           Id="2a1167fd-49cb-47ed-b246-178d76b2079f"
           TopLeft="722.428578264859,193.376472904773" />
         <AnnotationLayout
           Text="połączyć się z bazką z DimLocation i załadować dane - ok"
           ParentId="Package\Load DimLocation"
           FontInfo="{assembly:Null}"
-          Size="333,NaN"
+          Size="333,40"
           Id="cbf0e63d-5b4b-4926-938f-95f318c8fdd4"
           TopLeft="756.142862373469,253.964709357159" />
         <AnnotationLayout
           Text="ustalić typy kolumn - ok"
           ParentId="Package\Load DimLocation"
           FontInfo="{assembly:Null}"
-          Size="156,NaN"
+          Size="156,40"
           Id="46c85972-bbe2-4067-a342-d09b39f2e64b"
           TopLeft="756,152" />
         <AnnotationLayout
           Text="jest problem z ładowaniem address_text - ok"
           ParentId="Package\Load DimLocation"
           FontInfo="{assembly:Null}"
-          Size="265,NaN"
+          Size="265,40"
           Id="01d231b5-6147-44b6-861e-c15aab319b28"
           TopLeft="719,48" />
         <AnnotationLayout
           Text="wybrać tylko unikalne wiersze spośród ładowanych - ok&#xA;"
           ParentId="Package\Load DimLocation"
           FontInfo="{assembly:Null}"
-          Size="322,NaN"
+          Size="322,56"
           Id="7141b32c-e365-4d91-91de-8ba19e2508bd"
           TopLeft="807,442" />
         <AnnotationLayout
           Text="UWAGA, rzuca mi błąd przy konwersji lat i long ze stringa do floata,&#xA;wynika to z różnicy w długości formatów&#xA;dodatkowo ignoruje przycinanie tych kolumn&#xA;ROZW: zmienić kropki na przecinki"
           ParentId="Package\Load DimLocation"
           FontInfo="{assembly:Null}"
-          Size="385,NaN"
+          Size="385,88"
           Id="3214c7f8-987a-4bc9-aebb-75d73cc4fde6"
           TopLeft="777,316" />
         <AnnotationLayout
           Text="w latitude i longitude na pewno nie ma nulli"
           ParentId="Package\Load DimLocation"
           FontInfo="{assembly:Null}"
-          Size="261,NaN"
+          Size="261,40"
           Id="a81c2933-51a3-4538-b9ef-d191b8ac16de"
           TopLeft="822,401" />
         <AnnotationLayout
           Text="sortuje po wszystkich kolumnach z zaznaczoną opcją usuwania duplikatów"
           ParentId="Package\Load DimLocation"
           FontInfo="{assembly:Null}"
-          Size="422,NaN"
+          Size="422,40"
           Id="eff2bd21-7475-4941-89ee-628e22e85503"
-          TopLeft="258,447" />
+          TopLeft="256,432" />
         <AnnotationLayout
           Text="jest jakiś problem z lookupem, bo nie wykrywa duplikatów danych, &#xA;kilka razy może załadować te same dane,&#xA;jak zadziała, to zmatchowane rekordy trzeba będzie po prostu nadpisywać&#xA;bo to SCD1 &#xA;ROWZ: trzeba było zmienić z full cache na partial"
           ParentId="Package\Load DimLocation"
           FontInfo="{assembly:Null}"
-          Size="421,NaN"
+          Size="421,104"
           Id="acca3ea8-03ce-4c1d-b71b-de65f1cd2818"
           TopLeft="797,486" />
         <AnnotationLayout
           Text="nulle trzeba wyrzucic przed lookupem,&#xA;na razie po prostu zastępuje pustym tekstem"
           ParentId="Package\Load DimLocation"
           FontInfo="{assembly:Null}"
-          Size="266,NaN"
+          Size="266,56"
           Id="98495b2b-c77a-4fae-8f6d-cf0af8d12dea"
           TopLeft="272,71" />
+        <NodeLayout
+          Size="174,42"
+          Id="Package\Load DimLocation\DimLocation Update"
+          TopLeft="319,509" />
+        <EdgeLayout
+          Id="Package\Load DimLocation.Paths[Lookup Match Output]"
+          TopLeft="186.047620847922,450.294119502434">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="219.952379152078,58.705880497566"
+              Start="0,0"
+              End="219.952379152078,51.205880497566">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.8311000039624" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.8311000039624"
+                    Point2="0,23.8311000039624"
+                    Point3="4,23.8311000039624" />
+                  <mssgle:LineSegment
+                    End="215.952379152078,23.8311000039624" />
+                  <mssgle:CubicBezierSegment
+                    Point1="215.952379152078,23.8311000039624"
+                    Point2="219.952379152078,23.8311000039624"
+                    Point3="219.952379152078,27.8311000039624" />
+                  <mssgle:LineSegment
+                    End="219.952379152078,51.205880497566" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="61.7848028572888,28.8311000039624,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -3702,7 +4576,7 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -3712,7 +4586,7 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -3720,7 +4594,30 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Load DimLocation\DimLocation">
+    design-time-name="Package\Load DimLocation\DimLocation Insert">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load DimCompany\Select Unique Rows">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load DimCompany\DimCompany Insert">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
