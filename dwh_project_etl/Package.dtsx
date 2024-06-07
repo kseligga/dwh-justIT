@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="125"
-  DTS:VersionGUID="{313826BA-B50A-4DDF-B31F-172421391A24}">
+  DTS:VersionBuild="143"
+  DTS:VersionGUID="{B91C9E70-7030-4B48-9CB1-232769008D35}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -3500,117 +3500,6 @@
           version="1">
           <components>
             <component
-              refId="Package\Load DimLocation\Convert To String"
-              componentClassID="Microsoft.DerivedColumn"
-              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
-              name="Convert To String"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\Load DimLocation\Convert To String.Inputs[Derived Column Input]"
-                  description="Input to the Derived Column Transformation"
-                  name="Derived Column Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Load DimLocation\Convert To String.Inputs[Derived Column Input].Columns[Latitude]"
-                      cachedDataType="r4"
-                      cachedName="Latitude"
-                      lineageId="Package\Load DimLocation\Data Conversion.Outputs[Data Conversion Output].Columns[Latitude]" />
-                    <inputColumn
-                      refId="Package\Load DimLocation\Convert To String.Inputs[Derived Column Input].Columns[Longitude]"
-                      cachedDataType="r4"
-                      cachedName="Longitude"
-                      lineageId="Package\Load DimLocation\Data Conversion.Outputs[Data Conversion Output].Columns[Longitude]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Load DimLocation\Convert To String.Outputs[Derived Column Output]"
-                  description="Default Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  name="Derived Column Output"
-                  synchronousInputId="Package\Load DimLocation\Convert To String.Inputs[Derived Column Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Load DimLocation\Convert To String.Outputs[Derived Column Output].Columns[LatitudeString]"
-                      codePage="1250"
-                      dataType="str"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      length="50"
-                      lineageId="Package\Load DimLocation\Convert To String.Outputs[Derived Column Output].Columns[LatitudeString]"
-                      name="LatitudeString"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">(DT_STR,50,1250)#{Package\Load DimLocation\Data Conversion.Outputs[Data Conversion Output].Columns[Latitude]}</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,50,1250)Latitude</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load DimLocation\Convert To String.Outputs[Derived Column Output].Columns[LongitudeString]"
-                      codePage="1250"
-                      dataType="str"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      length="50"
-                      lineageId="Package\Load DimLocation\Convert To String.Outputs[Derived Column Output].Columns[LongitudeString]"
-                      name="LongitudeString"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">(DT_STR,50,1250)#{Package\Load DimLocation\Data Conversion.Outputs[Data Conversion Output].Columns[Longitude]}</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,50,1250)Longitude</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Load DimLocation\Convert To String.Outputs[Derived Column Error Output]"
-                  description="Error Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Derived Column Error Output"
-                  synchronousInputId="Package\Load DimLocation\Convert To String.Inputs[Derived Column Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Load DimLocation\Convert To String.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Load DimLocation\Convert To String.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Load DimLocation\Convert To String.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Load DimLocation\Convert To String.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
               refId="Package\Load DimLocation\Data Conversion"
               componentClassID="Microsoft.DataConvert"
               contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
@@ -3967,235 +3856,6 @@
               </outputs>
             </component>
             <component
-              refId="Package\Load DimLocation\Drop Nulls"
-              componentClassID="Microsoft.ConditionalSplit"
-              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
-              name="Drop Nulls"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\Load DimLocation\Drop Nulls.Inputs[Conditional Split Input]"
-                  description="Input to the Conditional Split Transformation"
-                  name="Conditional Split Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Load DimLocation\Drop Nulls.Inputs[Conditional Split Input].Columns[Street]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="Street"
-                      cachedSortKeyPosition="5"
-                      lineageId="Package\Load DimLocation\Select Unique Rows.Outputs[Sort Output].Columns[Street]" />
-                    <inputColumn
-                      refId="Package\Load DimLocation\Drop Nulls.Inputs[Conditional Split Input].Columns[City]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="City"
-                      cachedSortKeyPosition="4"
-                      lineageId="Package\Load DimLocation\Select Unique Rows.Outputs[Sort Output].Columns[City]" />
-                    <inputColumn
-                      refId="Package\Load DimLocation\Drop Nulls.Inputs[Conditional Split Input].Columns[CountryCode]"
-                      cachedDataType="wstr"
-                      cachedLength="10"
-                      cachedName="CountryCode"
-                      cachedSortKeyPosition="3"
-                      lineageId="Package\Load DimLocation\Select Unique Rows.Outputs[Sort Output].Columns[CountryCode]" />
-                    <inputColumn
-                      refId="Package\Load DimLocation\Drop Nulls.Inputs[Conditional Split Input].Columns[Latitude]"
-                      cachedDataType="r4"
-                      cachedName="Latitude"
-                      cachedSortKeyPosition="2"
-                      lineageId="Package\Load DimLocation\Select Unique Rows.Outputs[Sort Output].Columns[Latitude]" />
-                    <inputColumn
-                      refId="Package\Load DimLocation\Drop Nulls.Inputs[Conditional Split Input].Columns[Longitude]"
-                      cachedDataType="r4"
-                      cachedName="Longitude"
-                      cachedSortKeyPosition="1"
-                      lineageId="Package\Load DimLocation\Select Unique Rows.Outputs[Sort Output].Columns[Longitude]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Load DimLocation\Drop Nulls.Outputs[StreetNull]"
-                  description="Output 1 of the Conditional Split Transformation"
-                  errorOrTruncationOperation="Computation"
-                  errorRowDisposition="FailComponent"
-                  exclusionGroup="1"
-                  name="StreetNull"
-                  synchronousInputId="Package\Load DimLocation\Drop Nulls.Inputs[Conditional Split Input]"
-                  truncationRowDisposition="FailComponent">
-                  <properties>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">[ISNULL](#{Package\Load DimLocation\Select Unique Rows.Outputs[Sort Output].Columns[Street]})</property>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the friendly version of the expression. This expression version uses column names."
-                      expressionType="Notify"
-                      name="FriendlyExpression">ISNULL(Street)</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
-                      name="EvaluationOrder">0</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Load DimLocation\Drop Nulls.Outputs[CityNull]"
-                  description="Output 2 of the Conditional Split Transformation"
-                  errorOrTruncationOperation="Computation"
-                  errorRowDisposition="FailComponent"
-                  exclusionGroup="1"
-                  name="CityNull"
-                  synchronousInputId="Package\Load DimLocation\Drop Nulls.Inputs[Conditional Split Input]"
-                  truncationRowDisposition="FailComponent">
-                  <properties>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">[ISNULL](#{Package\Load DimLocation\Select Unique Rows.Outputs[Sort Output].Columns[City]})</property>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the friendly version of the expression. This expression version uses column names."
-                      expressionType="Notify"
-                      name="FriendlyExpression">ISNULL(City)</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
-                      name="EvaluationOrder">1</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Load DimLocation\Drop Nulls.Outputs[CountryCodeNull]"
-                  description="Output 3 of the Conditional Split Transformation"
-                  errorOrTruncationOperation="Computation"
-                  errorRowDisposition="FailComponent"
-                  exclusionGroup="1"
-                  name="CountryCodeNull"
-                  synchronousInputId="Package\Load DimLocation\Drop Nulls.Inputs[Conditional Split Input]"
-                  truncationRowDisposition="FailComponent">
-                  <properties>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">[ISNULL](#{Package\Load DimLocation\Select Unique Rows.Outputs[Sort Output].Columns[CountryCode]})</property>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the friendly version of the expression. This expression version uses column names."
-                      expressionType="Notify"
-                      name="FriendlyExpression">ISNULL(CountryCode)</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
-                      name="EvaluationOrder">2</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Load DimLocation\Drop Nulls.Outputs[LatitudeNull]"
-                  description="Output 4 of the Conditional Split Transformation"
-                  errorOrTruncationOperation="Computation"
-                  errorRowDisposition="FailComponent"
-                  exclusionGroup="1"
-                  name="LatitudeNull"
-                  synchronousInputId="Package\Load DimLocation\Drop Nulls.Inputs[Conditional Split Input]"
-                  truncationRowDisposition="FailComponent">
-                  <properties>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">[ISNULL](#{Package\Load DimLocation\Select Unique Rows.Outputs[Sort Output].Columns[Latitude]})</property>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the friendly version of the expression. This expression version uses column names."
-                      expressionType="Notify"
-                      name="FriendlyExpression">ISNULL(Latitude)</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
-                      name="EvaluationOrder">3</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Load DimLocation\Drop Nulls.Outputs[LongitudeNull]"
-                  description="Output 5 of the Conditional Split Transformation"
-                  errorOrTruncationOperation="Computation"
-                  errorRowDisposition="FailComponent"
-                  exclusionGroup="1"
-                  name="LongitudeNull"
-                  synchronousInputId="Package\Load DimLocation\Drop Nulls.Inputs[Conditional Split Input]"
-                  truncationRowDisposition="FailComponent">
-                  <properties>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">[ISNULL](#{Package\Load DimLocation\Select Unique Rows.Outputs[Sort Output].Columns[Longitude]})</property>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the friendly version of the expression. This expression version uses column names."
-                      expressionType="Notify"
-                      name="FriendlyExpression">ISNULL(Longitude)</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
-                      name="EvaluationOrder">4</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Load DimLocation\Drop Nulls.Outputs[NoNulls]"
-                  description="Default Output of the Conditional Split Transformation"
-                  exclusionGroup="1"
-                  name="NoNulls"
-                  synchronousInputId="Package\Load DimLocation\Drop Nulls.Inputs[Conditional Split Input]">
-                  <properties>
-                    <property
-                      dataType="System.Boolean"
-                      name="IsDefaultOut">true</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Load DimLocation\Drop Nulls.Outputs[Conditional Split Error Output]"
-                  description="Error Output of the Conditional Split Transformation"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Conditional Split Error Output"
-                  synchronousInputId="Package\Load DimLocation\Drop Nulls.Inputs[Conditional Split Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Load DimLocation\Drop Nulls.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Load DimLocation\Drop Nulls.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Load DimLocation\Drop Nulls.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Load DimLocation\Drop Nulls.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
               refId="Package\Load DimLocation\Flat File Source"
               componentClassID="Microsoft.FlatFileSource"
               contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
@@ -4515,6 +4175,132 @@
               </outputs>
             </component>
             <component
+              refId="Package\Load DimLocation\Manage Nulls"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Manage Nulls"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load DimLocation\Manage Nulls.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load DimLocation\Manage Nulls.Inputs[Derived Column Input].Columns[street]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="street"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load DimLocation\Flat File Source.Outputs[Flat File Source Output].Columns[street]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ISNULL](#{Package\Load DimLocation\Flat File Source.Outputs[Flat File Source Output].Columns[street]}) ? "" : #{Package\Load DimLocation\Flat File Source.Outputs[Flat File Source Output].Columns[street]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(street) ? "" : street</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load DimLocation\Manage Nulls.Inputs[Derived Column Input].Columns[city]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="city"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load DimLocation\Flat File Source.Outputs[Flat File Source Output].Columns[city]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ISNULL](#{Package\Load DimLocation\Flat File Source.Outputs[Flat File Source Output].Columns[city]}) ? "" : #{Package\Load DimLocation\Flat File Source.Outputs[Flat File Source Output].Columns[city]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(city) ? "" : city</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load DimLocation\Manage Nulls.Inputs[Derived Column Input].Columns[country_code]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="country_code"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load DimLocation\Flat File Source.Outputs[Flat File Source Output].Columns[country_code]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ISNULL](#{Package\Load DimLocation\Flat File Source.Outputs[Flat File Source Output].Columns[country_code]}) ? "" : #{Package\Load DimLocation\Flat File Source.Outputs[Flat File Source Output].Columns[country_code]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(country_code) ? "" : country_code</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load DimLocation\Manage Nulls.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Load DimLocation\Manage Nulls.Inputs[Derived Column Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load DimLocation\Manage Nulls.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Load DimLocation\Manage Nulls.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load DimLocation\Manage Nulls.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load DimLocation\Manage Nulls.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load DimLocation\Manage Nulls.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load DimLocation\Manage Nulls.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\Load DimLocation\Prepare Floats To Conversion"
               componentClassID="Microsoft.DerivedColumn"
               contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
@@ -4635,6 +4421,7 @@
     Street,
     City,
     CountryCode
+
 FROM 
     DimLocation</property>
                 <property
@@ -4648,6 +4435,7 @@ FROM
     Street,
     City,
     CountryCode
+
 FROM 
     DimLocation) [refTable]
 where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryCode] = ?</property>
@@ -4660,7 +4448,7 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
                   dataType="System.Int32"
                   description="Specifies the cache type of the lookup table."
                   name="CacheType"
-                  typeConverter="CacheType">0</property>
+                  typeConverter="CacheType">1</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
@@ -4686,7 +4474,7 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Load DimLocation\Data Conversion.Outputs[Data Conversion Output].Columns[Street]};#{Package\Load DimLocation\Data Conversion.Outputs[Data Conversion Output].Columns[City]};#{Package\Load DimLocation\Data Conversion.Outputs[Data Conversion Output].Columns[CountryCode]};</property>
+                  name="ParameterMap">#{Package\Load DimLocation\Select Unique Rows.Outputs[Sort Output].Columns[Street]};#{Package\Load DimLocation\Select Unique Rows.Outputs[Sort Output].Columns[City]};#{Package\Load DimLocation\Select Unique Rows.Outputs[Sort Output].Columns[CountryCode]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -4714,7 +4502,8 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Street"
-                      lineageId="Package\Load DimLocation\Data Conversion.Outputs[Data Conversion Output].Columns[Street]">
+                      cachedSortKeyPosition="5"
+                      lineageId="Package\Load DimLocation\Select Unique Rows.Outputs[Sort Output].Columns[Street]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -4731,7 +4520,8 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="City"
-                      lineageId="Package\Load DimLocation\Data Conversion.Outputs[Data Conversion Output].Columns[City]">
+                      cachedSortKeyPosition="4"
+                      lineageId="Package\Load DimLocation\Select Unique Rows.Outputs[Sort Output].Columns[City]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -4748,7 +4538,8 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
                       cachedDataType="wstr"
                       cachedLength="10"
                       cachedName="CountryCode"
-                      lineageId="Package\Load DimLocation\Data Conversion.Outputs[Data Conversion Output].Columns[CountryCode]">
+                      cachedSortKeyPosition="3"
+                      lineageId="Package\Load DimLocation\Select Unique Rows.Outputs[Sort Output].Columns[CountryCode]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -5003,7 +4794,7 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
           <paths>
             <path
               refId="Package\Load DimLocation.Paths[Data Conversion Output]"
-              endId="Package\Load DimLocation\Convert To String.Inputs[Derived Column Input]"
+              endId="Package\Load DimLocation\Select Unique Rows.Inputs[Sort Input]"
               name="Data Conversion Output"
               startId="Package\Load DimLocation\Data Conversion.Outputs[Data Conversion Output]" />
             <path
@@ -5013,27 +4804,22 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
               startId="Package\Load DimLocation\Prepare Floats To Conversion.Outputs[Derived Column Output]" />
             <path
               refId="Package\Load DimLocation.Paths[Derived Column Output1]"
-              endId="Package\Load DimLocation\Select New Rows.Inputs[Lookup Input]"
+              endId="Package\Load DimLocation\Prepare Floats To Conversion.Inputs[Derived Column Input]"
               name="Derived Column Output"
-              startId="Package\Load DimLocation\Convert To String.Outputs[Derived Column Output]" />
+              startId="Package\Load DimLocation\Manage Nulls.Outputs[Derived Column Output]" />
             <path
               refId="Package\Load DimLocation.Paths[Flat File Source Output]"
-              endId="Package\Load DimLocation\Prepare Floats To Conversion.Inputs[Derived Column Input]"
+              endId="Package\Load DimLocation\Manage Nulls.Inputs[Derived Column Input]"
               name="Flat File Source Output"
               startId="Package\Load DimLocation\Flat File Source.Outputs[Flat File Source Output]" />
             <path
               refId="Package\Load DimLocation.Paths[Lookup No Match Output]"
-              endId="Package\Load DimLocation\Select Unique Rows.Inputs[Sort Input]"
+              endId="Package\Load DimLocation\DimLocation.Inputs[OLE DB Destination Input]"
               name="Lookup No Match Output"
               startId="Package\Load DimLocation\Select New Rows.Outputs[Lookup No Match Output]" />
             <path
-              refId="Package\Load DimLocation.Paths[NoNulls]"
-              endId="Package\Load DimLocation\DimLocation.Inputs[OLE DB Destination Input]"
-              name="NoNulls"
-              startId="Package\Load DimLocation\Drop Nulls.Outputs[NoNulls]" />
-            <path
               refId="Package\Load DimLocation.Paths[Sort Output]"
-              endId="Package\Load DimLocation\Drop Nulls.Inputs[Conditional Split Input]"
+              endId="Package\Load DimLocation\Select New Rows.Inputs[Lookup Input]"
               name="Sort Output"
               startId="Package\Load DimLocation\Select Unique Rows.Outputs[Sort Output]" />
           </paths>
@@ -5106,7 +4892,7 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
     design-time-name="Package\Load DimCompany">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="106,42"
           Id="Package\Load DimCompany\Sort 1"
@@ -5166,7 +4952,9 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5200,7 +4988,9 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5222,7 +5012,9 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5256,7 +5048,9 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5290,7 +5084,9 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5324,21 +5120,23 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <AnnotationLayout
           Text="Do zrobienia: kolumny active żeby wymiar był SC2"
           ParentId="Package\Load DimCompany"
           FontInfo="{assembly:Null}"
-          Size="156,72"
+          Size="156,NaN"
           Id="94d1ed2c-e902-4c84-af6c-ecdd6b4b46df"
           TopLeft="342.30768720691,402.923071386722" />
         <AnnotationLayout
           Text="Edytujemy nazwy firm z dwóch źródeł, żeby pokrywały się przed mergem"
           ParentId="Package\Load DimCompany"
           FontInfo="{assembly:Null}"
-          Size="130,104"
+          Size="130,NaN"
           Id="68940ec9-1d44-4e39-ae2d-d0b8712ce0e1"
           TopLeft="673.846143805064,192.76922878623" />
       </GraphLayout>
@@ -5348,23 +5146,53 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
     design-time-name="Package\Load DimLocation">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Load DimLocation\Data Conversion"
+          TopLeft="82,240" />
         <NodeLayout
           Size="151,42"
           Id="Package\Load DimLocation\Flat File Source"
           TopLeft="79.7142871739913,19.8235296477083" />
         <NodeLayout
+          Size="217,42"
+          Id="Package\Load DimLocation\Prepare Floats To Conversion"
+          TopLeft="51,162" />
+        <NodeLayout
           Size="160,42"
           Id="Package\Load DimLocation\Select New Rows"
-          TopLeft="76.714287514589,330.294119502434" />
+          TopLeft="80.714287514589,408.294119502434" />
         <NodeLayout
           Size="137,42"
           Id="Package\Load DimLocation\DimLocation"
-          TopLeft="85.857144012743,576.82353256483" />
+          TopLeft="91.857144012743,509.82353256483" />
         <NodeLayout
-          Size="156,42"
-          Id="Package\Load DimLocation\Data Conversion"
-          TopLeft="73,203" />
+          Size="172,42"
+          Id="Package\Load DimLocation\Select Unique Rows"
+          TopLeft="80,314" />
+        <EdgeLayout
+          Id="Package\Load DimLocation.Paths[Derived Column Output]"
+          TopLeft="159.75,204">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,36"
+              Start="0,0"
+              End="0,28.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <AnnotationLayout
           Text="ustalić stałą nazwę źródła &#xA;i wybrać istotne kolumny - ok"
           ParentId="Package\Load DimLocation"
@@ -5378,7 +5206,7 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
           FontInfo="{assembly:Null}"
           Size="310,56"
           Id="cd78e446-4787-425f-baad-198fec4303da"
-          TopLeft="287.428576561869,276.94117825089" />
+          TopLeft="261.428576561869,404.94117825089" />
         <AnnotationLayout
           Text="dogenerować klucz główny (jakoś), &#xA;trzeba by jeszcze podłączyć się pod bazkę i przeanalizować tamte klucze - ok"
           ParentId="Package\Load DimLocation"
@@ -5394,13 +5222,6 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
           Id="cbf0e63d-5b4b-4926-938f-95f318c8fdd4"
           TopLeft="756.142862373469,253.964709357159" />
         <AnnotationLayout
-          Text="sprawdzić czy country_code nie jest nullowy,&#xD;&#xA;street też ma nulle - ok,&#xD;&#xA;na razie wstępnie usuwam wiersze z nullami, ale trzeba coś z tym zrobić (np. puste stringi),&#xD;&#xA;żeby nie było jakichś niespójności refertencyjnych"
-          ParentId="Package\Load DimLocation"
-          FontInfo="{assembly:Null}"
-          Size="505,88"
-          Id="fddfaba6-bf05-4a89-aeae-cf233b184305"
-          TopLeft="254,497" />
-        <AnnotationLayout
           Text="ustalić typy kolumn - ok"
           ParentId="Package\Load DimLocation"
           FontInfo="{assembly:Null}"
@@ -5411,244 +5232,167 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
           Text="jest problem z ładowaniem address_text - ok"
           ParentId="Package\Load DimLocation"
           FontInfo="{assembly:Null}"
-          Size="265,60"
+          Size="265,40"
           Id="01d231b5-6147-44b6-861e-c15aab319b28"
           TopLeft="719,48" />
         <AnnotationLayout
-          Text="wybrać tylko unikalne wiersze spośród ładowanych - ok&#xD;&#xA;"
+          Text="wybrać tylko unikalne wiersze spośród ładowanych - ok&#xA;"
           ParentId="Package\Load DimLocation"
           FontInfo="{assembly:Null}"
-          Size="322,60"
+          Size="322,56"
           Id="7141b32c-e365-4d91-91de-8ba19e2508bd"
           TopLeft="807,442" />
         <AnnotationLayout
-          Text="UWAGA, rzuca mi błąd przy konwersji lat i long ze stringa do floata,&#xD;&#xA;wynika to z różnicy w długości formatów&#xD;&#xA;dodatkowo ignoruje przycinanie tych kolumn"
+          Text="UWAGA, rzuca mi błąd przy konwersji lat i long ze stringa do floata,&#xA;wynika to z różnicy w długości formatów&#xA;dodatkowo ignoruje przycinanie tych kolumn&#xD;&#xA;ROZW: zmienić kropki na przecinki"
           ParentId="Package\Load DimLocation"
           FontInfo="{assembly:Null}"
-          Size="385,72"
+          Size="385,88"
           Id="3214c7f8-987a-4bc9-aebb-75d73cc4fde6"
           TopLeft="777,316" />
         <AnnotationLayout
           Text="w latitude i longitude na pewno nie ma nulli"
           ParentId="Package\Load DimLocation"
           FontInfo="{assembly:Null}"
-          Size="261,60"
+          Size="261,40"
           Id="a81c2933-51a3-4538-b9ef-d191b8ac16de"
-          TopLeft="769,389" />
-        <NodeLayout
-          Size="217,42"
-          Id="Package\Load DimLocation\Prepare Floats To Conversion"
-          TopLeft="49,106" />
-        <EdgeLayout
-          Id="Package\Load DimLocation.Paths[Flat File Source Output]"
-          TopLeft="156.357143586996,61.8235296477083">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,44.1764703522917"
-              Start="0,0"
-              End="0,36.6764703522917">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,36.6764703522917" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load DimLocation.Paths[Derived Column Output]"
-          TopLeft="154.25,148">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,55"
-              Start="0,0"
-              End="0,47.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,47.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="172,42"
-          Id="Package\Load DimLocation\Select Unique Rows"
-          TopLeft="72,425" />
-        <EdgeLayout
-          Id="Package\Load DimLocation.Paths[Lookup No Match Output]"
-          TopLeft="157.357143757294,372.294119502434">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,52.705880497566"
-              Start="0,0"
-              End="0,45.205880497566">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,45.205880497566" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,16.798252748783,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="822,401" />
         <AnnotationLayout
           Text="sortuje po wszystkich kolumnach z zaznaczoną opcją usuwania duplikatów"
           ParentId="Package\Load DimLocation"
           FontInfo="{assembly:Null}"
-          Size="422,60"
+          Size="422,40"
           Id="eff2bd21-7475-4941-89ee-628e22e85503"
-          TopLeft="264,429" />
-        <NodeLayout
-          Size="128,42"
-          Id="Package\Load DimLocation\Drop Nulls"
-          TopLeft="97,501" />
-        <EdgeLayout
-          Id="Package\Load DimLocation.Paths[Sort Output]"
-          TopLeft="159.5,467">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,34"
-              Start="0,0"
-              End="0,26.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load DimLocation.Paths[NoNulls]"
-          TopLeft="157.678572006371,543">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,33.82353256483"
-              Start="0,0"
-              End="0,26.32353256483">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26.32353256483" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-17.232578125,8.28725456366499,34.46515625,9.7490234375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="162,42"
-          Id="Package\Load DimLocation\Convert To String"
-          TopLeft="414,163" />
-        <EdgeLayout
-          Id="Package\Load DimLocation.Paths[Data Conversion Output]"
-          TopLeft="229,224">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="185,-40"
-              Start="0,0"
-              End="177.5,-40">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="88.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="88.5,0"
-                    Point2="92.5,0"
-                    Point3="92.5,-4" />
-                  <mssgle:LineSegment
-                    End="92.5,-36" />
-                  <mssgle:CubicBezierSegment
-                    Point1="92.5,-36"
-                    Point2="92.5,-40"
-                    Point3="96.5,-40" />
-                  <mssgle:LineSegment
-                    End="177.5,-40" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load DimLocation.Paths[Derived Column Output1]"
-          TopLeft="495,205">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-338.285712485411,125.294119502434"
-              Start="0,0"
-              End="-338.285712485411,117.794119502434">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,58.647059751217" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,58.647059751217"
-                    Point2="0,62.647059751217"
-                    Point3="-4,62.647059751217" />
-                  <mssgle:LineSegment
-                    End="-334.285712485411,62.647059751217" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-334.285712485411,62.647059751217"
-                    Point2="-338.285712485411,62.647059751217"
-                    Point3="-338.285712485411,66.647059751217" />
-                  <mssgle:LineSegment
-                    End="-338.285712485411,117.794119502434" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-177.142856242706,67.647059751217,16,16"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="258,447" />
         <AnnotationLayout
-          Text="jest jakiś problem z lookupem, bo nie wykrywa duplikatów danych, &#xD;&#xA;kilka razy może załadować te same dane,&#xD;&#xA;jak zadziała, to zmatchowane rekordy trzeba będzie po prostu nadpisywać&#xD;&#xA;bo to SCD1"
+          Text="jest jakiś problem z lookupem, bo nie wykrywa duplikatów danych, &#xA;kilka razy może załadować te same dane,&#xA;jak zadziała, to zmatchowane rekordy trzeba będzie po prostu nadpisywać&#xA;bo to SCD1 &#xD;&#xA;ROWZ: trzeba było zmienić z full cache na partial"
           ParentId="Package\Load DimLocation"
           FontInfo="{assembly:Null}"
-          Size="421,88"
+          Size="421,104"
           Id="acca3ea8-03ce-4c1d-b71b-de65f1cd2818"
-          TopLeft="264,334" />
+          TopLeft="797,486" />
+        <AnnotationLayout
+          Text="nulle trzeba wyrzucic przed lookupem,&#xD;&#xA;na razie po prostu zastępuje pustym tekstem"
+          ParentId="Package\Load DimLocation"
+          FontInfo="{assembly:Null}"
+          Size="266,60"
+          Id="98495b2b-c77a-4fae-8f6d-cf0af8d12dea"
+          TopLeft="272,71" />
+        <NodeLayout
+          Size="142,42"
+          Id="Package\Load DimLocation\Manage Nulls"
+          TopLeft="88,90" />
+        <EdgeLayout
+          Id="Package\Load DimLocation.Paths[Derived Column Output1]"
+          TopLeft="159.25,132">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,30"
+              Start="0,0"
+              End="0,22.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load DimLocation.Paths[Flat File Source Output]"
+          TopLeft="157.107143586996,61.8235296477083">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,28.1764703522917"
+              Start="0,0"
+              End="0,20.6764703522917">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.6764703522917" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load DimLocation.Paths[Data Conversion Output]"
+          TopLeft="163,282">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,32"
+              Start="0,0"
+              End="0,24.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load DimLocation.Paths[Sort Output]"
+          TopLeft="163.357143757294,356">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52.294119502434"
+              Start="0,0"
+              End="0,44.794119502434">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.794119502434" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load DimLocation.Paths[Lookup No Match Output]"
+          TopLeft="160.535715763666,450.294119502434">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.529413062396"
+              Start="0,0"
+              End="0,52.029413062396">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.029413062396" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.80638671875,20.210019031198,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
