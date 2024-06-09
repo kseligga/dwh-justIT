@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="188"
-  DTS:VersionGUID="{F55A7B22-616B-47E5-B295-CAC1A701A529}">
+  DTS:VersionBuild="230"
+  DTS:VersionGUID="{C2D1A1DA-5E14-48FD-AF07-DB522242C538}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -538,6 +538,201 @@
           version="1">
           <components>
             <component
+              refId="Package\Load DimCompany\Add SCD2 Columns"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Add SCD2 Columns"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load DimCompany\Add SCD2 Columns.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load DimCompany\Add SCD2 Columns.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Load DimCompany\Add SCD2 Columns.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load DimCompany\Add SCD2 Columns.Outputs[Derived Column Output].Columns[ActiveFrom]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\Load DimCompany\Add SCD2 Columns.Outputs[Derived Column Output].Columns[ActiveFrom]"
+                      name="ActiveFrom"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_WSTR,4)[YEAR]([GETDATE]()) + "-" + [RIGHT]("0" + (DT_WSTR,2)[MONTH]([GETDATE]()),2) + "-" + [RIGHT]("0" + (DT_WSTR,2)[DAY]([GETDATE]()),2)</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_WSTR,4)YEAR(GETDATE()) + "-" + RIGHT("0" + (DT_WSTR,2)MONTH(GETDATE()),2) + "-" + RIGHT("0" + (DT_WSTR,2)DAY(GETDATE()),2)</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load DimCompany\Add SCD2 Columns.Outputs[Derived Column Output].Columns[ActiveTo]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\Load DimCompany\Add SCD2 Columns.Outputs[Derived Column Output].Columns[ActiveTo]"
+                      name="ActiveTo"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_WSTR,10)"9999-12-31"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_WSTR,10)"9999-12-31"</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load DimCompany\Add SCD2 Columns.Outputs[Derived Column Output].Columns[Active]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load DimCompany\Add SCD2 Columns.Outputs[Derived Column Output].Columns[Active]"
+                      name="Active"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_BOOL)1</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_BOOL)1</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load DimCompany\Add SCD2 Columns.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Load DimCompany\Add SCD2 Columns.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load DimCompany\Add SCD2 Columns.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load DimCompany\Add SCD2 Columns.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load DimCompany\Add SCD2 Columns.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load DimCompany\Add SCD2 Columns.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load DimCompany\Clear CompanySize"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Clear CompanySize"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load DimCompany\Clear CompanySize.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load DimCompany\Clear CompanySize.Inputs[Derived Column Input].Columns[company_size]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="company_size"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load DimCompany\Inner Join Companies.Outputs[Merge Join Output].Columns[company_size]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE](#{Package\Load DimCompany\Inner Join Companies.Outputs[Merge Join Output].Columns[company_size]},"+",""),"&gt;",""),"&lt;",""),".",""),",",""),"++","")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(company_size,"+",""),"&gt;",""),"&lt;",""),".",""),",",""),"++","")</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load DimCompany\Clear CompanySize.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Load DimCompany\Clear CompanySize.Inputs[Derived Column Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load DimCompany\Clear CompanySize.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Load DimCompany\Clear CompanySize.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load DimCompany\Clear CompanySize.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load DimCompany\Clear CompanySize.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load DimCompany\Clear CompanySize.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load DimCompany\Clear CompanySize.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\Load DimCompany\Data Conversion"
               componentClassID="Microsoft.DataConvert"
               contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
@@ -548,6 +743,43 @@
                 <input
                   refId="Package\Load DimCompany\Data Conversion.Inputs[Data Conversion Input]"
                   name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load DimCompany\Data Conversion.Inputs[Data Conversion Input].Columns[Symbol]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Symbol"
+                      lineageId="Package\Load DimCompany\Inner Join Companies.Outputs[Merge Join Output].Columns[Symbol]" />
+                    <inputColumn
+                      refId="Package\Load DimCompany\Data Conversion.Inputs[Data Conversion Input].Columns[Sector]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Sector"
+                      lineageId="Package\Load DimCompany\Inner Join Companies.Outputs[Merge Join Output].Columns[Sector]" />
+                    <inputColumn
+                      refId="Package\Load DimCompany\Data Conversion.Inputs[Data Conversion Input].Columns[Industry]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Industry"
+                      lineageId="Package\Load DimCompany\Inner Join Companies.Outputs[Merge Join Output].Columns[Industry]" />
+                    <inputColumn
+                      refId="Package\Load DimCompany\Data Conversion.Inputs[Data Conversion Input].Columns[company_name]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="company_name"
+                      lineageId="Package\Load DimCompany\Inner Join Companies.Outputs[Merge Join Output].Columns[company_name]" />
+                    <inputColumn
+                      refId="Package\Load DimCompany\Data Conversion.Inputs[Data Conversion Input].Columns[company_size]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="company_size"
+                      lineageId="Package\Load DimCompany\Inner Join Companies.Outputs[Merge Join Output].Columns[company_size]" />
+                  </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
@@ -557,6 +789,112 @@
                   exclusionGroup="1"
                   name="Data Conversion Output"
                   synchronousInputId="Package\Load DimCompany\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load DimCompany\Data Conversion.Outputs[Data Conversion Output].Columns[Symbol]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Load DimCompany\Data Conversion.Outputs[Data Conversion Output].Columns[Symbol]"
+                      name="Symbol"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load DimCompany\Inner Join Companies.Outputs[Merge Join Output].Columns[Symbol]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load DimCompany\Data Conversion.Outputs[Data Conversion Output].Columns[Sector]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Load DimCompany\Data Conversion.Outputs[Data Conversion Output].Columns[Sector]"
+                      name="Sector"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load DimCompany\Inner Join Companies.Outputs[Merge Join Output].Columns[Sector]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load DimCompany\Data Conversion.Outputs[Data Conversion Output].Columns[Industry]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Load DimCompany\Data Conversion.Outputs[Data Conversion Output].Columns[Industry]"
+                      name="Industry"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load DimCompany\Inner Join Companies.Outputs[Merge Join Output].Columns[Industry]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load DimCompany\Data Conversion.Outputs[Data Conversion Output].Columns[CompanyName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Load DimCompany\Data Conversion.Outputs[Data Conversion Output].Columns[CompanyName]"
+                      name="CompanyName"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load DimCompany\Inner Join Companies.Outputs[Merge Join Output].Columns[company_name]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load DimCompany\Data Conversion.Outputs[Data Conversion Output].Columns[CompanySize]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load DimCompany\Data Conversion.Outputs[Data Conversion Output].Columns[CompanySize]"
+                      name="CompanySize"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load DimCompany\Inner Join Companies.Outputs[Merge Join Output].Columns[company_size]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
                   <externalMetadataColumns />
                 </output>
                 <output
@@ -654,6 +992,62 @@
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load DimCompany\DimCompany Insert.Inputs[OLE DB Destination Input].Columns[CompanyName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="CompanyName"
+                      externalMetadataColumnId="Package\Load DimCompany\DimCompany Insert.Inputs[OLE DB Destination Input].ExternalColumns[CompanyName]"
+                      lineageId="Package\Load DimCompany\Data Conversion.Outputs[Data Conversion Output].Columns[CompanyName]" />
+                    <inputColumn
+                      refId="Package\Load DimCompany\DimCompany Insert.Inputs[OLE DB Destination Input].Columns[CompanySize]"
+                      cachedDataType="i4"
+                      cachedName="CompanySize"
+                      externalMetadataColumnId="Package\Load DimCompany\DimCompany Insert.Inputs[OLE DB Destination Input].ExternalColumns[CompanySize]"
+                      lineageId="Package\Load DimCompany\Data Conversion.Outputs[Data Conversion Output].Columns[CompanySize]" />
+                    <inputColumn
+                      refId="Package\Load DimCompany\DimCompany Insert.Inputs[OLE DB Destination Input].Columns[Sector]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Sector"
+                      externalMetadataColumnId="Package\Load DimCompany\DimCompany Insert.Inputs[OLE DB Destination Input].ExternalColumns[Sector]"
+                      lineageId="Package\Load DimCompany\Data Conversion.Outputs[Data Conversion Output].Columns[Sector]" />
+                    <inputColumn
+                      refId="Package\Load DimCompany\DimCompany Insert.Inputs[OLE DB Destination Input].Columns[Industry]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Industry"
+                      externalMetadataColumnId="Package\Load DimCompany\DimCompany Insert.Inputs[OLE DB Destination Input].ExternalColumns[Industry]"
+                      lineageId="Package\Load DimCompany\Data Conversion.Outputs[Data Conversion Output].Columns[Industry]" />
+                    <inputColumn
+                      refId="Package\Load DimCompany\DimCompany Insert.Inputs[OLE DB Destination Input].Columns[Symbol]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Symbol"
+                      externalMetadataColumnId="Package\Load DimCompany\DimCompany Insert.Inputs[OLE DB Destination Input].ExternalColumns[Symbol]"
+                      lineageId="Package\Load DimCompany\Data Conversion.Outputs[Data Conversion Output].Columns[Symbol]" />
+                    <inputColumn
+                      refId="Package\Load DimCompany\DimCompany Insert.Inputs[OLE DB Destination Input].Columns[ActiveFrom]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="ActiveFrom"
+                      externalMetadataColumnId="Package\Load DimCompany\DimCompany Insert.Inputs[OLE DB Destination Input].ExternalColumns[ActiveFrom]"
+                      lineageId="Package\Load DimCompany\Add SCD2 Columns.Outputs[Derived Column Output].Columns[ActiveFrom]" />
+                    <inputColumn
+                      refId="Package\Load DimCompany\DimCompany Insert.Inputs[OLE DB Destination Input].Columns[ActiveTo]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="ActiveTo"
+                      externalMetadataColumnId="Package\Load DimCompany\DimCompany Insert.Inputs[OLE DB Destination Input].ExternalColumns[ActiveTo]"
+                      lineageId="Package\Load DimCompany\Add SCD2 Columns.Outputs[Derived Column Output].Columns[ActiveTo]" />
+                    <inputColumn
+                      refId="Package\Load DimCompany\DimCompany Insert.Inputs[OLE DB Destination Input].Columns[Active]"
+                      cachedDataType="bool"
+                      cachedName="Active"
+                      externalMetadataColumnId="Package\Load DimCompany\DimCompany Insert.Inputs[OLE DB Destination Input].ExternalColumns[Active]"
+                      lineageId="Package\Load DimCompany\Add SCD2 Columns.Outputs[Derived Column Output].Columns[Active]" />
+                  </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
@@ -680,10 +1074,6 @@
                       length="50"
                       name="Industry" />
                     <externalMetadataColumn
-                      refId="Package\Load DimCompany\DimCompany Insert.Inputs[OLE DB Destination Input].ExternalColumns[Listed]"
-                      dataType="bool"
-                      name="Listed" />
-                    <externalMetadataColumn
                       refId="Package\Load DimCompany\DimCompany Insert.Inputs[OLE DB Destination Input].ExternalColumns[ActiveFrom]"
                       dataType="wstr"
                       length="10"
@@ -697,6 +1087,11 @@
                       refId="Package\Load DimCompany\DimCompany Insert.Inputs[OLE DB Destination Input].ExternalColumns[Active]"
                       dataType="bool"
                       name="Active" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimCompany\DimCompany Insert.Inputs[OLE DB Destination Input].ExternalColumns[Symbol]"
+                      dataType="wstr"
+                      length="50"
+                      name="Symbol" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -743,7 +1138,18 @@
                   description="The SQL command to be executed."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE DimCompany
+SET
+Symbol=?,
+ CompanyName=?, 
+CompanySize=?, 
+Sector=?, 
+Industry=?,
+ActiveFrom=?,
+ActiveTo=?,
+Active=?
+WHERE CompanyKey = ?;
+</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -752,6 +1158,8 @@
               <connections>
                 <connection
                   refId="Package\Load DimCompany\DimCompany Update.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.dwh_project_star]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.dwh_project_star]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -762,8 +1170,176 @@
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load DimCompany\DimCompany Update.Inputs[OLE DB Command Input].Columns[Symbol]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Symbol"
+                      externalMetadataColumnId="Package\Load DimCompany\DimCompany Update.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\Load DimCompany\Data Conversion.Outputs[Data Conversion Output].Columns[Symbol]" />
+                    <inputColumn
+                      refId="Package\Load DimCompany\DimCompany Update.Inputs[OLE DB Command Input].Columns[CompanyNameOld]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="CompanyNameOld"
+                      externalMetadataColumnId="Package\Load DimCompany\DimCompany Update.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Match Output].Columns[CompanyNameOld]" />
+                    <inputColumn
+                      refId="Package\Load DimCompany\DimCompany Update.Inputs[OLE DB Command Input].Columns[CompanySize]"
+                      cachedDataType="i4"
+                      cachedName="CompanySize"
+                      externalMetadataColumnId="Package\Load DimCompany\DimCompany Update.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      lineageId="Package\Load DimCompany\Data Conversion.Outputs[Data Conversion Output].Columns[CompanySize]" />
+                    <inputColumn
+                      refId="Package\Load DimCompany\DimCompany Update.Inputs[OLE DB Command Input].Columns[Sector]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Sector"
+                      externalMetadataColumnId="Package\Load DimCompany\DimCompany Update.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      lineageId="Package\Load DimCompany\Data Conversion.Outputs[Data Conversion Output].Columns[Sector]" />
+                    <inputColumn
+                      refId="Package\Load DimCompany\DimCompany Update.Inputs[OLE DB Command Input].Columns[Industry]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Industry"
+                      externalMetadataColumnId="Package\Load DimCompany\DimCompany Update.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                      lineageId="Package\Load DimCompany\Data Conversion.Outputs[Data Conversion Output].Columns[Industry]" />
+                    <inputColumn
+                      refId="Package\Load DimCompany\DimCompany Update.Inputs[OLE DB Command Input].Columns[CompanyKey]"
+                      cachedDataType="i4"
+                      cachedName="CompanyKey"
+                      externalMetadataColumnId="Package\Load DimCompany\DimCompany Update.Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
+                      lineageId="Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Match Output].Columns[CompanyKey]" />
+                    <inputColumn
+                      refId="Package\Load DimCompany\DimCompany Update.Inputs[OLE DB Command Input].Columns[ActiveFrom]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="ActiveFrom"
+                      externalMetadataColumnId="Package\Load DimCompany\DimCompany Update.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
+                      lineageId="Package\Load DimCompany\Add SCD2 Columns.Outputs[Derived Column Output].Columns[ActiveFrom]" />
+                    <inputColumn
+                      refId="Package\Load DimCompany\DimCompany Update.Inputs[OLE DB Command Input].Columns[ActiveTo]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="ActiveTo"
+                      externalMetadataColumnId="Package\Load DimCompany\DimCompany Update.Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
+                      lineageId="Package\Load DimCompany\Add SCD2 Columns.Outputs[Derived Column Output].Columns[ActiveTo]" />
+                    <inputColumn
+                      refId="Package\Load DimCompany\DimCompany Update.Inputs[OLE DB Command Input].Columns[Active]"
+                      cachedDataType="bool"
+                      cachedName="Active"
+                      externalMetadataColumnId="Package\Load DimCompany\DimCompany Update.Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
+                      lineageId="Package\Load DimCompany\Add SCD2 Columns.Outputs[Derived Column Output].Columns[Active]" />
+                  </inputColumns>
                   <externalMetadataColumns
-                    isUsed="True" />
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load DimCompany\DimCompany Update.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="wstr"
+                      length="50"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Load DimCompany\DimCompany Update.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="wstr"
+                      length="50"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Load DimCompany\DimCompany Update.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      dataType="i4"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Load DimCompany\DimCompany Update.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      dataType="wstr"
+                      length="50"
+                      name="Param_3">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Load DimCompany\DimCompany Update.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                      dataType="wstr"
+                      length="50"
+                      name="Param_4">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Load DimCompany\DimCompany Update.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
+                      dataType="wstr"
+                      length="10"
+                      name="Param_5">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Load DimCompany\DimCompany Update.Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
+                      dataType="wstr"
+                      length="10"
+                      name="Param_6">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Load DimCompany\DimCompany Update.Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
+                      dataType="bool"
+                      name="Param_7">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Load DimCompany\DimCompany Update.Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
+                      dataType="i4"
+                      name="Param_8">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
@@ -1434,6 +2010,196 @@
               </outputs>
             </component>
             <component
+              refId="Package\Load DimCompany\Manage CompanySize"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Manage CompanySize"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load DimCompany\Manage CompanySize.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load DimCompany\Manage CompanySize.Inputs[Derived Column Input].Columns[company_size]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="company_size"
+                      lineageId="Package\Load DimCompany\Inner Join Companies.Outputs[Merge Join Output].Columns[company_size]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load DimCompany\Manage CompanySize.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Load DimCompany\Manage CompanySize.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load DimCompany\Manage CompanySize.Outputs[Derived Column Output].Columns[FirstNumber]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load DimCompany\Manage CompanySize.Outputs[Derived Column Output].Columns[FirstNumber]"
+                      name="FirstNumber"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_I4)[SUBSTRING](#{Package\Load DimCompany\Inner Join Companies.Outputs[Merge Join Output].Columns[company_size]},1,[FINDSTRING](#{Package\Load DimCompany\Inner Join Companies.Outputs[Merge Join Output].Columns[company_size]},"-",1) &gt; 0 ? [FINDSTRING](#{Package\Load DimCompany\Inner Join Companies.Outputs[Merge Join Output].Columns[company_size]},"-",1) - 1 : [LEN](#{Package\Load DimCompany\Inner Join Companies.Outputs[Merge Join Output].Columns[company_size]}))</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_I4)SUBSTRING(company_size,1,FINDSTRING(company_size,"-",1) &gt; 0 ? FINDSTRING(company_size,"-",1) - 1 : LEN(company_size))</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load DimCompany\Manage CompanySize.Outputs[Derived Column Output].Columns[SecondNumber]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load DimCompany\Manage CompanySize.Outputs[Derived Column Output].Columns[SecondNumber]"
+                      name="SecondNumber"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_I4)[SUBSTRING](#{Package\Load DimCompany\Inner Join Companies.Outputs[Merge Join Output].Columns[company_size]},[FINDSTRING](#{Package\Load DimCompany\Inner Join Companies.Outputs[Merge Join Output].Columns[company_size]},"-",1) + 1,[LEN](#{Package\Load DimCompany\Inner Join Companies.Outputs[Merge Join Output].Columns[company_size]}) - [FINDSTRING](#{Package\Load DimCompany\Inner Join Companies.Outputs[Merge Join Output].Columns[company_size]},"-",1))</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_I4)SUBSTRING(company_size,FINDSTRING(company_size,"-",1) + 1,LEN(company_size) - FINDSTRING(company_size,"-",1))</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load DimCompany\Manage CompanySize.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Load DimCompany\Manage CompanySize.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load DimCompany\Manage CompanySize.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load DimCompany\Manage CompanySize.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load DimCompany\Manage CompanySize.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load DimCompany\Manage CompanySize.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load DimCompany\Manage CompanySize 2"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Manage CompanySize 2"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load DimCompany\Manage CompanySize 2.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load DimCompany\Manage CompanySize 2.Inputs[Derived Column Input].Columns[company_size]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="company_size"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load DimCompany\Inner Join Companies.Outputs[Merge Join Output].Columns[company_size]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_I4)(#{Package\Load DimCompany\Manage CompanySize.Outputs[Derived Column Output].Columns[FirstNumber]} + #{Package\Load DimCompany\Manage CompanySize.Outputs[Derived Column Output].Columns[SecondNumber]}) / 2</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_I4)(FirstNumber + SecondNumber) / 2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load DimCompany\Manage CompanySize 2.Inputs[Derived Column Input].Columns[FirstNumber]"
+                      cachedDataType="i4"
+                      cachedName="FirstNumber"
+                      lineageId="Package\Load DimCompany\Manage CompanySize.Outputs[Derived Column Output].Columns[FirstNumber]" />
+                    <inputColumn
+                      refId="Package\Load DimCompany\Manage CompanySize 2.Inputs[Derived Column Input].Columns[SecondNumber]"
+                      cachedDataType="i4"
+                      cachedName="SecondNumber"
+                      lineageId="Package\Load DimCompany\Manage CompanySize.Outputs[Derived Column Output].Columns[SecondNumber]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load DimCompany\Manage CompanySize 2.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Load DimCompany\Manage CompanySize 2.Inputs[Derived Column Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load DimCompany\Manage CompanySize 2.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Load DimCompany\Manage CompanySize 2.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load DimCompany\Manage CompanySize 2.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load DimCompany\Manage CompanySize 2.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load DimCompany\Manage CompanySize 2.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load DimCompany\Manage CompanySize 2.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\Load DimCompany\Manage Nulls"
               componentClassID="Microsoft.DerivedColumn"
               contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
@@ -1483,11 +2249,306 @@
               </outputs>
             </component>
             <component
-              refId="Package\Load DimCompany\Select Unique Rows"
+              refId="Package\Load DimCompany\Modify Old SCD2 Columns"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Modify Old SCD2 Columns"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load DimCompany\Modify Old SCD2 Columns.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load DimCompany\Modify Old SCD2 Columns.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Load DimCompany\Modify Old SCD2 Columns.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load DimCompany\Modify Old SCD2 Columns.Outputs[Derived Column Output].Columns[ActiveToOld]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\Load DimCompany\Modify Old SCD2 Columns.Outputs[Derived Column Output].Columns[ActiveToOld]"
+                      name="ActiveToOld"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_WSTR,4)[YEAR]([GETDATE]()) + "-" + [RIGHT]("0" + (DT_WSTR,2)[MONTH]([GETDATE]()),2) + "-" + [RIGHT]("0" + (DT_WSTR,2)[DAY]([GETDATE]()),2)</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_WSTR,4)YEAR(GETDATE()) + "-" + RIGHT("0" + (DT_WSTR,2)MONTH(GETDATE()),2) + "-" + RIGHT("0" + (DT_WSTR,2)DAY(GETDATE()),2)</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load DimCompany\Modify Old SCD2 Columns.Outputs[Derived Column Output].Columns[ActiveOld]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load DimCompany\Modify Old SCD2 Columns.Outputs[Derived Column Output].Columns[ActiveOld]"
+                      name="ActiveOld"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_BOOL)0</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_BOOL)0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load DimCompany\Modify Old SCD2 Columns.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Load DimCompany\Modify Old SCD2 Columns.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load DimCompany\Modify Old SCD2 Columns.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load DimCompany\Modify Old SCD2 Columns.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load DimCompany\Modify Old SCD2 Columns.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load DimCompany\Modify Old SCD2 Columns.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load DimCompany\Saving Old Companies"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Saving Old Companies"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DimCompany]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load DimCompany\Saving Old Companies.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.dwh_project_star]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.dwh_project_star]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load DimCompany\Saving Old Companies.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load DimCompany\Saving Old Companies.Inputs[OLE DB Destination Input].Columns[SymbolOld]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SymbolOld"
+                      externalMetadataColumnId="Package\Load DimCompany\Saving Old Companies.Inputs[OLE DB Destination Input].ExternalColumns[Symbol]"
+                      lineageId="Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Match Output].Columns[SymbolOld]" />
+                    <inputColumn
+                      refId="Package\Load DimCompany\Saving Old Companies.Inputs[OLE DB Destination Input].Columns[CompanyNameOld]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="CompanyNameOld"
+                      externalMetadataColumnId="Package\Load DimCompany\Saving Old Companies.Inputs[OLE DB Destination Input].ExternalColumns[CompanyName]"
+                      lineageId="Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Match Output].Columns[CompanyNameOld]" />
+                    <inputColumn
+                      refId="Package\Load DimCompany\Saving Old Companies.Inputs[OLE DB Destination Input].Columns[CompanySizeOld]"
+                      cachedDataType="i4"
+                      cachedName="CompanySizeOld"
+                      externalMetadataColumnId="Package\Load DimCompany\Saving Old Companies.Inputs[OLE DB Destination Input].ExternalColumns[CompanySize]"
+                      lineageId="Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Match Output].Columns[CompanySizeOld]" />
+                    <inputColumn
+                      refId="Package\Load DimCompany\Saving Old Companies.Inputs[OLE DB Destination Input].Columns[SectorOld]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SectorOld"
+                      externalMetadataColumnId="Package\Load DimCompany\Saving Old Companies.Inputs[OLE DB Destination Input].ExternalColumns[Sector]"
+                      lineageId="Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Match Output].Columns[SectorOld]" />
+                    <inputColumn
+                      refId="Package\Load DimCompany\Saving Old Companies.Inputs[OLE DB Destination Input].Columns[IndustryOld]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="IndustryOld"
+                      externalMetadataColumnId="Package\Load DimCompany\Saving Old Companies.Inputs[OLE DB Destination Input].ExternalColumns[Industry]"
+                      lineageId="Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Match Output].Columns[IndustryOld]" />
+                    <inputColumn
+                      refId="Package\Load DimCompany\Saving Old Companies.Inputs[OLE DB Destination Input].Columns[ActiveOld]"
+                      cachedDataType="bool"
+                      cachedName="ActiveOld"
+                      externalMetadataColumnId="Package\Load DimCompany\Saving Old Companies.Inputs[OLE DB Destination Input].ExternalColumns[Active]"
+                      lineageId="Package\Load DimCompany\Modify Old SCD2 Columns.Outputs[Derived Column Output].Columns[ActiveOld]" />
+                    <inputColumn
+                      refId="Package\Load DimCompany\Saving Old Companies.Inputs[OLE DB Destination Input].Columns[ActiveToOld]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="ActiveToOld"
+                      externalMetadataColumnId="Package\Load DimCompany\Saving Old Companies.Inputs[OLE DB Destination Input].ExternalColumns[ActiveTo]"
+                      lineageId="Package\Load DimCompany\Modify Old SCD2 Columns.Outputs[Derived Column Output].Columns[ActiveToOld]" />
+                    <inputColumn
+                      refId="Package\Load DimCompany\Saving Old Companies.Inputs[OLE DB Destination Input].Columns[ActiveFromOld]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="ActiveFromOld"
+                      externalMetadataColumnId="Package\Load DimCompany\Saving Old Companies.Inputs[OLE DB Destination Input].ExternalColumns[ActiveFrom]"
+                      lineageId="Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Match Output].Columns[ActiveFromOld]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load DimCompany\Saving Old Companies.Inputs[OLE DB Destination Input].ExternalColumns[CompanyKey]"
+                      dataType="i4"
+                      name="CompanyKey" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimCompany\Saving Old Companies.Inputs[OLE DB Destination Input].ExternalColumns[Symbol]"
+                      dataType="wstr"
+                      length="50"
+                      name="Symbol" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimCompany\Saving Old Companies.Inputs[OLE DB Destination Input].ExternalColumns[CompanyName]"
+                      dataType="wstr"
+                      length="50"
+                      name="CompanyName" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimCompany\Saving Old Companies.Inputs[OLE DB Destination Input].ExternalColumns[CompanySize]"
+                      dataType="i4"
+                      name="CompanySize" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimCompany\Saving Old Companies.Inputs[OLE DB Destination Input].ExternalColumns[Sector]"
+                      dataType="wstr"
+                      length="50"
+                      name="Sector" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimCompany\Saving Old Companies.Inputs[OLE DB Destination Input].ExternalColumns[Industry]"
+                      dataType="wstr"
+                      length="50"
+                      name="Industry" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimCompany\Saving Old Companies.Inputs[OLE DB Destination Input].ExternalColumns[ActiveFrom]"
+                      dataType="wstr"
+                      length="10"
+                      name="ActiveFrom" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimCompany\Saving Old Companies.Inputs[OLE DB Destination Input].ExternalColumns[ActiveTo]"
+                      dataType="wstr"
+                      length="10"
+                      name="ActiveTo" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimCompany\Saving Old Companies.Inputs[OLE DB Destination Input].ExternalColumns[Active]"
+                      dataType="bool"
+                      name="Active" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load DimCompany\Saving Old Companies.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Load DimCompany\Saving Old Companies.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load DimCompany\Saving Old Companies.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load DimCompany\Saving Old Companies.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load DimCompany\Saving Old Companies.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load DimCompany\Saving Old Companies.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load DimCompany\Select Modified Companies"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
               description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
-              name="Select Unique Rows"
+              name="Select Modified Companies"
               usesDispositions="true"
               version="6">
               <properties>
@@ -1496,13 +2557,14 @@
                   description="Specifies the SQL statement that generates the lookup table."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[DimCompany]</property>
                 <property
                   dataType="System.String"
                   description="Specifies a SQL statement that uses parameters to generate the lookup table."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DimCompany]) [refTable]
+where [refTable].[CompanyKey] = ? and [refTable].[Symbol] = ? and [refTable].[CompanyName] = ? and [refTable].[CompanySize] = ? and [refTable].[Sector] = ? and [refTable].[Industry] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the type of connection used to access the reference dataset."
@@ -1533,12 +2595,238 @@
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml"></property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="CompanyKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Symbol" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CompanyName" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CompanySize" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Sector" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Industry" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ActiveFrom" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ActiveTo" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Active" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap"></property>
+                  name="ParameterMap">#{Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Match Output].Columns[CompanyKey]};#{Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Match Output].Columns[SymbolOld]};#{Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Match Output].Columns[CompanyNameOld]};#{Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Match Output].Columns[CompanySizeOld]};#{Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Match Output].Columns[SectorOld]};#{Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Match Output].Columns[IndustryOld]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load DimCompany\Select Modified Companies.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.dwh_project_star]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.dwh_project_star]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load DimCompany\Select Modified Companies.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load DimCompany\Select Modified Companies.Inputs[Lookup Input].Columns[CompanyKey]"
+                      cachedDataType="i4"
+                      cachedName="CompanyKey"
+                      lineageId="Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Match Output].Columns[CompanyKey]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">CompanyKey</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load DimCompany\Select Modified Companies.Inputs[Lookup Input].Columns[SymbolOld]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SymbolOld"
+                      lineageId="Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Match Output].Columns[SymbolOld]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Symbol</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load DimCompany\Select Modified Companies.Inputs[Lookup Input].Columns[CompanyNameOld]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="CompanyNameOld"
+                      lineageId="Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Match Output].Columns[CompanyNameOld]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">CompanyName</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load DimCompany\Select Modified Companies.Inputs[Lookup Input].Columns[CompanySizeOld]"
+                      cachedDataType="i4"
+                      cachedName="CompanySizeOld"
+                      lineageId="Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Match Output].Columns[CompanySizeOld]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">CompanySize</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load DimCompany\Select Modified Companies.Inputs[Lookup Input].Columns[SectorOld]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="SectorOld"
+                      lineageId="Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Match Output].Columns[SectorOld]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Sector</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load DimCompany\Select Modified Companies.Inputs[Lookup Input].Columns[IndustryOld]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="IndustryOld"
+                      lineageId="Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Match Output].Columns[IndustryOld]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Industry</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load DimCompany\Select Modified Companies.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Load DimCompany\Select Modified Companies.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load DimCompany\Select Modified Companies.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Load DimCompany\Select Modified Companies.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load DimCompany\Select Modified Companies.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Load DimCompany\Select Modified Companies.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load DimCompany\Select Modified Companies.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load DimCompany\Select Modified Companies.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load DimCompany\Select Modified Companies.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load DimCompany\Select Modified Companies.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load DimCompany\Select Unique Rows"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Select Unique Rows"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[DimCompany]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DimCompany]) [refTable]
+where [refTable].[Symbol] = ? and [refTable].[CompanyName] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="CompanyKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Symbol" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CompanyName" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CompanySize" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Sector" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Industry" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ActiveFrom" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ActiveTo" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Active" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Load DimCompany\Data Conversion.Outputs[Data Conversion Output].Columns[Symbol]};#{Package\Load DimCompany\Data Conversion.Outputs[Data Conversion Output].Columns[CompanyName]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1551,6 +2839,8 @@
               <connections>
                 <connection
                   refId="Package\Load DimCompany\Select Unique Rows.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.dwh_project_star]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.dwh_project_star]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -1558,6 +2848,42 @@
                 <input
                   refId="Package\Load DimCompany\Select Unique Rows.Inputs[Lookup Input]"
                   name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load DimCompany\Select Unique Rows.Inputs[Lookup Input].Columns[Symbol]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Symbol"
+                      lineageId="Package\Load DimCompany\Data Conversion.Outputs[Data Conversion Output].Columns[Symbol]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Symbol</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load DimCompany\Select Unique Rows.Inputs[Lookup Input].Columns[CompanyName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="CompanyName"
+                      lineageId="Package\Load DimCompany\Data Conversion.Outputs[Data Conversion Output].Columns[CompanyName]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">CompanyName</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
@@ -1565,10 +2891,114 @@
                 <output
                   refId="Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="FailComponent"
                   exclusionGroup="1"
                   name="Lookup Match Output"
                   synchronousInputId="Package\Load DimCompany\Select Unique Rows.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Match Output].Columns[CompanyKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Match Output].Columns[CompanyKey]"
+                      name="CompanyKey"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">CompanyKey</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Match Output].Columns[ActiveFromOld]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Copy Column"
+                      length="10"
+                      lineageId="Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Match Output].Columns[ActiveFromOld]"
+                      name="ActiveFromOld"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">ActiveFrom</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Match Output].Columns[SymbolOld]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Copy Column"
+                      length="50"
+                      lineageId="Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Match Output].Columns[SymbolOld]"
+                      name="SymbolOld"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Symbol</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Match Output].Columns[CompanyNameOld]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Copy Column"
+                      length="50"
+                      lineageId="Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Match Output].Columns[CompanyNameOld]"
+                      name="CompanyNameOld"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">CompanyName</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Match Output].Columns[CompanySizeOld]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Match Output].Columns[CompanySizeOld]"
+                      name="CompanySizeOld"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">CompanySize</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Match Output].Columns[SectorOld]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Copy Column"
+                      length="50"
+                      lineageId="Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Match Output].Columns[SectorOld]"
+                      name="SectorOld"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Sector</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Match Output].Columns[IndustryOld]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Copy Column"
+                      length="50"
+                      lineageId="Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Match Output].Columns[IndustryOld]"
+                      name="IndustryOld"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Industry</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
                   <externalMetadataColumns />
                 </output>
                 <output
@@ -2194,37 +3624,62 @@
           <paths>
             <path
               refId="Package\Load DimCompany.Paths[Data Conversion Output]"
-              endId="Package\Load DimCompany\Select Unique Rows.Inputs[Lookup Input]"
+              endId="Package\Load DimCompany\Add SCD2 Columns.Inputs[Derived Column Input]"
               name="Data Conversion Output"
               startId="Package\Load DimCompany\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Load DimCompany.Paths[Derived Column Output7]"
+              endId="Package\Load DimCompany\Manage Nulls.Inputs[Derived Column Input]"
+              name="Derived Column Output"
+              startId="Package\Load DimCompany\Manage CompanySize 2.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Load DimCompany.Paths[Derived Column Output6]"
+              endId="Package\Load DimCompany\Manage CompanySize 2.Inputs[Derived Column Input]"
+              name="Derived Column Output"
+              startId="Package\Load DimCompany\Manage CompanySize.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Load DimCompany.Paths[Derived Column Output5]"
+              endId="Package\Load DimCompany\Manage CompanySize.Inputs[Derived Column Input]"
+              name="Derived Column Output"
+              startId="Package\Load DimCompany\Clear CompanySize.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Load DimCompany.Paths[Derived Column Output4]"
+              endId="Package\Load DimCompany\DimCompany Update.Inputs[OLE DB Command Input]"
+              name="Derived Column Output"
+              startId="Package\Load DimCompany\Modify Old SCD2 Columns.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Load DimCompany.Paths[Derived Column Output3]"
+              endId="Package\Load DimCompany\Select Unique Rows.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\Load DimCompany\Add SCD2 Columns.Outputs[Derived Column Output]" />
             <path
               refId="Package\Load DimCompany.Paths[Derived Column Output]"
               endId="Package\Load DimCompany\Sort By Company Name 2.Inputs[Sort Input]"
               name="Derived Column Output"
               startId="Package\Load DimCompany\Extrant Company Name 2.Outputs[Derived Column Output]" />
             <path
-              refId="Package\Load DimCompany.Paths[Derived Column Output1]"
-              endId="Package\Load DimCompany\Sort By Company Name.Inputs[Sort Input]"
-              name="Derived Column Output"
-              startId="Package\Load DimCompany\Extrant Company Name.Outputs[Derived Column Output]" />
-            <path
               refId="Package\Load DimCompany.Paths[Derived Column Output2]"
               endId="Package\Load DimCompany\Data Conversion.Inputs[Data Conversion Input]"
               name="Derived Column Output"
               startId="Package\Load DimCompany\Manage Nulls.Outputs[Derived Column Output]" />
             <path
-              refId="Package\Load DimCompany.Paths[Flat File Source Output]"
-              endId="Package\Load DimCompany\Extrant Company Name.Inputs[Derived Column Input]"
-              name="Flat File Source Output"
-              startId="Package\Load DimCompany\SP500_companies.Outputs[Flat File Source Output]" />
+              refId="Package\Load DimCompany.Paths[Derived Column Output1]"
+              endId="Package\Load DimCompany\Sort By Company Name.Inputs[Sort Input]"
+              name="Derived Column Output"
+              startId="Package\Load DimCompany\Extrant Company Name.Outputs[Derived Column Output]" />
             <path
               refId="Package\Load DimCompany.Paths[Flat File Source Output1]"
               endId="Package\Load DimCompany\Extrant Company Name 2.Inputs[Derived Column Input]"
               name="Flat File Source Output"
               startId="Package\Load DimCompany\JustIT.Outputs[Flat File Source Output]" />
             <path
+              refId="Package\Load DimCompany.Paths[Flat File Source Output]"
+              endId="Package\Load DimCompany\Extrant Company Name.Inputs[Derived Column Input]"
+              name="Flat File Source Output"
+              startId="Package\Load DimCompany\SP500_companies.Outputs[Flat File Source Output]" />
+            <path
               refId="Package\Load DimCompany.Paths[Lookup Match Output]"
-              endId="Package\Load DimCompany\DimCompany Update.Inputs[OLE DB Command Input]"
+              endId="Package\Load DimCompany\Select Modified Companies.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Match Output]" />
             <path
@@ -2233,10 +3688,20 @@
               name="Lookup No Match Output"
               startId="Package\Load DimCompany\Select Unique Rows.Outputs[Lookup No Match Output]" />
             <path
+              refId="Package\Load DimCompany.Paths[Lookup No Match Output1]"
+              endId="Package\Load DimCompany\Modify Old SCD2 Columns.Inputs[Derived Column Input]"
+              name="Lookup No Match Output"
+              startId="Package\Load DimCompany\Select Modified Companies.Outputs[Lookup No Match Output]" />
+            <path
               refId="Package\Load DimCompany.Paths[Merge Join Output]"
-              endId="Package\Load DimCompany\Manage Nulls.Inputs[Derived Column Input]"
+              endId="Package\Load DimCompany\Clear CompanySize.Inputs[Derived Column Input]"
               name="Merge Join Output"
               startId="Package\Load DimCompany\Inner Join Companies.Outputs[Merge Join Output]" />
+            <path
+              refId="Package\Load DimCompany.Paths[OLE DB Command Output]"
+              endId="Package\Load DimCompany\Saving Old Companies.Inputs[OLE DB Destination Input]"
+              name="OLE DB Command Output"
+              startId="Package\Load DimCompany\DimCompany Update.Outputs[OLE DB Command Output]" />
             <path
               refId="Package\Load DimCompany.Paths[Sort Output]"
               endId="Package\Load DimCompany\Inner Join Companies.Inputs[Merge Join Left Input]"
@@ -3874,103 +5339,55 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
     design-time-name="Package\Load DimCompany">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="191,42"
-          Id="Package\Load DimCompany\Sort By Company Name"
-          TopLeft="184,317" />
+          Size="178,42"
+          Id="Package\Load DimCompany\DimCompany Update"
+          TopLeft="461.444444444445,1125.88888888889" />
         <NodeLayout
-          Size="200,42"
-          Id="Package\Load DimCompany\Extrant Company Name 2"
-          TopLeft="472.999992698431,215.384612175134" />
+          Size="172,42"
+          Id="Package\Load DimCompany\Select Unique Rows"
+          TopLeft="310,905.777777777778" />
         <NodeLayout
-          Size="200,42"
-          Id="Package\Load DimCompany\Sort By Company Name 2"
-          TopLeft="469,316" />
+          Size="181,42"
+          Id="Package\Load DimCompany\Inner Join Companies"
+          TopLeft="314.333333333333,409" />
+        <NodeLayout
+          Size="164,42"
+          Id="Package\Load DimCompany\SP500_companies"
+          TopLeft="201.999996051192,112.999998226762" />
+        <NodeLayout
+          Size="142,42"
+          Id="Package\Load DimCompany\Manage Nulls"
+          TopLeft="327.111111111111,691.222222222222" />
         <NodeLayout
           Size="107,42"
           Id="Package\Load DimCompany\JustIT"
           TopLeft="516.692300007894,116.769229029234" />
         <NodeLayout
-          Size="181,42"
-          Id="Package\Load DimCompany\Inner Join Companies"
-          TopLeft="321,409" />
+          Size="200,42"
+          Id="Package\Load DimCompany\Extrant Company Name 2"
+          TopLeft="472.999992698431,215.384612175134" />
+        <NodeLayout
+          Size="191,42"
+          Id="Package\Load DimCompany\Sort By Company Name"
+          TopLeft="184,317" />
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Load DimCompany\DimCompany Insert"
+          TopLeft="127,1003.77777777778" />
         <NodeLayout
           Size="191,42"
           Id="Package\Load DimCompany\Extrant Company Name"
           TopLeft="189.307687951968,211.999996721745" />
         <NodeLayout
-          Size="164,42"
-          Id="Package\Load DimCompany\SP500_companies"
-          TopLeft="201.999996051192,112.999998226762" />
-        <EdgeLayout
-          Id="Package\Load DimCompany.Paths[Sort Output1]"
-          TopLeft="569,358">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-128.666666666667,51"
-              Start="0,0"
-              End="-128.666666666667,43.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26.3318729463308" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,26.3318729463308"
-                    Point2="0,30.3318729463308"
-                    Point3="-4,30.3318729463308" />
-                  <mssgle:LineSegment
-                    End="-124.666666666667,30.3318729463308" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-124.666666666667,30.3318729463308"
-                    Point2="-128.666666666667,30.3318729463308"
-                    Point3="-128.666666666667,34.3318729463308" />
-                  <mssgle:LineSegment
-                    End="-128.666666666667,43.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load DimCompany.Paths[Sort Output]"
-          TopLeft="279.5,359">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="103.166666666667,50"
-              Start="0,0"
-              End="103.166666666667,42.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,25.73713033954" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,25.73713033954"
-                    Point2="0,29.73713033954"
-                    Point3="4,29.73713033954" />
-                  <mssgle:LineSegment
-                    End="99.1666666666667,29.73713033954" />
-                  <mssgle:CubicBezierSegment
-                    Point1="99.1666666666667,29.73713033954"
-                    Point2="103.166666666667,29.73713033954"
-                    Point3="103.166666666667,33.73713033954" />
-                  <mssgle:LineSegment
-                    End="103.166666666667,42.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="200,42"
+          Id="Package\Load DimCompany\Sort By Company Name 2"
+          TopLeft="469,316" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Load DimCompany\Data Conversion"
+          TopLeft="321.555555555556,762.777777777778" />
         <EdgeLayout
           Id="Package\Load DimCompany.Paths[Flat File Source Output1]"
           TopLeft="571.596146353163,158.769229029234">
@@ -4007,6 +5424,28 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,49.499998494983" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load DimCompany.Paths[Derived Column Output2]"
+          TopLeft="398.833333333333,733.222222222222">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,29.5555555555554"
+              Start="0,0"
+              End="0,22.0555555555554">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.0555555555554" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4059,13 +5498,74 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <AnnotationLayout
-          Text="Do zrobienia: kolumny active żeby wymiar był SC2"
-          ParentId="Package\Load DimCompany"
-          FontInfo="{assembly:Null}"
-          Size="156,72"
-          Id="94d1ed2c-e902-4c84-af6c-ecdd6b4b46df"
-          TopLeft="675.30768720691,99.923071386722" />
+        <EdgeLayout
+          Id="Package\Load DimCompany.Paths[Sort Output1]"
+          TopLeft="569,358">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-135.333333333333,51"
+              Start="0,0"
+              End="-135.333333333333,43.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.3318729463308" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.3318729463308"
+                    Point2="0,30.3318729463308"
+                    Point3="-4,30.3318729463308" />
+                  <mssgle:LineSegment
+                    End="-131.333333333333,30.3318729463308" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-131.333333333333,30.3318729463308"
+                    Point2="-135.333333333333,30.3318729463308"
+                    Point3="-135.333333333333,34.3318729463308" />
+                  <mssgle:LineSegment
+                    End="-135.333333333333,43.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load DimCompany.Paths[Sort Output]"
+          TopLeft="279.5,359">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="96.5,50"
+              Start="0,0"
+              End="96.5,42.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.73713033954" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.73713033954"
+                    Point2="0,29.73713033954"
+                    Point3="4,29.73713033954" />
+                  <mssgle:LineSegment
+                    End="92.5,29.73713033954" />
+                  <mssgle:CubicBezierSegment
+                    Point1="92.5,29.73713033954"
+                    Point2="96.5,29.73713033954"
+                    Point3="96.5,33.73713033954" />
+                  <mssgle:LineSegment
+                    End="96.5,42.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <AnnotationLayout
           Text="Edytujemy nazwy firm z dwóch źródeł, żeby pokrywały się przed mergem"
           ParentId="Package\Load DimCompany"
@@ -4074,225 +5574,377 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
           Id="68940ec9-1d44-4e39-ae2d-d0b8712ce0e1"
           TopLeft="734.846143805064,186.76922878623" />
         <AnnotationLayout
-          Text="trzeba zachować kolumny,&#xA;po których będziemy łączyć fakty z wymiarami,&#xA;dla ofert oryginalne company_name,&#xA;dla giełdy symbol&#xD;&#xA;TODO: trzeba jeszcze dodać te dwie kolumny do hurtowni,&#xD;&#xA;CompanyName już mamy, czyli company_name_new będzie tylko &#xD;&#xA;na potrzeby merga, do dwh ładujemy zwykłe company_name"
+          Text="trzeba zachować kolumny,&#xA;po których będziemy łączyć fakty z wymiarami,&#xA;dla ofert oryginalne company_name,&#xA;dla giełdy symbol&#xA;TODO: trzeba jeszcze dodać te dwie kolumny do hurtowni,&#xA;CompanyName już mamy, czyli company_name_new będzie tylko &#xA;na potrzeby merga, do dwh ładujemy zwykłe company_name"
           ParentId="Package\Load DimCompany"
           FontInfo="{assembly:Null}"
           Size="378,136"
           Id="00208c28-b080-45db-91ad-0a45ccbc4a15"
-          TopLeft="637,366" />
+          TopLeft="894.777777777778,459.333333333333" />
         <AnnotationLayout
-          Text="TODO: obsłużyć nulle i kolumnę company_size"
+          Text="TODO: obsłużyć nulle"
           ParentId="Package\Load DimCompany"
           FontInfo="{assembly:Null}"
-          Size="274,60"
+          Size="142,40"
           Id="ff4800f1-50c4-41e8-9b5a-81d0e7f6e223"
-          TopLeft="529,492" />
+          TopLeft="474.555555555556,685.333333333333" />
         <AnnotationLayout
           Text="od razu przy sortowaniu usuwam duplikaty"
           ParentId="Package\Load DimCompany"
           FontInfo="{assembly:Null}"
-          Size="256,60"
+          Size="256,40"
           Id="870db7b5-e8aa-43c5-96bf-1d19d2e6564a"
           TopLeft="673,306" />
-        <NodeLayout
-          Size="142,42"
-          Id="Package\Load DimCompany\Manage Nulls"
-          TopLeft="336,489" />
-        <EdgeLayout
-          Id="Package\Load DimCompany.Paths[Merge Join Output]"
-          TopLeft="409.25,451">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,38"
-              Start="0,0"
-              End="0,30.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,30.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="156,42"
-          Id="Package\Load DimCompany\Data Conversion"
-          TopLeft="326,565" />
-        <EdgeLayout
-          Id="Package\Load DimCompany.Paths[Derived Column Output2]"
-          TopLeft="405.5,531">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,34"
-              Start="0,0"
-              End="0,26.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <AnnotationLayout
-          Text="TODO: zmienić typy danych"
-          ParentId="Package\Load DimCompany"
-          FontInfo="{assembly:Null}"
-          Size="175,60"
-          Id="79f2f607-ace6-4d00-9412-c9c041f63c72"
-          TopLeft="536,574" />
-        <NodeLayout
-          Size="172,42"
-          Id="Package\Load DimCompany\Select Unique Rows"
-          TopLeft="314,649" />
-        <EdgeLayout
-          Id="Package\Load DimCompany.Paths[Data Conversion Output]"
-          TopLeft="402,607">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,42"
-              Start="0,0"
-              End="0,34.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,34.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <AnnotationLayout
-          Text="TODO: wybrać tylko nowe rekordy i je dodać,&#xD;&#xA;a na starych zrobić update (w sensie dodać nowe wiersze, ustawić na aktywne,&#xD;&#xA;a stare na nieaktywne, trzeba chyba jeszcze jakiś kafelek tu dołożyć, żeby to zrobić),&#xD;&#xA;wybór można robić lookupem (trochę sporo to trwa,&#xD;&#xA;ale jest tylko jeden blok), ale można też chyba mergem &#xD;&#xA;i później szukać jakichś nulli dla niezmergowanych"
+          Text="wybrać tylko nowe rekordy i je dodać,&#xA;a na starych zrobić update (w sensie dodać nowe wiersze, ustawić na aktywne,&#xA;a stare na nieaktywne, trzeba chyba jeszcze jakiś kafelek tu dołożyć, żeby to zrobić),&#xA;wybór można robić lookupem (trochę sporo to trwa,&#xA;ale jest tylko jeden blok), ale można też chyba mergem &#xA;i później szukać jakichś nulli dla niezmergowanych"
           ParentId="Package\Load DimCompany"
           FontInfo="{assembly:Null}"
           Size="469,120"
           Id="833cc555-dc98-4fad-aaaf-c6cd2621d3b2"
-          TopLeft="641,648" />
+          TopLeft="883.222222222222,604.666666666667" />
         <NodeLayout
-          Size="173,42"
-          Id="Package\Load DimCompany\DimCompany Insert"
-          TopLeft="160,741" />
+          Size="170,42"
+          Id="Package\Load DimCompany\Add SCD2 Columns"
+          TopLeft="312.555555555556,831.555555555556" />
+        <NodeLayout
+          Size="202,42"
+          Id="Package\Load DimCompany\Modify Old SCD2 Columns"
+          TopLeft="450.444444444445,1043.88888888889" />
         <EdgeLayout
           Id="Package\Load DimCompany.Paths[Lookup No Match Output]"
-          TopLeft="400,691">
+          TopLeft="396,947.777777777778">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-153.5,50"
+              EndConnector="-182.5,56"
               Start="0,0"
-              End="-153.5,42.5">
+              End="-182.5,48.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,21" />
+                    End="0,24" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,21"
-                    Point2="0,25"
-                    Point3="-4,25" />
+                    Point1="0,24"
+                    Point2="0,28"
+                    Point3="-4,28" />
                   <mssgle:LineSegment
-                    End="-149.5,25" />
+                    End="-178.5,28" />
                   <mssgle:CubicBezierSegment
-                    Point1="-149.5,25"
-                    Point2="-153.5,25"
-                    Point3="-153.5,29" />
+                    Point1="-178.5,28"
+                    Point2="-182.5,28"
+                    Point3="-182.5,32" />
                   <mssgle:LineSegment
-                    End="-153.5,42.5" />
+                    End="-182.5,48.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-132.55638671875,30,111.6127734375,11.609375"
+              BoundingBox="-147.05638671875,33,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <AnnotationLayout
-          Text="TODO: załadować dane"
-          ParentId="Package\Load DimCompany"
-          FontInfo="{assembly:Null}"
-          Size="152,60"
-          Id="ba1e7ce9-cae2-478b-bf3e-7c0541274d58"
-          TopLeft="329,778" />
-        <NodeLayout
-          Size="178,42"
-          Id="Package\Load DimCompany\DimCompany Update"
-          TopLeft="463,746" />
         <EdgeLayout
-          Id="Package\Load DimCompany.Paths[Lookup Match Output]"
-          TopLeft="427.333333333333,691">
+          Id="Package\Load DimCompany.Paths[Data Conversion Output]"
+          TopLeft="398.555555555556,804.777777777778">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="124.666666666667,55"
+              EndConnector="0,26.7777777777777"
               Start="0,0"
-              End="124.666666666667,47.5">
+              End="0,19.2777777777777">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,18.3041474654378" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,18.3041474654378"
-                    Point2="0,22.3041474654378"
-                    Point3="4,22.3041474654378" />
+                    End="0,19.2777777777777" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load DimCompany.Paths[Derived Column Output3]"
+          TopLeft="396.777777777778,873.555555555556">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,32.2222222222223"
+              Start="0,0"
+              End="0,24.7222222222223">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="120.666666666667,22.3041474654378" />
-                  <mssgle:CubicBezierSegment
-                    Point1="120.666666666667,22.3041474654378"
-                    Point2="124.666666666667,22.3041474654378"
-                    Point3="124.666666666667,26.3041474654378" />
+                    End="0,24.7222222222223" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="184,42"
+          Id="Package\Load DimCompany\Saving Old Companies"
+          TopLeft="462.444444444445,1196.88888888889" />
+        <EdgeLayout
+          Id="Package\Load DimCompany.Paths[OLE DB Command Output]"
+          TopLeft="552.444444444445,1167.88888888889">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,29"
+              Start="0,0"
+              End="0,21.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="124.666666666667,47.5" />
+                    End="0,21.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load DimCompany.Paths[Derived Column Output4]"
+          TopLeft="550.944444444445,1085.88888888889">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40"
+              Start="0,0"
+              End="0,32.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="182,42"
+          Id="Package\Load DimCompany\Manage CompanySize"
+          TopLeft="310.111111111111,554.111111111111" />
+        <NodeLayout
+          Size="169,42"
+          Id="Package\Load DimCompany\Clear CompanySize"
+          TopLeft="319,477.333333333333" />
+        <EdgeLayout
+          Id="Package\Load DimCompany.Paths[Merge Join Output]"
+          TopLeft="404.166666666667,451">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,26.3333333333333"
+              Start="0,0"
+              End="0,18.8333333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.8333333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load DimCompany.Paths[Derived Column Output5]"
+          TopLeft="402.305555555556,519.333333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34.7777777777778"
+              Start="0,0"
+              End="0,27.2777777777778">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.2777777777778" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="191,42"
+          Id="Package\Load DimCompany\Manage CompanySize 2"
+          TopLeft="303.777777777778,618.888888888889" />
+        <EdgeLayout
+          Id="Package\Load DimCompany.Paths[Derived Column Output6]"
+          TopLeft="400.194444444444,596.111111111111">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,22.7777777777779"
+              Start="0,0"
+              End="0,15.2777777777779">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.2777777777779" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load DimCompany.Paths[Derived Column Output7]"
+          TopLeft="398.694444444444,660.888888888889">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,30.3333333333334"
+              Start="0,0"
+              End="0,22.8333333333334">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.8333333333334" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="205,42"
+          Id="Package\Load DimCompany\Select Modified Companies"
+          TopLeft="444.444444444444,975.555555555556" />
+        <EdgeLayout
+          Id="Package\Load DimCompany.Paths[Lookup Match Output]"
+          TopLeft="423.333333333333,947.777777777778">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="123.611111111111,27.7777777777778"
+              Start="0,0"
+              End="123.611111111111,20.2777777777778">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,7.26472094214032" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,7.26472094214032"
+                    Point2="0,11.2647209421403"
+                    Point3="4,11.2647209421403" />
+                  <mssgle:LineSegment
+                    End="119.611111111111,11.2647209421403" />
+                  <mssgle:CubicBezierSegment
+                    Point1="119.611111111111,11.2647209421403"
+                    Point2="123.611111111111,11.2647209421403"
+                    Point3="123.611111111111,15.2647209421403" />
+                  <mssgle:LineSegment
+                    End="123.611111111111,20.2777777777778" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="14.1419466145833,27.3041474654378,96.3827734375,11.609375"
+              BoundingBox="13.6141688368055,16.2647209421403,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load DimCompany.Paths[Lookup No Match Output1]"
+          TopLeft="549.194444444445,1017.55555555556">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,26.3333333333333"
+              Start="0,0"
+              End="0,18.8333333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.8333333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.80638671875,3.61197916666663,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load DimCompany\Select Unique Rows">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimCompany]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load DimCompany\DimCompany Insert">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Load DimLocation">
     <LayoutInfo>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="160,42"
-          Id="Package\Load DimLocation\Select New Rows"
-          TopLeft="80.714287514589,408.294119502434" />
-        <NodeLayout
-          Size="168,42"
-          Id="Package\Load DimLocation\DimLocation Insert"
-          TopLeft="77.857144012743,509.82353256483" />
-        <NodeLayout
-          Size="172,42"
-          Id="Package\Load DimLocation\Select Unique Rows"
-          TopLeft="80,314" />
         <NodeLayout
           Size="108,42"
           Id="Package\Load DimLocation\JustIT"
@@ -4302,13 +5954,51 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
           Id="Package\Load DimLocation\Manage Nulls"
           TopLeft="88,90" />
         <NodeLayout
-          Size="156,42"
-          Id="Package\Load DimLocation\Data Conversion"
-          TopLeft="82,240" />
+          Size="168,42"
+          Id="Package\Load DimLocation\DimLocation Insert"
+          TopLeft="77.857144012743,509.82353256483" />
         <NodeLayout
           Size="217,42"
           Id="Package\Load DimLocation\Prepare Floats To Conversion"
           TopLeft="51,162" />
+        <NodeLayout
+          Size="160,42"
+          Id="Package\Load DimLocation\Select New Rows"
+          TopLeft="80.714287514589,408.294119502434" />
+        <NodeLayout
+          Size="174,42"
+          Id="Package\Load DimLocation\DimLocation Update"
+          TopLeft="319,509" />
+        <NodeLayout
+          Size="172,42"
+          Id="Package\Load DimLocation\Select Unique Rows"
+          TopLeft="80,314" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Load DimLocation\Data Conversion"
+          TopLeft="82,240" />
+        <EdgeLayout
+          Id="Package\Load DimLocation.Paths[Data Conversion Output]"
+          TopLeft="163,282">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,32"
+              Start="0,0"
+              End="0,24.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Load DimLocation.Paths[Sort Output]"
           TopLeft="163.357143757294,356">
@@ -4352,6 +6042,42 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
               BoundingBox="-55.80638671875,20.210019031198,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load DimLocation.Paths[Lookup Match Output]"
+          TopLeft="186.047620847922,450.294119502434">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="219.952379152078,58.705880497566"
+              Start="0,0"
+              End="219.952379152078,51.205880497566">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.8311000039624" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.8311000039624"
+                    Point2="0,23.8311000039624"
+                    Point3="4,23.8311000039624" />
+                  <mssgle:LineSegment
+                    End="215.952379152078,23.8311000039624" />
+                  <mssgle:CubicBezierSegment
+                    Point1="215.952379152078,23.8311000039624"
+                    Point2="219.952379152078,23.8311000039624"
+                    Point3="219.952379152078,27.8311000039624" />
+                  <mssgle:LineSegment
+                    End="219.952379152078,51.205880497566" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="61.7848028572888,28.8311000039624,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -4413,28 +6139,6 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,28.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load DimLocation.Paths[Data Conversion Output]"
-          TopLeft="163,282">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,32"
-              Start="0,0"
-              End="0,24.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4527,72 +6231,9 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
           Size="266,56"
           Id="98495b2b-c77a-4fae-8f6d-cf0af8d12dea"
           TopLeft="272,71" />
-        <NodeLayout
-          Size="174,42"
-          Id="Package\Load DimLocation\DimLocation Update"
-          TopLeft="319,509" />
-        <EdgeLayout
-          Id="Package\Load DimLocation.Paths[Lookup Match Output]"
-          TopLeft="186.047620847922,450.294119502434">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="219.952379152078,58.705880497566"
-              Start="0,0"
-              End="219.952379152078,51.205880497566">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,19.8311000039624" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,19.8311000039624"
-                    Point2="0,23.8311000039624"
-                    Point3="4,23.8311000039624" />
-                  <mssgle:LineSegment
-                    End="215.952379152078,23.8311000039624" />
-                  <mssgle:CubicBezierSegment
-                    Point1="215.952379152078,23.8311000039624"
-                    Point2="219.952379152078,23.8311000039624"
-                    Point3="219.952379152078,27.8311000039624" />
-                  <mssgle:LineSegment
-                    End="219.952379152078,51.205880497566" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="61.7848028572888,28.8311000039624,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load DimLocation\Select New Rows">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Load DimLocation\DimLocation Insert">
     <Properties>
@@ -4607,17 +6248,30 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Load DimCompany\Select Unique Rows">
+    design-time-name="Package\Load DimLocation\Select New Rows">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Load DimCompany\DimCompany Insert">
+    design-time-name="Package\Load DimCompany\Saving Old Companies">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -4626,6 +6280,29 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load DimCompany\Select Modified Companies">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimCompany]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
