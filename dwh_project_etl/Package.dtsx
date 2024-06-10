@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="384"
-  DTS:VersionGUID="{7512FD48-EC6E-4FB6-AC44-D90DC8DD9742}">
+  DTS:VersionBuild="402"
+  DTS:VersionGUID="{C30F6651-53F6-42F4-BBC2-BF9C57B0AF71}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -7580,7 +7580,7 @@ where [refTable].[CompanyName] = ?</property>
                   expressionType="Notify"
                   name="SqlCommandParam"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[FactItOffers]) [refTable]
-where [refTable].[CompanyKey] = ? and [refTable].[DateKey] = ?</property>
+where [refTable].[Title] = ? and [refTable].[WorkplaceType] = ? and [refTable].[ExperienceLevel] = ? and [refTable].[Type] = ? and [refTable].[SalaryFrom] = ? and [refTable].[SalaryTo] = ? and [refTable].[Currency] = ? and [refTable].[RemoteInterview] = ? and [refTable].[Remote] = ? and [refTable].[CompanyKey] = ? and [refTable].[DateKey] = ? and [refTable].[LocationKey] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the type of connection used to access the reference dataset."
@@ -7611,12 +7611,12 @@ where [refTable].[CompanyKey] = ? and [refTable].[DateKey] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="OfferKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Title" dataType="DT_WSTR" length="100" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DateKey" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="MarkerIcon" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="WorkplaceType" dataType="DT_WSTR" length="20" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ExperienceLevel" dataType="DT_WSTR" length="20" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="RemoteInterview" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Remote" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Type" dataType="DT_WSTR" length="20" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SalaryFrom" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SalaryTo" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Currency" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="LocationKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CompanyKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="OfferKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Title" dataType="DT_WSTR" length="100" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DateKey" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="WorkplaceType" dataType="DT_WSTR" length="20" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ExperienceLevel" dataType="DT_WSTR" length="20" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="RemoteInterview" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Remote" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Type" dataType="DT_WSTR" length="20" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SalaryFrom" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SalaryTo" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Currency" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="LocationKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CompanyKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Load FactItOffers\Filter By Companies.Outputs[Lookup Match Output].Columns[CompanyKey]};#{Package\Load FactItOffers\Convert Date.Outputs[Data Conversion Output].Columns[DateKey]};</property>
+                  name="ParameterMap">#{Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[Title]};#{Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[WorkplaceType]};#{Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[ExperienceLevel]};#{Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[Type]};#{Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[SalaryFrom]};#{Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[SalaryTo]};#{Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[Currency]};#{Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[RemoteInterview]};#{Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[Remote]};#{Package\Load FactItOffers\Filter By Companies.Outputs[Lookup Match Output].Columns[CompanyKey]};#{Package\Load FactItOffers\Convert Date.Outputs[Data Conversion Output].Columns[DateKey]};#{Package\Load FactItOffers\Connect To Location.Outputs[Lookup Match Output].Columns[LocationKey]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -7640,6 +7640,56 @@ where [refTable].[CompanyKey] = ? and [refTable].[DateKey] = ?</property>
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
+                      refId="Package\Load FactItOffers\Retain New Data.Inputs[Lookup Input].Columns[Title]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Title"
+                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[Title]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Title</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load FactItOffers\Retain New Data.Inputs[Lookup Input].Columns[WorkplaceType]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="WorkplaceType"
+                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[WorkplaceType]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">WorkplaceType</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load FactItOffers\Retain New Data.Inputs[Lookup Input].Columns[CompanyKey]"
+                      cachedDataType="i4"
+                      cachedName="CompanyKey"
+                      lineageId="Package\Load FactItOffers\Filter By Companies.Outputs[Lookup Match Output].Columns[CompanyKey]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">CompanyKey</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
                       refId="Package\Load FactItOffers\Retain New Data.Inputs[Lookup Input].Columns[DateKey]"
                       cachedDataType="wstr"
                       cachedLength="10"
@@ -7657,15 +7707,130 @@ where [refTable].[CompanyKey] = ? and [refTable].[DateKey] = ?</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Load FactItOffers\Retain New Data.Inputs[Lookup Input].Columns[CompanyKey]"
-                      cachedDataType="i4"
-                      cachedName="CompanyKey"
-                      lineageId="Package\Load FactItOffers\Filter By Companies.Outputs[Lookup Match Output].Columns[CompanyKey]">
+                      refId="Package\Load FactItOffers\Retain New Data.Inputs[Lookup Input].Columns[Currency]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="Currency"
+                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[Currency]">
                       <properties>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">CompanyKey</property>
+                          name="JoinToReferenceColumn">Currency</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load FactItOffers\Retain New Data.Inputs[Lookup Input].Columns[SalaryTo]"
+                      cachedDataType="i4"
+                      cachedName="SalaryTo"
+                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[SalaryTo]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">SalaryTo</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load FactItOffers\Retain New Data.Inputs[Lookup Input].Columns[SalaryFrom]"
+                      cachedDataType="i4"
+                      cachedName="SalaryFrom"
+                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[SalaryFrom]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">SalaryFrom</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load FactItOffers\Retain New Data.Inputs[Lookup Input].Columns[Type]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="Type"
+                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[Type]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Type</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load FactItOffers\Retain New Data.Inputs[Lookup Input].Columns[Remote]"
+                      cachedDataType="bool"
+                      cachedName="Remote"
+                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[Remote]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Remote</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load FactItOffers\Retain New Data.Inputs[Lookup Input].Columns[RemoteInterview]"
+                      cachedDataType="bool"
+                      cachedName="RemoteInterview"
+                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[RemoteInterview]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">RemoteInterview</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load FactItOffers\Retain New Data.Inputs[Lookup Input].Columns[ExperienceLevel]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="ExperienceLevel"
+                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[ExperienceLevel]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">ExperienceLevel</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load FactItOffers\Retain New Data.Inputs[Lookup Input].Columns[LocationKey]"
+                      cachedDataType="i4"
+                      cachedName="LocationKey"
+                      lineageId="Package\Load FactItOffers\Connect To Location.Outputs[Lookup Match Output].Columns[LocationKey]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">LocationKey</property>
                         <property
                           dataType="System.Null"
                           description="Specifies the column in the reference table from which a column is copied."
@@ -7761,17 +7926,17 @@ where [refTable].[CompanyKey] = ? and [refTable].[DateKey] = ?</property>
               startId="Package\Load FactItOffers\Filter By Companies.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Load FactItOffers.Paths[Lookup Match Output1]"
-              endId="Package\Load FactItOffers\Retain New Data.Inputs[Lookup Input]"
+              endId="Package\Load FactItOffers\Convert Location Data.Inputs[Data Conversion Input]"
               name="Lookup Match Output"
               startId="Package\Load FactItOffers\Connect To Date.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Load FactItOffers.Paths[Lookup Match Output2]"
-              endId="Package\Load FactItOffers\FactItOffers.Inputs[OLE DB Destination Input]"
+              endId="Package\Load FactItOffers\Retain New Data.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\Load FactItOffers\Connect To Location.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Load FactItOffers.Paths[Lookup No Match Output]"
-              endId="Package\Load FactItOffers\Convert Location Data.Inputs[Data Conversion Input]"
+              endId="Package\Load FactItOffers\FactItOffers.Inputs[OLE DB Destination Input]"
               name="Lookup No Match Output"
               startId="Package\Load FactItOffers\Retain New Data.Outputs[Lookup No Match Output]" />
           </paths>
@@ -10668,73 +10833,11 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
         <NodeLayout
           Size="158,42"
           Id="Package\Load FactItOffers\Retain New Data"
-          TopLeft="364,683" />
-        <EdgeLayout
-          Id="Package\Load FactItOffers.Paths[Lookup Match Output1]"
-          TopLeft="441.5,643">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,40"
-              Start="0,0"
-              End="0,32.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,32.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,10.4453125,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <AnnotationLayout
-          Text="sprawdzam nowe dane po nazwie firmy i dacie"
-          ParentId="Package\Load FactItOffers"
-          FontInfo="{assembly:Null}"
-          Size="275,60"
-          Id="8e439157-6fec-46b2-b911-f022bd88adab"
-          TopLeft="551,679" />
+          TopLeft="354,846" />
         <NodeLayout
-          Size="184,42"
+          Size="191,42"
           Id="Package\Load FactItOffers\Convert Location Data"
-          TopLeft="346,761" />
-        <EdgeLayout
-          Id="Package\Load FactItOffers.Paths[Lookup No Match Output]"
-          TopLeft="440.5,725">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,36"
-              Start="0,0"
-              End="0,28.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,28.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,8.4453125,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <AnnotationLayout
-          Text="dołączam klucz lokacji po ulicy, mieście i kodzie kraju"
-          ParentId="Package\Load FactItOffers"
-          FontInfo="{assembly:Null}"
-          Size="310,60"
-          Id="86669f82-bd33-4924-a0bd-5c2ffe7e03f6"
-          TopLeft="570,843" />
+          TopLeft="342,684" />
         <AnnotationLayout
           Text="usunąłem jeszcze MarkerIcon z dwh"
           ParentId="Package\Load FactItOffers"
@@ -10745,21 +10848,21 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
         <NodeLayout
           Size="175,42"
           Id="Package\Load FactItOffers\Connect To Location"
-          TopLeft="348,828" />
+          TopLeft="344,753" />
         <EdgeLayout
           Id="Package\Load FactItOffers.Paths[Data Conversion Output2]"
-          TopLeft="436.75,803">
+          TopLeft="434.5,726">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,25"
+              EndConnector="0,27"
               Start="0,0"
-              End="0,17.5">
+              End="0,19.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17.5" />
+                    End="0,19.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10768,31 +10871,79 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="135,42"
-          Id="Package\Load FactItOffers\FactItOffers"
-          TopLeft="367,909" />
         <EdgeLayout
-          Id="Package\Load FactItOffers.Paths[Lookup Match Output2]"
-          TopLeft="435,870">
+          Id="Package\Load FactItOffers.Paths[Lookup Match Output1]"
+          TopLeft="438.75,643">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,39"
+              EndConnector="0,41"
               Start="0,0"
-              End="0,31.5">
+              End="0,33.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.5" />
+                    End="0,33.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-57.0600390625,7.75,114.120078125,16"
+              BoundingBox="-48.19138671875,10.9453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load FactItOffers.Paths[Lookup Match Output2]"
+          TopLeft="432.25,795">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51"
+              Start="0,0"
+              End="0,43.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,15.9453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="135,42"
+          Id="Package\Load FactItOffers\FactItOffers"
+          TopLeft="369,946" />
+        <EdgeLayout
+          Id="Package\Load FactItOffers.Paths[Lookup No Match Output]"
+          TopLeft="434.75,888">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58"
+              Start="0,0"
+              End="0,50.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.80638671875,19.4453125,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -10880,7 +11031,7 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,7.9453125,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,7.4453125,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -10904,7 +11055,7 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-44.19138671875,25,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,10.9453125,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>

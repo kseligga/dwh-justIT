@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="383"
-  DTS:VersionGUID="{7EE61390-4EAF-469B-BED6-31B912C5E990}">
+  DTS:VersionBuild="397"
+  DTS:VersionGUID="{F3BC299D-07AE-47A6-9B34-3308FE64F7E9}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -5381,6 +5381,609 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
           version="1">
           <components>
             <component
+              refId="Package\Load FactItOffers\Aggregate"
+              componentClassID="Microsoft.Aggregate"
+              contactInfo="Aggregate;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;3"
+              description="Aggregates data with functions such as Average, Sum, Count, Max, and Min. For example, group data to compute the sum of sales per product or the average visits per day."
+              name="Aggregate"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the approximate number of group by keys that the aggregation produces. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no KeyScale value is used."
+                  name="KeyScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the exact number of group by keys that the aggregation produces. If a KeyScale value is specified, the value in Keys takes precedence."
+                  name="Keys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the approximate number of distinct values in a column that the aggregation counts distinctly. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no CountDistinctScale value is used."
+                  name="CountDistinctScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the exact number of distinct values in a column that the aggregation counts distinctly. If a CountDistinctScale value is specified, the value in CountDistinctKeys takes precedence."
+                  name="CountDistinctKeys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage by which memory can be extended during the aggregation. Valid values are between 1 and 100."
+                  name="AutoExtendFactor">25</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Load FactItOffers\Aggregate.Inputs[Aggregate Input 1]"
+                  name="Aggregate Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load FactItOffers\Aggregate.Inputs[Aggregate Input 1].Columns[LocationKey]"
+                      cachedDataType="i4"
+                      cachedName="LocationKey"
+                      lineageId="Package\Load FactItOffers\Connect To Location.Outputs[Lookup Match Output].Columns[LocationKey]" />
+                    <inputColumn
+                      refId="Package\Load FactItOffers\Aggregate.Inputs[Aggregate Input 1].Columns[CountryCode]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="CountryCode"
+                      lineageId="Package\Load FactItOffers\Convert Location Data.Outputs[Data Conversion Output].Columns[CountryCode]" />
+                    <inputColumn
+                      refId="Package\Load FactItOffers\Aggregate.Inputs[Aggregate Input 1].Columns[City]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="City"
+                      lineageId="Package\Load FactItOffers\Convert Location Data.Outputs[Data Conversion Output].Columns[City]" />
+                    <inputColumn
+                      refId="Package\Load FactItOffers\Aggregate.Inputs[Aggregate Input 1].Columns[Street]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Street"
+                      lineageId="Package\Load FactItOffers\Convert Location Data.Outputs[Data Conversion Output].Columns[Street]" />
+                    <inputColumn
+                      refId="Package\Load FactItOffers\Aggregate.Inputs[Aggregate Input 1].Columns[DateKey]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="DateKey"
+                      lineageId="Package\Load FactItOffers\Convert Date.Outputs[Data Conversion Output].Columns[DateKey]" />
+                    <inputColumn
+                      refId="Package\Load FactItOffers\Aggregate.Inputs[Aggregate Input 1].Columns[CompanyKey]"
+                      cachedDataType="i4"
+                      cachedName="CompanyKey"
+                      lineageId="Package\Load FactItOffers\Filter By Companies.Outputs[Lookup Match Output].Columns[CompanyKey]" />
+                    <inputColumn
+                      refId="Package\Load FactItOffers\Aggregate.Inputs[Aggregate Input 1].Columns[Remote]"
+                      cachedDataType="bool"
+                      cachedName="Remote"
+                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[Remote]" />
+                    <inputColumn
+                      refId="Package\Load FactItOffers\Aggregate.Inputs[Aggregate Input 1].Columns[RemoteInterview]"
+                      cachedDataType="bool"
+                      cachedName="RemoteInterview"
+                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[RemoteInterview]" />
+                    <inputColumn
+                      refId="Package\Load FactItOffers\Aggregate.Inputs[Aggregate Input 1].Columns[Currency]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="Currency"
+                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[Currency]" />
+                    <inputColumn
+                      refId="Package\Load FactItOffers\Aggregate.Inputs[Aggregate Input 1].Columns[SalaryTo]"
+                      cachedDataType="i4"
+                      cachedName="SalaryTo"
+                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[SalaryTo]" />
+                    <inputColumn
+                      refId="Package\Load FactItOffers\Aggregate.Inputs[Aggregate Input 1].Columns[SalaryFrom]"
+                      cachedDataType="i4"
+                      cachedName="SalaryFrom"
+                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[SalaryFrom]" />
+                    <inputColumn
+                      refId="Package\Load FactItOffers\Aggregate.Inputs[Aggregate Input 1].Columns[Type]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="Type"
+                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[Type]" />
+                    <inputColumn
+                      refId="Package\Load FactItOffers\Aggregate.Inputs[Aggregate Input 1].Columns[ExperienceLevel]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="ExperienceLevel"
+                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[ExperienceLevel]" />
+                    <inputColumn
+                      refId="Package\Load FactItOffers\Aggregate.Inputs[Aggregate Input 1].Columns[CompanyName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="CompanyName"
+                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[CompanyName]" />
+                    <inputColumn
+                      refId="Package\Load FactItOffers\Aggregate.Inputs[Aggregate Input 1].Columns[WorkplaceType]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="WorkplaceType"
+                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[WorkplaceType]" />
+                    <inputColumn
+                      refId="Package\Load FactItOffers\Aggregate.Inputs[Aggregate Input 1].Columns[Title]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Title"
+                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[Title]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1]"
+                  name="Aggregate Output 1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the approximate number of group by keys that the aggregation produces. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no KeyScale value is used."
+                      name="KeyScale"
+                      typeConverter="KeyScaleType">0</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifies the exact number of group by keys that the aggregation produces. If a KeyScale value is specified, the value in Keys takes precedence."
+                      name="Keys" />
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[LocationKey]"
+                      dataType="i4"
+                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[LocationKey]"
+                      name="LocationKey">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\Load FactItOffers\Connect To Location.Outputs[Lookup Match Output].Columns[LocationKey]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[CountryCode]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[CountryCode]"
+                      name="CountryCode">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\Load FactItOffers\Convert Location Data.Outputs[Data Conversion Output].Columns[CountryCode]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[City]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[City]"
+                      name="City">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\Load FactItOffers\Convert Location Data.Outputs[Data Conversion Output].Columns[City]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[Street]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[Street]"
+                      name="Street">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\Load FactItOffers\Convert Location Data.Outputs[Data Conversion Output].Columns[Street]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[DateKey]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[DateKey]"
+                      name="DateKey">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\Load FactItOffers\Convert Date.Outputs[Data Conversion Output].Columns[DateKey]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[CompanyKey]"
+                      dataType="i4"
+                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[CompanyKey]"
+                      name="CompanyKey">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\Load FactItOffers\Filter By Companies.Outputs[Lookup Match Output].Columns[CompanyKey]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[Remote]"
+                      dataType="bool"
+                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[Remote]"
+                      name="Remote">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[Remote]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[RemoteInterview]"
+                      dataType="bool"
+                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[RemoteInterview]"
+                      name="RemoteInterview">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[RemoteInterview]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[Currency]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[Currency]"
+                      name="Currency">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[Currency]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[SalaryTo]"
+                      dataType="i4"
+                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[SalaryTo]"
+                      name="SalaryTo">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[SalaryTo]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[SalaryFrom]"
+                      dataType="i4"
+                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[SalaryFrom]"
+                      name="SalaryFrom">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[SalaryFrom]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[Type]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[Type]"
+                      name="Type">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[Type]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[ExperienceLevel]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[ExperienceLevel]"
+                      name="ExperienceLevel">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[ExperienceLevel]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[CompanyName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[CompanyName]"
+                      name="CompanyName">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[CompanyName]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[WorkplaceType]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[WorkplaceType]"
+                      name="WorkplaceType">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[WorkplaceType]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[Title]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[Title]"
+                      name="Title">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[Title]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[Count all]"
+                      dataType="ui8"
+                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[Count all]"
+                      name="Count all">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\Load FactItOffers\0:invalid}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">2</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\Load FactItOffers\Connect To Date"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
@@ -6254,55 +6857,6 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
               </outputs>
             </component>
             <component
-              refId="Package\Load FactItOffers\Derived Column"
-              componentClassID="Microsoft.DerivedColumn"
-              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
-              name="Derived Column"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\Load FactItOffers\Derived Column.Inputs[Derived Column Input]"
-                  description="Input to the Derived Column Transformation"
-                  name="Derived Column Input">
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Load FactItOffers\Derived Column.Outputs[Derived Column Output]"
-                  description="Default Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  name="Derived Column Output"
-                  synchronousInputId="Package\Load FactItOffers\Derived Column.Inputs[Derived Column Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Load FactItOffers\Derived Column.Outputs[Derived Column Error Output]"
-                  description="Error Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Derived Column Error Output"
-                  synchronousInputId="Package\Load FactItOffers\Derived Column.Inputs[Derived Column Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Load FactItOffers\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Load FactItOffers\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Load FactItOffers\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Load FactItOffers\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
               refId="Package\Load FactItOffers\Extract Date"
               componentClassID="Microsoft.DerivedColumn"
               contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
@@ -6456,78 +7010,78 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
                       cachedLength="100"
                       cachedName="Title"
                       externalMetadataColumnId="Package\Load FactItOffers\FactItOffers.Inputs[OLE DB Destination Input].ExternalColumns[Title]"
-                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[Title]" />
+                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[Title]" />
                     <inputColumn
                       refId="Package\Load FactItOffers\FactItOffers.Inputs[OLE DB Destination Input].Columns[WorkplaceType]"
                       cachedDataType="wstr"
                       cachedLength="20"
                       cachedName="WorkplaceType"
                       externalMetadataColumnId="Package\Load FactItOffers\FactItOffers.Inputs[OLE DB Destination Input].ExternalColumns[WorkplaceType]"
-                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[WorkplaceType]" />
+                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[WorkplaceType]" />
                     <inputColumn
                       refId="Package\Load FactItOffers\FactItOffers.Inputs[OLE DB Destination Input].Columns[ExperienceLevel]"
                       cachedDataType="wstr"
                       cachedLength="20"
                       cachedName="ExperienceLevel"
                       externalMetadataColumnId="Package\Load FactItOffers\FactItOffers.Inputs[OLE DB Destination Input].ExternalColumns[ExperienceLevel]"
-                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[ExperienceLevel]" />
+                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[ExperienceLevel]" />
                     <inputColumn
                       refId="Package\Load FactItOffers\FactItOffers.Inputs[OLE DB Destination Input].Columns[Type]"
                       cachedDataType="wstr"
                       cachedLength="20"
                       cachedName="Type"
                       externalMetadataColumnId="Package\Load FactItOffers\FactItOffers.Inputs[OLE DB Destination Input].ExternalColumns[Type]"
-                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[Type]" />
+                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[Type]" />
                     <inputColumn
                       refId="Package\Load FactItOffers\FactItOffers.Inputs[OLE DB Destination Input].Columns[SalaryFrom]"
                       cachedDataType="i4"
                       cachedName="SalaryFrom"
                       externalMetadataColumnId="Package\Load FactItOffers\FactItOffers.Inputs[OLE DB Destination Input].ExternalColumns[SalaryFrom]"
-                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[SalaryFrom]" />
+                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[SalaryFrom]" />
                     <inputColumn
                       refId="Package\Load FactItOffers\FactItOffers.Inputs[OLE DB Destination Input].Columns[SalaryTo]"
                       cachedDataType="i4"
                       cachedName="SalaryTo"
                       externalMetadataColumnId="Package\Load FactItOffers\FactItOffers.Inputs[OLE DB Destination Input].ExternalColumns[SalaryTo]"
-                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[SalaryTo]" />
+                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[SalaryTo]" />
                     <inputColumn
                       refId="Package\Load FactItOffers\FactItOffers.Inputs[OLE DB Destination Input].Columns[Currency]"
                       cachedDataType="wstr"
                       cachedLength="10"
                       cachedName="Currency"
                       externalMetadataColumnId="Package\Load FactItOffers\FactItOffers.Inputs[OLE DB Destination Input].ExternalColumns[Currency]"
-                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[Currency]" />
+                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[Currency]" />
                     <inputColumn
                       refId="Package\Load FactItOffers\FactItOffers.Inputs[OLE DB Destination Input].Columns[RemoteInterview]"
                       cachedDataType="bool"
                       cachedName="RemoteInterview"
                       externalMetadataColumnId="Package\Load FactItOffers\FactItOffers.Inputs[OLE DB Destination Input].ExternalColumns[RemoteInterview]"
-                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[RemoteInterview]" />
+                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[RemoteInterview]" />
                     <inputColumn
                       refId="Package\Load FactItOffers\FactItOffers.Inputs[OLE DB Destination Input].Columns[Remote]"
                       cachedDataType="bool"
                       cachedName="Remote"
                       externalMetadataColumnId="Package\Load FactItOffers\FactItOffers.Inputs[OLE DB Destination Input].ExternalColumns[Remote]"
-                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[Remote]" />
+                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[Remote]" />
                     <inputColumn
                       refId="Package\Load FactItOffers\FactItOffers.Inputs[OLE DB Destination Input].Columns[CompanyKey]"
                       cachedDataType="i4"
                       cachedName="CompanyKey"
                       externalMetadataColumnId="Package\Load FactItOffers\FactItOffers.Inputs[OLE DB Destination Input].ExternalColumns[CompanyKey]"
-                      lineageId="Package\Load FactItOffers\Filter By Companies.Outputs[Lookup Match Output].Columns[CompanyKey]" />
+                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[CompanyKey]" />
                     <inputColumn
                       refId="Package\Load FactItOffers\FactItOffers.Inputs[OLE DB Destination Input].Columns[DateKey]"
                       cachedDataType="wstr"
                       cachedLength="10"
                       cachedName="DateKey"
                       externalMetadataColumnId="Package\Load FactItOffers\FactItOffers.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
-                      lineageId="Package\Load FactItOffers\Convert Date.Outputs[Data Conversion Output].Columns[DateKey]" />
+                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[DateKey]" />
                     <inputColumn
                       refId="Package\Load FactItOffers\FactItOffers.Inputs[OLE DB Destination Input].Columns[LocationKey]"
                       cachedDataType="i4"
                       cachedName="LocationKey"
                       externalMetadataColumnId="Package\Load FactItOffers\FactItOffers.Inputs[OLE DB Destination Input].ExternalColumns[LocationKey]"
-                      lineageId="Package\Load FactItOffers\Connect To Location.Outputs[Lookup Match Output].Columns[LocationKey]" />
+                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[LocationKey]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -7629,7 +8183,7 @@ where [refTable].[CompanyName] = ?</property>
                   expressionType="Notify"
                   name="SqlCommandParam"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[FactItOffers]) [refTable]
-where [refTable].[CompanyKey] = ? and [refTable].[DateKey] = ?</property>
+where [refTable].[LocationKey] = ? and [refTable].[DateKey] = ? and [refTable].[CompanyKey] = ? and [refTable].[Remote] = ? and [refTable].[RemoteInterview] = ? and [refTable].[Currency] = ? and [refTable].[SalaryTo] = ? and [refTable].[SalaryFrom] = ? and [refTable].[Type] = ? and [refTable].[ExperienceLevel] = ? and [refTable].[WorkplaceType] = ? and [refTable].[Title] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the type of connection used to access the reference dataset."
@@ -7660,12 +8214,12 @@ where [refTable].[CompanyKey] = ? and [refTable].[DateKey] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="OfferKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Title" dataType="DT_WSTR" length="100" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DateKey" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="MarkerIcon" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="WorkplaceType" dataType="DT_WSTR" length="20" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ExperienceLevel" dataType="DT_WSTR" length="20" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="RemoteInterview" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Remote" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Type" dataType="DT_WSTR" length="20" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SalaryFrom" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SalaryTo" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Currency" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="LocationKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CompanyKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="OfferKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Title" dataType="DT_WSTR" length="100" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DateKey" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="WorkplaceType" dataType="DT_WSTR" length="20" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ExperienceLevel" dataType="DT_WSTR" length="20" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="RemoteInterview" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Remote" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Type" dataType="DT_WSTR" length="20" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SalaryFrom" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SalaryTo" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Currency" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="LocationKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CompanyKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Load FactItOffers\Filter By Companies.Outputs[Lookup Match Output].Columns[CompanyKey]};#{Package\Load FactItOffers\Convert Date.Outputs[Data Conversion Output].Columns[DateKey]};</property>
+                  name="ParameterMap">#{Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[LocationKey]};#{Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[DateKey]};#{Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[CompanyKey]};#{Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[Remote]};#{Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[RemoteInterview]};#{Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[Currency]};#{Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[SalaryTo]};#{Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[SalaryFrom]};#{Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[Type]};#{Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[ExperienceLevel]};#{Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[WorkplaceType]};#{Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[Title]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -7689,11 +8243,61 @@ where [refTable].[CompanyKey] = ? and [refTable].[DateKey] = ?</property>
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
+                      refId="Package\Load FactItOffers\Retain New Data.Inputs[Lookup Input].Columns[Title]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Title"
+                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[Title]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Title</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load FactItOffers\Retain New Data.Inputs[Lookup Input].Columns[WorkplaceType]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="WorkplaceType"
+                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[WorkplaceType]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">WorkplaceType</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load FactItOffers\Retain New Data.Inputs[Lookup Input].Columns[CompanyKey]"
+                      cachedDataType="i4"
+                      cachedName="CompanyKey"
+                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[CompanyKey]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">CompanyKey</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
                       refId="Package\Load FactItOffers\Retain New Data.Inputs[Lookup Input].Columns[DateKey]"
                       cachedDataType="wstr"
                       cachedLength="10"
                       cachedName="DateKey"
-                      lineageId="Package\Load FactItOffers\Convert Date.Outputs[Data Conversion Output].Columns[DateKey]">
+                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[DateKey]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -7706,15 +8310,130 @@ where [refTable].[CompanyKey] = ? and [refTable].[DateKey] = ?</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Load FactItOffers\Retain New Data.Inputs[Lookup Input].Columns[CompanyKey]"
-                      cachedDataType="i4"
-                      cachedName="CompanyKey"
-                      lineageId="Package\Load FactItOffers\Filter By Companies.Outputs[Lookup Match Output].Columns[CompanyKey]">
+                      refId="Package\Load FactItOffers\Retain New Data.Inputs[Lookup Input].Columns[Currency]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="Currency"
+                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[Currency]">
                       <properties>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">CompanyKey</property>
+                          name="JoinToReferenceColumn">Currency</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load FactItOffers\Retain New Data.Inputs[Lookup Input].Columns[SalaryTo]"
+                      cachedDataType="i4"
+                      cachedName="SalaryTo"
+                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[SalaryTo]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">SalaryTo</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load FactItOffers\Retain New Data.Inputs[Lookup Input].Columns[SalaryFrom]"
+                      cachedDataType="i4"
+                      cachedName="SalaryFrom"
+                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[SalaryFrom]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">SalaryFrom</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load FactItOffers\Retain New Data.Inputs[Lookup Input].Columns[Type]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="Type"
+                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[Type]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Type</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load FactItOffers\Retain New Data.Inputs[Lookup Input].Columns[Remote]"
+                      cachedDataType="bool"
+                      cachedName="Remote"
+                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[Remote]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Remote</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load FactItOffers\Retain New Data.Inputs[Lookup Input].Columns[RemoteInterview]"
+                      cachedDataType="bool"
+                      cachedName="RemoteInterview"
+                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[RemoteInterview]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">RemoteInterview</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load FactItOffers\Retain New Data.Inputs[Lookup Input].Columns[ExperienceLevel]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="ExperienceLevel"
+                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[ExperienceLevel]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">ExperienceLevel</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load FactItOffers\Retain New Data.Inputs[Lookup Input].Columns[LocationKey]"
+                      cachedDataType="i4"
+                      cachedName="LocationKey"
+                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[LocationKey]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">LocationKey</property>
                         <property
                           dataType="System.Null"
                           description="Specifies the column in the reference table from which a column is copied."
@@ -7769,6 +8488,11 @@ where [refTable].[CompanyKey] = ? and [refTable].[DateKey] = ?</property>
           </components>
           <paths>
             <path
+              refId="Package\Load FactItOffers.Paths[Aggregate Output 1]"
+              endId="Package\Load FactItOffers\Retain New Data.Inputs[Lookup Input]"
+              name="Aggregate Output 1"
+              startId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1]" />
+            <path
               refId="Package\Load FactItOffers.Paths[Conditional Split Default Output]"
               endId="Package\Load FactItOffers\Data Conversion.Inputs[Data Conversion Input]"
               name="Conditional Split Default Output"
@@ -7810,24 +8534,19 @@ where [refTable].[CompanyKey] = ? and [refTable].[DateKey] = ?</property>
               startId="Package\Load FactItOffers\Filter By Companies.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Load FactItOffers.Paths[Lookup Match Output1]"
-              endId="Package\Load FactItOffers\Retain New Data.Inputs[Lookup Input]"
+              endId="Package\Load FactItOffers\Convert Location Data.Inputs[Data Conversion Input]"
               name="Lookup Match Output"
               startId="Package\Load FactItOffers\Connect To Date.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Load FactItOffers.Paths[Lookup Match Output2]"
-              endId="Package\Load FactItOffers\FactItOffers.Inputs[OLE DB Destination Input]"
+              endId="Package\Load FactItOffers\Aggregate.Inputs[Aggregate Input 1]"
               name="Lookup Match Output"
               startId="Package\Load FactItOffers\Connect To Location.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Load FactItOffers.Paths[Lookup No Match Output]"
-              endId="Package\Load FactItOffers\Convert Location Data.Inputs[Data Conversion Input]"
+              endId="Package\Load FactItOffers\FactItOffers.Inputs[OLE DB Destination Input]"
               name="Lookup No Match Output"
               startId="Package\Load FactItOffers\Retain New Data.Outputs[Lookup No Match Output]" />
-            <path
-              refId="Package\Load FactItOffers.Paths[Lookup No Match Output1]"
-              endId="Package\Load FactItOffers\Derived Column.Inputs[Derived Column Input]"
-              name="Lookup No Match Output"
-              startId="Package\Load FactItOffers\Connect To Location.Outputs[Lookup No Match Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -10722,31 +11441,7 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
         <NodeLayout
           Size="158,42"
           Id="Package\Load FactItOffers\Retain New Data"
-          TopLeft="364,683" />
-        <EdgeLayout
-          Id="Package\Load FactItOffers.Paths[Lookup Match Output1]"
-          TopLeft="441.5,643">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,40"
-              Start="0,0"
-              End="0,32.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,32.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,10.4453125,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="109,894" />
         <AnnotationLayout
           Text="sprawdzam nowe dane po nazwie firmy i dacie"
           ParentId="Package\Load FactItOffers"
@@ -10755,33 +11450,9 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
           Id="8e439157-6fec-46b2-b911-f022bd88adab"
           TopLeft="551,679" />
         <NodeLayout
-          Size="184,42"
+          Size="191,42"
           Id="Package\Load FactItOffers\Convert Location Data"
-          TopLeft="346,761" />
-        <EdgeLayout
-          Id="Package\Load FactItOffers.Paths[Lookup No Match Output]"
-          TopLeft="440.5,725">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,36"
-              Start="0,0"
-              End="0,28.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,28.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,8.4453125,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="342,684" />
         <AnnotationLayout
           Text="dołączam klucz lokacji po ulicy, mieście i kodzie kraju"
           ParentId="Package\Load FactItOffers"
@@ -10799,21 +11470,21 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
         <NodeLayout
           Size="175,42"
           Id="Package\Load FactItOffers\Connect To Location"
-          TopLeft="348,828" />
+          TopLeft="344,753" />
         <EdgeLayout
           Id="Package\Load FactItOffers.Paths[Data Conversion Output2]"
-          TopLeft="436.75,803">
+          TopLeft="434.5,726">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,25"
+              EndConnector="0,27"
               Start="0,0"
-              End="0,17.5">
+              End="0,19.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17.5" />
+                    End="0,19.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10825,68 +11496,140 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
         <NodeLayout
           Size="135,42"
           Id="Package\Load FactItOffers\FactItOffers"
-          TopLeft="367,909" />
+          TopLeft="367,985" />
         <EdgeLayout
-          Id="Package\Load FactItOffers.Paths[Lookup Match Output2]"
-          TopLeft="435,870">
+          Id="Package\Load FactItOffers.Paths[Lookup Match Output1]"
+          TopLeft="438.75,643">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,39"
+              EndConnector="0,41"
               Start="0,0"
-              End="0,31.5">
+              End="0,33.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.5" />
+                    End="0,33.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-57.0600390625,7.75,114.120078125,16"
+              BoundingBox="-48.19138671875,10.9453125,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="154,42"
-          Id="Package\Load FactItOffers\Derived Column"
-          TopLeft="133,913" />
+          Size="127,42"
+          Id="Package\Load FactItOffers\Aggregate"
+          TopLeft="381,880" />
         <EdgeLayout
-          Id="Package\Load FactItOffers.Paths[Lookup No Match Output1]"
-          TopLeft="407.666666666667,870">
+          Id="Package\Load FactItOffers.Paths[Lookup Match Output2]"
+          TopLeft="431.5,795">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-197.666666666667,43"
+              EndConnector="13,85"
               Start="0,0"
-              End="-197.666666666667,35.5">
+              End="13,77.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,13.4337485843715" />
+                    End="0,38.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,13.4337485843715"
-                    Point2="0,17.4337485843715"
-                    Point3="-4,17.4337485843715" />
+                    Point1="0,38.5"
+                    Point2="0,42.5"
+                    Point3="4,42.5" />
                   <mssgle:LineSegment
-                    End="-193.666666666667,17.4337485843715" />
+                    End="9,42.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="-193.666666666667,17.4337485843715"
-                    Point2="-197.666666666667,17.4337485843715"
-                    Point3="-197.666666666667,21.4337485843715" />
+                    Point1="9,42.5"
+                    Point2="13,42.5"
+                    Point3="13,46.5" />
                   <mssgle:LineSegment
-                    End="-197.666666666667,35.5" />
+                    End="13,77.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-163.508372395833,22.4337485843715,129.350078125,16"
+              BoundingBox="-41.69138671875,47.5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load FactItOffers.Paths[Aggregate Output 1]"
+          TopLeft="381,901">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-114,14"
+              Start="0,0"
+              End="-106.5,14">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-53,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-53,0"
+                    Point2="-57,0"
+                    Point3="-57,4" />
+                  <mssgle:LineSegment
+                    End="-57,10" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-57,10"
+                    Point2="-57,14"
+                    Point3="-61,14" />
+                  <mssgle:LineSegment
+                    End="-106.5,14" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-65,-22,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load FactItOffers.Paths[Lookup No Match Output]"
+          TopLeft="188,936">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="246.5,49"
+              Start="0,0"
+              End="246.5,41.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.5"
+                    Point2="0,24.5"
+                    Point3="4,24.5" />
+                  <mssgle:LineSegment
+                    End="242.5,24.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="242.5,24.5"
+                    Point2="246.5,24.5"
+                    Point3="246.5,28.5" />
+                  <mssgle:LineSegment
+                    End="246.5,41.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="67.44361328125,29.5,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -10974,7 +11717,7 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,7.9453125,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,7.4453125,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -10998,7 +11741,7 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-44.19138671875,25,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,10.9453125,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
