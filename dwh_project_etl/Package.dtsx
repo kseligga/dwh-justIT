@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="292"
-  DTS:VersionGUID="{E9B593B4-709E-40DE-9564-07B99E090B27}">
+  DTS:VersionBuild="305"
+  DTS:VersionGUID="{300E0627-786F-490A-AAE1-8B2AC2476B37}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -30,7 +30,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="D:\Studia\semestr6\dwh\project\dwh-justIT\all_listed_data.csv">
+          DTS:ConnectionString="D:\Studia\semestr6\dwh\project\dwh-justIT\all_listed_data_parsed.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -39,7 +39,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="title"
-              DTS:DTSID="{842A5645-0DCB-482B-9092-8D0D94F366D8}"
+              DTS:DTSID="{C6002E30-1A06-4363-842E-83C8A9AF1949}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -48,7 +48,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="street"
-              DTS:DTSID="{C06128B9-89DA-40B0-A3B4-03003263571F}"
+              DTS:DTSID="{DEF455F0-C326-47BC-B566-3D11958C5EA8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -57,7 +57,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="city"
-              DTS:DTSID="{24367746-9E7F-4DE0-9871-D3F2CB061D89}"
+              DTS:DTSID="{5769BC6E-1DEF-4454-9DE0-DC7D05AE01E1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -66,7 +66,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="country_code"
-              DTS:DTSID="{FA2ED26B-B2AB-4FA3-86CE-3A4CA126EBCA}"
+              DTS:DTSID="{ED34EA25-2E20-4579-81EB-91FE366AD54C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -75,7 +75,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="address_text"
-              DTS:DTSID="{9F68535D-2794-4DFE-BC4F-7BF805BEE6DE}"
+              DTS:DTSID="{4345D9C4-D60C-4DB0-9592-7579F49604AC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -84,7 +84,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="marker_icon"
-              DTS:DTSID="{34DB94A4-D29F-48AB-B60D-30A49E36F1B4}"
+              DTS:DTSID="{17190A96-48F5-461A-AA1C-4823617D6D1F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -93,7 +93,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="workplace_type"
-              DTS:DTSID="{76BF832E-250B-434F-B5CD-8B1F4BEB4049}"
+              DTS:DTSID="{AEAA32ED-9C01-4526-B5F5-CFB54D2E033C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -102,7 +102,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="company_name"
-              DTS:DTSID="{80235AF3-ECD0-40A0-85F1-AF86AAFFEC34}"
+              DTS:DTSID="{F9A53661-EDD8-46A9-834E-3A333FB73E97}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -111,7 +111,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="company_url"
-              DTS:DTSID="{F2127D1D-B837-4AF9-A672-7D0C2E7EC826}"
+              DTS:DTSID="{723A9F65-5DD9-4FC8-B7F5-92BA2F2A21D0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -120,7 +120,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="company_size"
-              DTS:DTSID="{CC0D4CE6-A66A-4EAD-8E8A-2AC519615989}"
+              DTS:DTSID="{104A9CBD-B98F-4B27-8BBA-BE4FFD00C707}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -129,7 +129,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="experience_level"
-              DTS:DTSID="{1705A121-B01E-48CB-B112-FE1E06743B25}"
+              DTS:DTSID="{3AFD2C0B-79DE-445F-95EF-86B552BE4BBB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -138,7 +138,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="latitude"
-              DTS:DTSID="{4E5CC321-B62B-4F32-8160-5E2C71024DB7}"
+              DTS:DTSID="{76C3832F-D42E-46C6-B386-F44733F76B95}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -147,7 +147,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="longitude"
-              DTS:DTSID="{7E13FC72-69B4-49C0-8769-82D3EEE4B081}"
+              DTS:DTSID="{1505C02D-37EE-4DE6-A964-3197C22CB91B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -156,7 +156,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="published_at"
-              DTS:DTSID="{F2088489-2542-4144-A370-7E5E22E9F64B}"
+              DTS:DTSID="{92C6A992-ECF6-4DA0-BB25-105EFB99F542}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -165,7 +165,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="remote_interview"
-              DTS:DTSID="{DB05DF8A-FC1F-4B9A-83B1-D81D65B8FD66}"
+              DTS:DTSID="{B86A7F1B-7B5B-48B4-B6D2-575CCDE11B70}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -174,7 +174,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="id"
-              DTS:DTSID="{71C56F97-1A63-4C5B-BE0A-FCBF839FADDC}"
+              DTS:DTSID="{45328222-4FF5-428B-8DD8-F77D5E7AF7C2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -183,7 +183,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="employment_types"
-              DTS:DTSID="{3D3D41A3-EAC8-4DB5-97DD-CA4BD6A26B21}"
+              DTS:DTSID="{06D9704A-21B9-4159-B715-3E2ED4E04AD0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -192,7 +192,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="company_logo_url"
-              DTS:DTSID="{AD2B8C78-C8F2-40F2-8BB4-A89307957E2D}"
+              DTS:DTSID="{0C97C17A-A51B-415B-873F-214BC1764D39}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -201,7 +201,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="skills"
-              DTS:DTSID="{372894B9-3390-4B51-9110-BAFF022330E3}"
+              DTS:DTSID="{2768879B-8C17-403A-976F-1ADF4008D2E2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -210,7 +210,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="remote"
-              DTS:DTSID="{A65E5B9E-4552-40FA-9B5B-E588815776D1}"
+              DTS:DTSID="{AE646DAA-82CD-4906-8F55-04DD22A3F9F0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -219,7 +219,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="open_to_hire_ukrainians"
-              DTS:DTSID="{C749FBA9-4DC9-4417-B44E-2FB8D27A2FED}"
+              DTS:DTSID="{A67DDE89-2C81-4E12-B05D-41759886FD26}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -228,7 +228,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="display_offer"
-              DTS:DTSID="{D519FDE1-004B-4CE1-AAC6-4B8094948C24}"
+              DTS:DTSID="{699316B2-B7C7-4596-B0BD-A35DD8862677}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -237,7 +237,43 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="multilocation"
-              DTS:DTSID="{94999600-440E-47A2-9781-DA5EAC9C6A77}"
+              DTS:DTSID="{BED7E2C4-75E3-41A5-A27C-E0A30DF10857}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="way_of_apply"
+              DTS:DTSID="{3F4A29DF-D298-4EB7-89FD-52EC962B29B6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="type"
+              DTS:DTSID="{B748101E-1119-40CB-8FC6-B182C4847203}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="salary_from"
+              DTS:DTSID="{011B72CA-9F19-4B30-9382-2BD1D576F67F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="salary_to"
+              DTS:DTSID="{7FD29EAB-32E4-48E3-8C2E-64D91D4E9CC8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -245,8 +281,8 @@
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="way_of_apply"
-              DTS:DTSID="{010B1498-37A4-4096-A643-BFA3CFCBF4A8}"
+              DTS:ObjectName="currency"
+              DTS:DTSID="{F51CAD3B-BCBD-4F3D-888B-0333A246C513}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -1978,6 +2014,30 @@ WHERE CompanyKey = ?;
                       dataType="str"
                       length="50"
                       name="way_of_apply" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimCompany\JustIT.Outputs[Flat File Source Output].ExternalColumns[type]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="type" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimCompany\JustIT.Outputs[Flat File Source Output].ExternalColumns[salary_from]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="salary_from" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimCompany\JustIT.Outputs[Flat File Source Output].ExternalColumns[salary_to]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="salary_to" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimCompany\JustIT.Outputs[Flat File Source Output].ExternalColumns[currency]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="currency" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -2579,7 +2639,7 @@ where [refTable].[CompanyKey] = ? and [refTable].[Symbol] = ? and [refTable].[Co
                   dataType="System.Int32"
                   description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
                   name="NoMatchBehavior"
-                  typeConverter="LookupNoMatchBehavior">0</property>
+                  typeConverter="LookupNoMatchBehavior">1</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
@@ -2731,7 +2791,6 @@ where [refTable].[CompanyKey] = ? and [refTable].[Symbol] = ? and [refTable].[Co
                 <output
                   refId="Package\Load DimCompany\Select Modified Companies.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="FailComponent"
                   exclusionGroup="1"
                   name="Lookup Match Output"
                   synchronousInputId="Package\Load DimCompany\Select Modified Companies.Inputs[Lookup Input]">
@@ -3628,52 +3687,52 @@ where [refTable].[Symbol] = ? and [refTable].[CompanyName] = ?</property>
               name="Data Conversion Output"
               startId="Package\Load DimCompany\Data Conversion.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\Load DimCompany.Paths[Derived Column Output7]"
+              refId="Package\Load DimCompany.Paths[Derived Column Output6]"
               endId="Package\Load DimCompany\Manage Nulls.Inputs[Derived Column Input]"
               name="Derived Column Output"
               startId="Package\Load DimCompany\Manage CompanySize 2.Outputs[Derived Column Output]" />
             <path
-              refId="Package\Load DimCompany.Paths[Derived Column Output6]"
+              refId="Package\Load DimCompany.Paths[Derived Column Output5]"
               endId="Package\Load DimCompany\Manage CompanySize 2.Inputs[Derived Column Input]"
               name="Derived Column Output"
               startId="Package\Load DimCompany\Manage CompanySize.Outputs[Derived Column Output]" />
             <path
-              refId="Package\Load DimCompany.Paths[Derived Column Output5]"
+              refId="Package\Load DimCompany.Paths[Derived Column Output4]"
               endId="Package\Load DimCompany\Manage CompanySize.Inputs[Derived Column Input]"
               name="Derived Column Output"
               startId="Package\Load DimCompany\Clear CompanySize.Outputs[Derived Column Output]" />
             <path
-              refId="Package\Load DimCompany.Paths[Derived Column Output4]"
+              refId="Package\Load DimCompany.Paths[Derived Column Output7]"
               endId="Package\Load DimCompany\DimCompany Update.Inputs[OLE DB Command Input]"
               name="Derived Column Output"
               startId="Package\Load DimCompany\Modify Old SCD2 Columns.Outputs[Derived Column Output]" />
             <path
-              refId="Package\Load DimCompany.Paths[Derived Column Output3]"
+              refId="Package\Load DimCompany.Paths[Derived Column Output2]"
               endId="Package\Load DimCompany\Select Unique Rows.Inputs[Lookup Input]"
               name="Derived Column Output"
               startId="Package\Load DimCompany\Add SCD2 Columns.Outputs[Derived Column Output]" />
             <path
-              refId="Package\Load DimCompany.Paths[Derived Column Output]"
+              refId="Package\Load DimCompany.Paths[Derived Column Output1]"
               endId="Package\Load DimCompany\Sort By Company Name 2.Inputs[Sort Input]"
               name="Derived Column Output"
               startId="Package\Load DimCompany\Extrant Company Name 2.Outputs[Derived Column Output]" />
             <path
-              refId="Package\Load DimCompany.Paths[Derived Column Output2]"
+              refId="Package\Load DimCompany.Paths[Derived Column Output]"
               endId="Package\Load DimCompany\Data Conversion.Inputs[Data Conversion Input]"
               name="Derived Column Output"
               startId="Package\Load DimCompany\Manage Nulls.Outputs[Derived Column Output]" />
             <path
-              refId="Package\Load DimCompany.Paths[Derived Column Output1]"
+              refId="Package\Load DimCompany.Paths[Derived Column Output3]"
               endId="Package\Load DimCompany\Sort By Company Name.Inputs[Sort Input]"
               name="Derived Column Output"
               startId="Package\Load DimCompany\Extrant Company Name.Outputs[Derived Column Output]" />
             <path
-              refId="Package\Load DimCompany.Paths[Flat File Source Output1]"
+              refId="Package\Load DimCompany.Paths[Flat File Source Output]"
               endId="Package\Load DimCompany\Extrant Company Name 2.Inputs[Derived Column Input]"
               name="Flat File Source Output"
               startId="Package\Load DimCompany\JustIT.Outputs[Flat File Source Output]" />
             <path
-              refId="Package\Load DimCompany.Paths[Flat File Source Output]"
+              refId="Package\Load DimCompany.Paths[Flat File Source Output1]"
               endId="Package\Load DimCompany\Extrant Company Name.Inputs[Derived Column Input]"
               name="Flat File Source Output"
               startId="Package\Load DimCompany\SP500_companies.Outputs[Flat File Source Output]" />
@@ -4567,6 +4626,30 @@ WHERE        (LocationKey = ?)</property>
                       dataType="str"
                       length="50"
                       name="way_of_apply" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimLocation\JustIT.Outputs[Flat File Source Output].ExternalColumns[type]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="type" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimLocation\JustIT.Outputs[Flat File Source Output].ExternalColumns[salary_from]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="salary_from" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimLocation\JustIT.Outputs[Flat File Source Output].ExternalColumns[salary_to]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="salary_to" />
+                    <externalMetadataColumn
+                      refId="Package\Load DimLocation\JustIT.Outputs[Flat File Source Output].ExternalColumns[currency]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="currency" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -6421,8 +6504,7 @@ namespace SC_73af265137fd491c955a3053c80fcdf2.Properties {
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
-    <TargetFrameworkProfile>
-    </TargetFrameworkProfile>
+    <TargetFrameworkProfile></TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -6508,10 +6590,11 @@ namespace SC_73af265137fd491c955a3053c80fcdf2.Properties {
     <msb:CodeName>SC_73af265137fd491c955a3053c80fcdf2</msb:CodeName>
     <msb:Language>msBuild</msb:Language>
     <msb:DisplayName>SC_73af265137fd491c955a3053c80fcdf2</msb:DisplayName>
-    <msb:ProjectId>{C6129250-3B4C-4FA7-85C1-45532CAF177C}</msb:ProjectId>
+    <msb:ProjectId>{24837199-3453-498E-9CD8-C39DD631F277}</msb:ProjectId>
   </msb:PropertyGroup>
   <msb:ItemGroup>
     <msb:Project Include="SC_73af265137fd491c955a3053c80fcdf2.csproj" />
+    <msb:File Include="packages.config" />
     <msb:File Include="main.cs" />
     <msb:File Include="BufferWrapper.cs" />
     <msb:File Include="ComponentWrapper.cs" />
@@ -6520,7 +6603,6 @@ namespace SC_73af265137fd491c955a3053c80fcdf2.Properties {
     <msb:File Include="Properties\Resources.resx" />
     <msb:File Include="Properties\Resources.Designer.cs" />
     <msb:File Include="Properties\Settings.Designer.cs" />
-    <msb:File Include="packages.config" />
   </msb:ItemGroup>
 </c:Project>]]></arrayElement>
                     <arrayElement
@@ -6659,155 +6741,7 @@ namespace SC_73af265137fd491c955a3053c80fcdf2.Properties {
                   name="BinaryCode"
                   state="cdata">
                   <arrayElements
-                    arrayElementCount="2">
-                    <arrayElement
-                      dataType="System.String"><![CDATA[SC_73af265137fd491c955a3053c80fcdf2.dll]]></arrayElement>
-                    <arrayElement
-                      dataType="System.String"><![CDATA[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
-LgAzAG8BLgA7AG8BLgBDAEYBLgBLAHUBLgBTAG8BLgBbAIwBQwBjANYB4QB7ANYB4wBrANYBaQFz
-AD0BiQFzAD0BGwADAAEABwALAAgADQAAAM8F/gAAAHEDAgEAALYA/gAAADcDAgEAAGUE/gAAAF0D
-AgEAAMED/gAAAEcDAgEAAAAH/gAAAIwDAgEAANQEBgEAANsACwEAAEQGEAECAAYAAwACAAcABQAB
-AAgABwABAAkACQABAAoACwABAAsADQABAAwADwABAA0AEQABAA4AEwABAA8AFQACABkAFwACABoA
-GQABABsAGQACABwAGwAEgAAAAQAAAAAAAAAAAAAAAAABAAAABAAAAAAAAAAAAAAAkwA2AAAAAAAQ
-AAAAAAAAAAAAAACcAIQGAAAAAA0AAAAAAAAAAAAAAKUAQAQAAAAAEAAAAAAAAAAAAAAAnAChBgAA
-AAAEAAAAAAAAAAAAAACTALYDAAAAAAAAAAABAAAAQAUAAAAAAAAAU0NfNzNhZjI2NTEzN2ZkNDkx
-Yzk1NWEzMDUzYzgwZmNkZjIAPE1vZHVsZT4ASW5wdXRJRABtc2NvcmxpYgBkZWZhdWx0SW5zdGFu
-Y2UAUnVudGltZVR5cGVIYW5kbGUAR2V0VHlwZUZyb21IYW5kbGUASW5wdXROYW1lAE1pY3Jvc29m
-dC5TcWxTZXJ2ZXIuRHRzLlBpcGVsaW5lAGdldF9UeXBlAHNldF9UeXBlAEpUb2tlblR5cGUAZ2V0
-X0N1bHR1cmUAc2V0X0N1bHR1cmUAcmVzb3VyY2VDdWx0dXJlAEFwcGxpY2F0aW9uU2V0dGluZ3NC
-YXNlAFBhcnNlAEVkaXRvckJyb3dzYWJsZVN0YXRlAENvbXBpbGVyR2VuZXJhdGVkQXR0cmlidXRl
-AERlYnVnZ2VyTm9uVXNlckNvZGVBdHRyaWJ1dGUARGVidWdnYWJsZUF0dHJpYnV0ZQBFZGl0b3JC
-cm93c2FibGVBdHRyaWJ1dGUAQXNzZW1ibHlUaXRsZUF0dHJpYnV0ZQBBc3NlbWJseVRyYWRlbWFy
-a0F0dHJpYnV0ZQBUYXJnZXRGcmFtZXdvcmtBdHRyaWJ1dGUAQXNzZW1ibHlDb25maWd1cmF0aW9u
-QXR0cmlidXRlAEFzc2VtYmx5RGVzY3JpcHRpb25BdHRyaWJ1dGUAQ29tcGlsYXRpb25SZWxheGF0
-aW9uc0F0dHJpYnV0ZQBBc3NlbWJseVByb2R1Y3RBdHRyaWJ1dGUAQXNzZW1ibHlDb3B5cmlnaHRB
-dHRyaWJ1dGUAU1NJU1NjcmlwdENvbXBvbmVudEVudHJ5UG9pbnRBdHRyaWJ1dGUAQXNzZW1ibHlD
-b21wYW55QXR0cmlidXRlAFJ1bnRpbWVDb21wYXRpYmlsaXR5QXR0cmlidXRlAFByZUV4ZWN1dGUA
-UG9zdEV4ZWN1dGUAdmFsdWUAU3lzdGVtLlJ1bnRpbWUuVmVyc2lvbmluZwBHZXRTdHJpbmcAU3lz
-dGVtLkNvbXBvbmVudE1vZGVsAFNDXzczYWYyNjUxMzdmZDQ5MWM5NTVhMzA1M2M4MGZjZGYyLmRs
-bABzZXRfVHlwZV9Jc051bGwAc2V0X1NhbGFyeUZyb21fSXNOdWxsAHNldF9TYWxhcnlUb19Jc051
-bGwAZ2V0X2VtcGxveW1lbnR0eXBlc19Jc051bGwAc2V0X0N1cnJlbmN5X0lzTnVsbABTZXROdWxs
-AGdldF9JdGVtAHNldF9JdGVtAFN5c3RlbQBzZXRfU2FsYXJ5RnJvbQByZXNvdXJjZU1hbgBKVG9r
-ZW4AU2NyaXB0TWFpbgBTeXN0ZW0uQ29uZmlndXJhdGlvbgBTeXN0ZW0uR2xvYmFsaXphdGlvbgBT
-eXN0ZW0uUmVmbGVjdGlvbgBJbnZhbGlkT3BlcmF0aW9uRXhjZXB0aW9uAE5ld3RvbnNvZnQuSnNv
-bgBTdHJpbmdDb21wYXJpc29uAHNldF9TYWxhcnlUbwBDdWx0dXJlSW5mbwBPdXRwdXROYW1lTWFw
-AE91dHB1dE1hcABOZXd0b25zb2Z0Lkpzb24uTGlucQBJbnB1dDBCdWZmZXIAUGlwZWxpbmVCdWZm
-ZXIAU2NyaXB0QnVmZmVyAGdldF9SZXNvdXJjZU1hbmFnZXIASkNvbnRhaW5lcgAuY3RvcgAuY2N0
-b3IAU3lzdGVtLkRpYWdub3N0aWNzAFN5c3RlbS5SdW50aW1lLkNvbXBpbGVyU2VydmljZXMAU3lz
-dGVtLlJlc291cmNlcwBTQ183M2FmMjY1MTM3ZmQ0OTFjOTU1YTMwNTNjODBmY2RmMi5Qcm9wZXJ0
-aWVzLlJlc291cmNlcy5yZXNvdXJjZXMARGVidWdnaW5nTW9kZXMAU0NfNzNhZjI2NTEzN2ZkNDkx
-Yzk1NWEzMDUzYzgwZmNkZjIuUHJvcGVydGllcwBWYXJpYWJsZXMAZ2V0X2VtcGxveW1lbnR0eXBl
-cwBCdWZmZXJDb2x1bW5JbmRleGVzAEdldENvbHVtbkluZGV4ZXMAU2V0dGluZ3MARXF1YWxzAENv
-bm5lY3Rpb25zAEpPYmplY3QARW5kT2ZSb3dzZXQAb3BfRXhwbGljaXQAZ2V0X0RlZmF1bHQAVXNl
-ckNvbXBvbmVudABQYXJlbnRDb21wb25lbnQAU2NyaXB0Q29tcG9uZW50AGdldF9Db3VudABNaWNy
-b3NvZnQuU3FsU2VydmVyLlR4U2NyaXB0AE1pY3Jvc29mdC5TcWxTZXJ2ZXIuUGlwZWxpbmVIb3N0
-AElucHV0MF9Qcm9jZXNzSW5wdXQASW5wdXQwX1Byb2Nlc3NJbnB1dFJvdwBOZXh0Um93AEpBcnJh
-eQBzZXRfQ3VycmVuY3kAQ29udGFpbnNLZXkAZ2V0X0Fzc2VtYmx5AAAAABFjAHUAcgByAGUAbgBj
-AHkAABdzAGEAbABhAHIAeQBfAGYAcgBvAG0AABNzAGEAbABhAHIAeQBfAHQAbwAACXQAeQBwAGUA
-AICbSQBzAE4AdQBsAGwAIABwAHIAbwBwAGUAcgB0AHkAIABjAGEAbgBuAG8AdAAgAGIAZQAgAHMA
-ZQB0ACAAdABvACAARgBhAGwAcwBlAC4AIABBAHMAcwBpAGcAbgAgAGEAIAB2AGEAbAB1AGUAIAB0
-AG8AIAB0AGgAZQAgAGMAbwBsAHUAbQBuACAAaQBuAHMAdABlAGEAZAAuAAAPSQBuAHAAdQB0ACAA
-MAAAcVMAQwBfADcAMwBhAGYAMgA2ADUAMQAzADcAZgBkADQAOQAxAGMAOQA1ADUAYQAzADAANQAz
-AGMAOAAwAGYAYwBkAGYAMgAuAFAAcgBvAHAAZQByAHQAaQBlAHMALgBSAGUAcwBvAHUAcgBjAGUA
-cwAApf4xPHMtCECazv/dW0L+HwAEIAEBCAMgAAEFIAEBEREEIAEBDgUgAQERYQYHAhI5Ej0FAAES
-OQ4DIAAIBSABEnUIBCABAg4FIAESdQ4EIAAReQUAAQ4SdQkgAwESRR0IEkkDBhJFAwYdCAQgAQ4I
-BCABAggFIAIBCBwDIAACByACAg4RgIUFIAEdCAgIAAESgIkRgI0FIAASgJEHIAIBDhKAkQi3elxW
-GTTgiQiJhF3NgIDMkQgwrU/msqau7QMGEhQDBhIYAwYSTQMGElkDBhJdAwYSIAUgAQESDAMgAA4E
-IAEBAgkgBAEIDhJFEkkFIAEBEk0EAAASWQQAABJdBQABARJdBAAAEiADAAABAygADgMoAAIECAAS
-WQQIABJdBAgAEiAIAQAIAAAAAAAeAQABAFQCFldyYXBOb25FeGNlcHRpb25UaHJvd3MBCAEAAgAA
-AAAAKAEAI1NDXzczYWYyNjUxMzdmZDQ5MWM5NTVhMzA1M2M4MGZjZGYyAAAFAQAAAAAWAQARQ29w
-eXJpZ2h0IEAgIDIwMjQAAEkBABouTkVURnJhbWV3b3JrLFZlcnNpb249djQuNwEAVA4URnJhbWV3
-b3JrRGlzcGxheU5hbWUSLk5FVCBGcmFtZXdvcmsgNC43BAEAAAAAtAAAAM7K774BAAAAkQAAAGxT
-eXN0ZW0uUmVzb3VyY2VzLlJlc291cmNlUmVhZGVyLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4w
-LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkjU3lzdGVt
-LlJlc291cmNlcy5SdW50aW1lUmVzb3VyY2VTZXQCAAAAAAAAAAAAAABQQURQQURQtAAAAIQ1AAAA
-AAAAAAAAAJ41AAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAACQNQAAAAAAAAAAAAAAAF9Db3JEbGxN
-YWluAG1zY29yZWUuZGxsAAAAAAD/JQAgABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAABABAAAAAYAACAAAAAAAAAAAAAAAAAAAABAAEAAAAwAACAAAAAAAAAAAAAAAAAAAABAAAAAABI
-AAAAWEAAAOwDAAAAAAAAAAAAAOwDNAAAAFYAUwBfAFYARQBSAFMASQBPAE4AXwBJAE4ARgBPAAAA
-AAC9BO/+AAABAAAAAQAAAAAAAAABAAAAAAA/AAAAAAAAAAQAAAACAAAAAAAAAAAAAAAAAAAARAAA
-AAEAVgBhAHIARgBpAGwAZQBJAG4AZgBvAAAAAAAkAAQAAABUAHIAYQBuAHMAbABhAHQAaQBvAG4A
-AAAAAAAAsARMAwAAAQBTAHQAcgBpAG4AZwBGAGkAbABlAEkAbgBmAG8AAAAoAwAAAQAwADAAMAAw
-ADAANABiADAAAAAaAAEAAQBDAG8AbQBtAGUAbgB0AHMAAAAAAAAAIgABAAEAQwBvAG0AcABhAG4A
-eQBOAGEAbQBlAAAAAAAAAAAAcAAkAAEARgBpAGwAZQBEAGUAcwBjAHIAaQBwAHQAaQBvAG4AAAAA
-AFMAQwBfADcAMwBhAGYAMgA2ADUAMQAzADcAZgBkADQAOQAxAGMAOQA1ADUAYQAzADAANQAzAGMA
-OAAwAGYAYwBkAGYAMgAAADAACAABAEYAaQBsAGUAVgBlAHIAcwBpAG8AbgAAAAAAMQAuADAALgAw
-AC4AMAAAAHAAKAABAEkAbgB0AGUAcgBuAGEAbABOAGEAbQBlAAAAUwBDAF8ANwAzAGEAZgAyADYA
-NQAxADMANwBmAGQANAA5ADEAYwA5ADUANQBhADMAMAA1ADMAYwA4ADAAZgBjAGQAZgAyAC4AZABs
-AGwAAABIABIAAQBMAGUAZwBhAGwAQwBvAHAAeQByAGkAZwBoAHQAAABDAG8AcAB5AHIAaQBnAGgA
-dAAgAEAAIAAgADIAMAAyADQAAAAqAAEAAQBMAGUAZwBhAGwAVAByAGEAZABlAG0AYQByAGsAcwAA
-AAAAAAAAAHgAKAABAE8AcgBpAGcAaQBuAGEAbABGAGkAbABlAG4AYQBtAGUAAABTAEMAXwA3ADMA
-YQBmADIANgA1ADEAMwA3AGYAZAA0ADkAMQBjADkANQA1AGEAMwAwADUAMwBjADgAMABmAGMAZABm
-ADIALgBkAGwAbAAAAGgAJAABAFAAcgBvAGQAdQBjAHQATgBhAG0AZQAAAAAAUwBDAF8ANwAzAGEA
-ZgAyADYANQAxADMANwBmAGQANAA5ADEAYwA5ADUANQBhADMAMAA1ADMAYwA4ADAAZgBjAGQAZgAy
-AAAANAAIAAEAUAByAG8AZAB1AGMAdABWAGUAcgBzAGkAbwBuAAAAMQAuADAALgAwAC4AMAAAADgA
-CAABAEEAcwBzAGUAbQBiAGwAeQAgAFYAZQByAHMAaQBvAG4AAAAxAC4AMAAuADAALgAwAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAwAAACwNQAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
-                  </arrayElements>
+                    arrayElementCount="0" />
                 </property>
                 <property
                   dataType="System.String"
@@ -8611,25 +8545,33 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
       <GraphLayout
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="178,42"
-          Id="Package\Load DimCompany\DimCompany Update"
-          TopLeft="461.444444444445,1125.88888888889" />
-        <NodeLayout
-          Size="172,42"
-          Id="Package\Load DimCompany\Select Unique Rows"
-          TopLeft="310,905.777777777778" />
+          Size="191,42"
+          Id="Package\Load DimCompany\Sort By Company Name"
+          TopLeft="184,317" />
         <NodeLayout
           Size="181,42"
           Id="Package\Load DimCompany\Inner Join Companies"
           TopLeft="314.333333333333,409" />
         <NodeLayout
-          Size="164,42"
-          Id="Package\Load DimCompany\SP500_companies"
-          TopLeft="201.999996051192,112.999998226762" />
+          Size="172,42"
+          Id="Package\Load DimCompany\Select Unique Rows"
+          TopLeft="310,905.777777777778" />
         <NodeLayout
-          Size="142,42"
-          Id="Package\Load DimCompany\Manage Nulls"
-          TopLeft="327.111111111111,691.222222222222" />
+          Size="205,42"
+          Id="Package\Load DimCompany\Select Modified Companies"
+          TopLeft="444.444444444444,975.555555555556" />
+        <NodeLayout
+          Size="200,42"
+          Id="Package\Load DimCompany\Sort By Company Name 2"
+          TopLeft="469,316" />
+        <NodeLayout
+          Size="182,42"
+          Id="Package\Load DimCompany\Manage CompanySize"
+          TopLeft="310.111111111111,554.111111111111" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Load DimCompany\Data Conversion"
+          TopLeft="321.555555555556,762.777777777778" />
         <NodeLayout
           Size="108,42"
           Id="Package\Load DimCompany\JustIT"
@@ -8639,135 +8581,45 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
           Id="Package\Load DimCompany\Extrant Company Name 2"
           TopLeft="472.999992698431,215.384612175134" />
         <NodeLayout
-          Size="191,42"
-          Id="Package\Load DimCompany\Sort By Company Name"
-          TopLeft="184,317" />
+          Size="202,42"
+          Id="Package\Load DimCompany\Modify Old SCD2 Columns"
+          TopLeft="450.444444444445,1043.88888888889" />
         <NodeLayout
-          Size="173,42"
-          Id="Package\Load DimCompany\DimCompany Insert"
-          TopLeft="127,1003.77777777778" />
+          Size="184,42"
+          Id="Package\Load DimCompany\Saving Old Companies"
+          TopLeft="462.444444444445,1196.88888888889" />
+        <NodeLayout
+          Size="169,42"
+          Id="Package\Load DimCompany\Clear CompanySize"
+          TopLeft="319,477.333333333333" />
         <NodeLayout
           Size="191,42"
           Id="Package\Load DimCompany\Extrant Company Name"
           TopLeft="189.307687951968,211.999996721745" />
         <NodeLayout
-          Size="200,42"
-          Id="Package\Load DimCompany\Sort By Company Name 2"
-          TopLeft="469,316" />
+          Size="173,42"
+          Id="Package\Load DimCompany\DimCompany Insert"
+          TopLeft="127,1003.77777777778" />
         <NodeLayout
-          Size="156,42"
-          Id="Package\Load DimCompany\Data Conversion"
-          TopLeft="321.555555555556,762.777777777778" />
-        <EdgeLayout
-          Id="Package\Load DimCompany.Paths[Flat File Source Output1]"
-          TopLeft="571.846146353163,158.769229029234">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,56.6153831459"
-              Start="0,0"
-              End="0,49.1153831459">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,49.1153831459" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load DimCompany.Paths[Flat File Source Output]"
-          TopLeft="284.40384200158,154.999998226762">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,56.999998494983"
-              Start="0,0"
-              End="0,49.499998494983">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,49.499998494983" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load DimCompany.Paths[Derived Column Output2]"
-          TopLeft="398.833333333333,733.222222222222">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,29.5555555555554"
-              Start="0,0"
-              End="0,22.0555555555554">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,22.0555555555554" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load DimCompany.Paths[Derived Column Output1]"
-          TopLeft="282.153843975984,253.999996721745">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,63.000003278255"
-              Start="0,0"
-              End="0,55.500003278255">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,55.500003278255" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load DimCompany.Paths[Derived Column Output]"
-          TopLeft="570.999996349216,257.384612175134">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,58.615387824866"
-              Start="0,0"
-              End="0,51.115387824866">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,51.115387824866" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="142,42"
+          Id="Package\Load DimCompany\Manage Nulls"
+          TopLeft="327.111111111111,691.222222222222" />
+        <NodeLayout
+          Size="178,42"
+          Id="Package\Load DimCompany\DimCompany Update"
+          TopLeft="461.444444444445,1125.88888888889" />
+        <NodeLayout
+          Size="164,42"
+          Id="Package\Load DimCompany\SP500_companies"
+          TopLeft="201.999996051192,112.999998226762" />
+        <NodeLayout
+          Size="191,42"
+          Id="Package\Load DimCompany\Manage CompanySize 2"
+          TopLeft="303.777777777778,618.888888888889" />
+        <NodeLayout
+          Size="170,42"
+          Id="Package\Load DimCompany\Add SCD2 Columns"
+          TopLeft="312.555555555556,831.555555555556" />
         <EdgeLayout
           Id="Package\Load DimCompany.Paths[Sort Output1]"
           TopLeft="569,358">
@@ -8836,49 +8688,74 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <AnnotationLayout
-          Text="Edytujemy nazwy firm z dwóch źródeł, żeby pokrywały się przed mergem"
-          ParentId="Package\Load DimCompany"
-          FontInfo="{assembly:Null}"
-          Size="130,104"
-          Id="68940ec9-1d44-4e39-ae2d-d0b8712ce0e1"
-          TopLeft="734.846143805064,186.76922878623" />
-        <AnnotationLayout
-          Text="trzeba zachować kolumny,&#xA;po których będziemy łączyć fakty z wymiarami,&#xA;dla ofert oryginalne company_name,&#xA;dla giełdy symbol&#xA;TODO: trzeba jeszcze dodać te dwie kolumny do hurtowni,&#xA;CompanyName już mamy, czyli company_name_new będzie tylko &#xA;na potrzeby merga, do dwh ładujemy zwykłe company_name"
-          ParentId="Package\Load DimCompany"
-          FontInfo="{assembly:Null}"
-          Size="378,136"
-          Id="00208c28-b080-45db-91ad-0a45ccbc4a15"
-          TopLeft="894.777777777778,459.333333333333" />
-        <AnnotationLayout
-          Text="TODO: obsłużyć nulle"
-          ParentId="Package\Load DimCompany"
-          FontInfo="{assembly:Null}"
-          Size="142,40"
-          Id="ff4800f1-50c4-41e8-9b5a-81d0e7f6e223"
-          TopLeft="474.555555555556,685.333333333333" />
-        <AnnotationLayout
-          Text="od razu przy sortowaniu usuwam duplikaty"
-          ParentId="Package\Load DimCompany"
-          FontInfo="{assembly:Null}"
-          Size="256,40"
-          Id="870db7b5-e8aa-43c5-96bf-1d19d2e6564a"
-          TopLeft="673,306" />
-        <AnnotationLayout
-          Text="wybrać tylko nowe rekordy i je dodać,&#xA;a na starych zrobić update (w sensie dodać nowe wiersze, ustawić na aktywne,&#xA;a stare na nieaktywne, trzeba chyba jeszcze jakiś kafelek tu dołożyć, żeby to zrobić),&#xA;wybór można robić lookupem (trochę sporo to trwa,&#xA;ale jest tylko jeden blok), ale można też chyba mergem &#xA;i później szukać jakichś nulli dla niezmergowanych"
-          ParentId="Package\Load DimCompany"
-          FontInfo="{assembly:Null}"
-          Size="469,120"
-          Id="833cc555-dc98-4fad-aaaf-c6cd2621d3b2"
-          TopLeft="883.222222222222,604.666666666667" />
-        <NodeLayout
-          Size="170,42"
-          Id="Package\Load DimCompany\Add SCD2 Columns"
-          TopLeft="312.555555555556,831.555555555556" />
-        <NodeLayout
-          Size="202,42"
-          Id="Package\Load DimCompany\Modify Old SCD2 Columns"
-          TopLeft="450.444444444445,1043.88888888889" />
+        <EdgeLayout
+          Id="Package\Load DimCompany.Paths[OLE DB Command Output]"
+          TopLeft="552.444444444445,1167.88888888889">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,29"
+              Start="0,0"
+              End="0,21.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load DimCompany.Paths[Merge Join Output]"
+          TopLeft="404.166666666667,451">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,26.3333333333333"
+              Start="0,0"
+              End="0,18.8333333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.8333333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load DimCompany.Paths[Lookup No Match Output1]"
+          TopLeft="549.194444444445,1017.55555555556">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,26.3333333333333"
+              Start="0,0"
+              End="0,18.8333333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.8333333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.80638671875,3.61197916666663,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Load DimCompany.Paths[Lookup No Match Output]"
           TopLeft="396,947.777777777778">
@@ -8916,202 +8793,6 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Load DimCompany.Paths[Data Conversion Output]"
-          TopLeft="398.555555555556,804.777777777778">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,26.7777777777777"
-              Start="0,0"
-              End="0,19.2777777777777">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,19.2777777777777" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load DimCompany.Paths[Derived Column Output3]"
-          TopLeft="396.777777777778,873.555555555556">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,32.2222222222223"
-              Start="0,0"
-              End="0,24.7222222222223">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.7222222222223" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="184,42"
-          Id="Package\Load DimCompany\Saving Old Companies"
-          TopLeft="462.444444444445,1196.88888888889" />
-        <EdgeLayout
-          Id="Package\Load DimCompany.Paths[OLE DB Command Output]"
-          TopLeft="552.444444444445,1167.88888888889">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,29"
-              Start="0,0"
-              End="0,21.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,21.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load DimCompany.Paths[Derived Column Output4]"
-          TopLeft="550.944444444445,1085.88888888889">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,40"
-              Start="0,0"
-              End="0,32.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,32.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="182,42"
-          Id="Package\Load DimCompany\Manage CompanySize"
-          TopLeft="310.111111111111,554.111111111111" />
-        <NodeLayout
-          Size="169,42"
-          Id="Package\Load DimCompany\Clear CompanySize"
-          TopLeft="319,477.333333333333" />
-        <EdgeLayout
-          Id="Package\Load DimCompany.Paths[Merge Join Output]"
-          TopLeft="404.166666666667,451">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,26.3333333333333"
-              Start="0,0"
-              End="0,18.8333333333333">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18.8333333333333" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load DimCompany.Paths[Derived Column Output5]"
-          TopLeft="402.305555555556,519.333333333333">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,34.7777777777778"
-              Start="0,0"
-              End="0,27.2777777777778">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,27.2777777777778" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="191,42"
-          Id="Package\Load DimCompany\Manage CompanySize 2"
-          TopLeft="303.777777777778,618.888888888889" />
-        <EdgeLayout
-          Id="Package\Load DimCompany.Paths[Derived Column Output6]"
-          TopLeft="400.194444444444,596.111111111111">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,22.7777777777779"
-              Start="0,0"
-              End="0,15.2777777777779">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,15.2777777777779" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load DimCompany.Paths[Derived Column Output7]"
-          TopLeft="398.694444444444,660.888888888889">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,30.3333333333334"
-              Start="0,0"
-              End="0,22.8333333333334">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,22.8333333333334" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="205,42"
-          Id="Package\Load DimCompany\Select Modified Companies"
-          TopLeft="444.444444444444,975.555555555556" />
-        <EdgeLayout
           Id="Package\Load DimCompany.Paths[Lookup Match Output]"
           TopLeft="423.333333333333,947.777777777778">
           <EdgeLayout.Curve>
@@ -9148,29 +8829,282 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Load DimCompany.Paths[Lookup No Match Output1]"
-          TopLeft="549.194444444445,1017.55555555556">
+          Id="Package\Load DimCompany.Paths[Flat File Source Output1]"
+          TopLeft="284.40384200158,154.999998226762">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,26.3333333333333"
+              EndConnector="0,56.999998494983"
               Start="0,0"
-              End="0,18.8333333333333">
+              End="0,49.499998494983">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,18.8333333333333" />
+                    End="0,49.499998494983" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,3.61197916666663,111.6127734375,11.609375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load DimCompany.Paths[Flat File Source Output]"
+          TopLeft="571.846146353163,158.769229029234">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,56.6153831459"
+              Start="0,0"
+              End="0,49.1153831459">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.1153831459" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load DimCompany.Paths[Derived Column Output7]"
+          TopLeft="550.944444444445,1085.88888888889">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40"
+              Start="0,0"
+              End="0,32.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load DimCompany.Paths[Derived Column Output6]"
+          TopLeft="398.694444444444,660.888888888889">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,30.3333333333334"
+              Start="0,0"
+              End="0,22.8333333333334">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.8333333333334" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load DimCompany.Paths[Derived Column Output5]"
+          TopLeft="400.194444444444,596.111111111111">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,22.7777777777779"
+              Start="0,0"
+              End="0,15.2777777777779">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.2777777777779" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load DimCompany.Paths[Derived Column Output4]"
+          TopLeft="402.305555555556,519.333333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34.7777777777778"
+              Start="0,0"
+              End="0,27.2777777777778">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.2777777777778" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load DimCompany.Paths[Derived Column Output3]"
+          TopLeft="282.153843975984,253.999996721745">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,63.000003278255"
+              Start="0,0"
+              End="0,55.500003278255">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,55.500003278255" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load DimCompany.Paths[Derived Column Output2]"
+          TopLeft="396.777777777778,873.555555555556">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,32.2222222222223"
+              Start="0,0"
+              End="0,24.7222222222223">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.7222222222223" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load DimCompany.Paths[Derived Column Output1]"
+          TopLeft="570.999996349216,257.384612175134">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58.615387824866"
+              Start="0,0"
+              End="0,51.115387824866">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,51.115387824866" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load DimCompany.Paths[Derived Column Output]"
+          TopLeft="398.833333333333,733.222222222222">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,29.5555555555554"
+              Start="0,0"
+              End="0,22.0555555555554">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.0555555555554" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load DimCompany.Paths[Data Conversion Output]"
+          TopLeft="398.555555555556,804.777777777778">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,26.7777777777777"
+              Start="0,0"
+              End="0,19.2777777777777">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.2777777777777" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <AnnotationLayout
+          Text="Edytujemy nazwy firm z dwóch źródeł, żeby pokrywały się przed mergem"
+          ParentId="Package\Load DimCompany"
+          FontInfo="{assembly:Null}"
+          Size="130,104"
+          Id="68940ec9-1d44-4e39-ae2d-d0b8712ce0e1"
+          TopLeft="734.846143805064,186.76922878623" />
+        <AnnotationLayout
+          Text="trzeba zachować kolumny,&#xA;po których będziemy łączyć fakty z wymiarami,&#xA;dla ofert oryginalne company_name,&#xA;dla giełdy symbol&#xA;TODO: trzeba jeszcze dodać te dwie kolumny do hurtowni,&#xA;CompanyName już mamy, czyli company_name_new będzie tylko &#xA;na potrzeby merga, do dwh ładujemy zwykłe company_name"
+          ParentId="Package\Load DimCompany"
+          FontInfo="{assembly:Null}"
+          Size="378,136"
+          Id="00208c28-b080-45db-91ad-0a45ccbc4a15"
+          TopLeft="894.777777777778,459.333333333333" />
+        <AnnotationLayout
+          Text="TODO: obsłużyć nulle"
+          ParentId="Package\Load DimCompany"
+          FontInfo="{assembly:Null}"
+          Size="142,40"
+          Id="ff4800f1-50c4-41e8-9b5a-81d0e7f6e223"
+          TopLeft="474.555555555556,685.333333333333" />
+        <AnnotationLayout
+          Text="od razu przy sortowaniu usuwam duplikaty"
+          ParentId="Package\Load DimCompany"
+          FontInfo="{assembly:Null}"
+          Size="256,40"
+          Id="870db7b5-e8aa-43c5-96bf-1d19d2e6564a"
+          TopLeft="673,306" />
+        <AnnotationLayout
+          Text="wybrać tylko nowe rekordy i je dodać,&#xA;a na starych zrobić update (w sensie dodać nowe wiersze, ustawić na aktywne,&#xA;a stare na nieaktywne, trzeba chyba jeszcze jakiś kafelek tu dołożyć, żeby to zrobić),&#xA;wybór można robić lookupem (trochę sporo to trwa,&#xA;ale jest tylko jeden blok), ale można też chyba mergem &#xA;i później szukać jakichś nulli dla niezmergowanych"
+          ParentId="Package\Load DimCompany"
+          FontInfo="{assembly:Null}"
+          Size="469,120"
+          Id="833cc555-dc98-4fad-aaaf-c6cd2621d3b2"
+          TopLeft="883.222222222222,604.666666666667" />
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -9180,7 +9114,7 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -9190,10 +9124,46 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load DimCompany\Select Modified Companies">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimCompany]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load DimCompany\Saving Old Companies">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -9347,7 +9317,7 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="61.7848028572888,28.8311000039624,96.3827734375,11.609375"
+              BoundingBox="61.784802857289,28.8311000039624,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -9370,7 +9340,9 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-8,8.33823517614585,16,16"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9544,18 +9516,7 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
     design-time-name="Package\Load FactItOffers">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="108,42"
-          Id="Package\Load FactItOffers\JustIT"
-          TopLeft="390,66" />
-        <AnnotationLayout
-          Text="obsłużyć employment_types:&#xD;&#xA;wydobyć typ, ceny i walutę,&#xD;&#xA;obsłużyć wiele elementów"
-          ParentId="Package\Load FactItOffers"
-          FontInfo="{assembly:Null}"
-          Size="181,72"
-          Id="1b0e5cb5-3665-4ded-a352-dc9d8643250f"
-          TopLeft="631,88" />
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="167,42"
           Id="Package\Load FactItOffers\Remove Null Rows"
@@ -9563,7 +9524,39 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
         <NodeLayout
           Size="246,42"
           Id="Package\Load FactItOffers\Manage employment_types column"
-          TopLeft="299,309" />
+          TopLeft="319,313" />
+        <NodeLayout
+          Size="108,42"
+          Id="Package\Load FactItOffers\JustIT"
+          TopLeft="390,66" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Load FactItOffers\Script Component"
+          TopLeft="361,231" />
+        <EdgeLayout
+          Id="Package\Load FactItOffers.Paths[Output 0]"
+          TopLeft="442.25,273">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40"
+              Start="0,0"
+              End="0,32.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-8,8.25,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Load FactItOffers.Paths[Flat File Source Output]"
           TopLeft="445.25,108">
@@ -9583,53 +9576,8 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <AnnotationLayout
-          Text="zwiększyłem długość dla employment_types i title (do 100, w bazie też)"
-          ParentId="Package\Load FactItOffers"
-          FontInfo="{assembly:Null}"
-          Size="404,60"
-          Id="41cab7e7-2f3e-4394-b07a-97216268fc6e"
-          TopLeft="673,206" />
-        <NodeLayout
-          Size="163,42"
-          Id="Package\Load FactItOffers\Script Component"
-          TopLeft="361,231" />
-        <EdgeLayout
-          Id="Package\Load FactItOffers.Paths[Output 0]"
-          TopLeft="442.5,273">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-20.5,36"
-              Start="0,0"
-              End="-20.5,28.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,14" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,14"
-                    Point2="0,18"
-                    Point3="-4,18" />
-                  <mssgle:LineSegment
-                    End="-16.5,18" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-16.5,18"
-                    Point2="-20.5,18"
-                    Point3="-20.5,22" />
-                  <mssgle:LineSegment
-                    End="-20.5,28.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-18.25,23,16,16"
+              BoundingBox="0,0,0,0"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -9658,10 +9606,24 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
           </EdgeLayout.Labels>
         </EdgeLayout>
         <AnnotationLayout
+          Text="obsłużyć employment_types:&#xA;wydobyć typ, ceny i walutę,&#xA;obsłużyć wiele elementów"
+          ParentId="Package\Load FactItOffers"
+          FontInfo="{assembly:Null}"
+          Size="181,NaN"
+          Id="1b0e5cb5-3665-4ded-a352-dc9d8643250f"
+          TopLeft="631,88" />
+        <AnnotationLayout
+          Text="zwiększyłem długość dla employment_types i title (do 100, w bazie też)"
+          ParentId="Package\Load FactItOffers"
+          FontInfo="{assembly:Null}"
+          Size="404,NaN"
+          Id="41cab7e7-2f3e-4394-b07a-97216268fc6e"
+          TopLeft="673,206" />
+        <AnnotationLayout
           Text="TODO: naprawić ten skrypt, bo nie działa albo jakoś inaczej to ogarnąć"
           ParentId="Package\Load FactItOffers"
           FontInfo="{assembly:Null}"
-          Size="400,60"
+          Size="400,NaN"
           Id="3b8b848b-ccd1-421d-8f68-beae999a3193"
           TopLeft="625,317" />
       </GraphLayout>
@@ -9673,6 +9635,18 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="158,42"
+          Id="Package\Load FactStockResults\FactStockResults"
+          TopLeft="222,582" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Load FactStockResults\Data Conversion"
+          TopLeft="215,260" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\Load FactStockResults\Retain New Data"
+          TopLeft="221,499" />
+        <NodeLayout
           Size="142,42"
           Id="Package\Load FactStockResults\SP500 Stocks"
           TopLeft="230,24" />
@@ -9681,61 +9655,65 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
           Id="Package\Load FactStockResults\Prepare Numbers"
           TopLeft="218,185" />
         <NodeLayout
-          Size="156,42"
-          Id="Package\Load FactStockResults\Data Conversion"
-          TopLeft="215,260" />
-        <EdgeLayout
-          Id="Package\Load FactStockResults.Paths[Derived Column Output]"
-          TopLeft="295.75,227">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,33"
-              Start="0,0"
-              End="0,25.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,25.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="158,42"
+          Id="Package\Load FactStockResults\Connect To Date"
+          TopLeft="216,423" />
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Load FactStockResults\Conditional Split"
+          TopLeft="219,102" />
         <NodeLayout
           Size="172,42"
           Id="Package\Load FactStockResults\Filter By Companies"
           TopLeft="202,340" />
         <EdgeLayout
-          Id="Package\Load FactStockResults.Paths[Data Conversion Output]"
-          TopLeft="290.5,302">
+          Id="Package\Load FactStockResults.Paths[Lookup No Match Output]"
+          TopLeft="300.5,541">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,38"
+              EndConnector="0,41"
               Start="0,0"
-              End="0,30.5">
+              End="0,33.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,30.5" />
+                    End="0,33.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-55.80638671875,10.9453125,111.6127734375,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="158,42"
-          Id="Package\Load FactStockResults\Connect To Date"
-          TopLeft="216,423" />
+        <EdgeLayout
+          Id="Package\Load FactStockResults.Paths[Lookup Match Output1]"
+          TopLeft="297.5,465">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34"
+              Start="0,0"
+              End="0,26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,7.4453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Load FactStockResults.Paths[Lookup Match Output]"
           TopLeft="291.5,382">
@@ -9760,14 +9738,6 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="158,42"
-          Id="Package\Load FactStockResults\FactStockResults"
-          TopLeft="222,582" />
-        <NodeLayout
-          Size="155,42"
-          Id="Package\Load FactStockResults\Conditional Split"
-          TopLeft="219,102" />
         <EdgeLayout
           Id="Package\Load FactStockResults.Paths[Flat File Source Output]"
           TopLeft="298.75,66">
@@ -9787,7 +9757,57 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load FactStockResults.Paths[Derived Column Output]"
+          TopLeft="295.75,227">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,33"
+              Start="0,0"
+              End="0,25.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load FactStockResults.Paths[Data Conversion Output]"
+          TopLeft="290.5,302">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,38"
+              Start="0,0"
+              End="0,30.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9815,149 +9835,15 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
           </EdgeLayout.Labels>
         </EdgeLayout>
         <AnnotationLayout
-          Text="powinno się chyba usunąć duplikaty,&#xD;&#xA;sprawdzam to podacie i firmie"
+          Text="powinno się chyba usunąć duplikaty,&#xA;sprawdzam to podacie i firmie"
           ParentId="Package\Load FactStockResults"
           FontInfo="{assembly:Null}"
-          Size="222,60"
+          Size="222,NaN"
           Id="9fcd7fcb-7b9d-46f7-bfc5-202f9a64d441"
           TopLeft="411,493" />
-        <NodeLayout
-          Size="158,42"
-          Id="Package\Load FactStockResults\Retain New Data"
-          TopLeft="221,499" />
-        <EdgeLayout
-          Id="Package\Load FactStockResults.Paths[Lookup Match Output1]"
-          TopLeft="297.5,465">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,34"
-              Start="0,0"
-              End="0,26.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,7.4453125,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load FactStockResults.Paths[Lookup No Match Output]"
-          TopLeft="300.5,541">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,41"
-              Start="0,0"
-              End="0,33.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,33.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,10.9453125,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load DimCompany\Saving Old Companies">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load DimCompany\Select Modified Companies">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimCompany]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load FactStockResults\Filter By Companies">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimCompany]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load FactStockResults\Connect To Date">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimDate]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Load FactStockResults\FactStockResults">
     <Properties>
@@ -9977,7 +9863,7 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -9987,7 +9873,53 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load FactStockResults\Connect To Date">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimDate]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load FactStockResults\Filter By Companies">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimCompany]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
