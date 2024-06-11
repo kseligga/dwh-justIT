@@ -1,4 +1,4 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="6/4/2024 11:18:16 AM"
@@ -7,12 +7,12 @@
   DTS:CreatorName="KUBA_KOMP\kubek"
   DTS:DTSID="{DE288515-AD5B-4BF6-99D0-49425578DBCE}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="16.0.5397.1"
+  DTS:LastModifiedProductVersion="16.0.5467.0"
   DTS:LocaleID="1045"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="406"
-  DTS:VersionGUID="{072C2867-A3EF-4C43-8AC4-AA536F27B92E}">
+  DTS:VersionBuild="409"
+  DTS:VersionGUID="{8F16CFC7-3DEF-4110-AB8E-7B7BCBC87758}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -30,7 +30,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="D:\studia\semestr6\dwh\project\DWH-justIT\all_listed_data_parsed.csv">
+          DTS:ConnectionString="D:\Studia\semestr6\dwh\project\dwh-justIT\all_listed_data_parsed.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -39,16 +39,16 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="title"
-              DTS:DTSID="{4301872B-92FF-4D8A-AD34-33997796090E}"
+              DTS:DTSID="{C6002E30-1A06-4363-842E-83C8A9AF1949}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="street"
-              DTS:DTSID="{9C8E0951-DABF-4F90-BCFA-2BE971F25E4A}"
+              DTS:DTSID="{DEF455F0-C326-47BC-B566-3D11958C5EA8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -57,7 +57,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="city"
-              DTS:DTSID="{BEFCE875-AFD2-4CB8-8A6C-58B4C6E51240}"
+              DTS:DTSID="{5769BC6E-1DEF-4454-9DE0-DC7D05AE01E1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -66,7 +66,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="country_code"
-              DTS:DTSID="{B9AE50B6-4BD4-4751-8457-258A90DB5C61}"
+              DTS:DTSID="{ED34EA25-2E20-4579-81EB-91FE366AD54C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -75,7 +75,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="address_text"
-              DTS:DTSID="{13EE167F-DF47-4CF8-B5AC-258A3ACE2367}"
+              DTS:DTSID="{4345D9C4-D60C-4DB0-9592-7579F49604AC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -84,7 +84,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="marker_icon"
-              DTS:DTSID="{99D8C8FF-67D8-4F77-BAD0-C46440E616CC}"
+              DTS:DTSID="{17190A96-48F5-461A-AA1C-4823617D6D1F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -93,16 +93,16 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="workplace_type"
-              DTS:DTSID="{DECAE5B7-819D-46A2-9161-98AF2B4683BF}"
+              DTS:DTSID="{AEAA32ED-9C01-4526-B5F5-CFB54D2E033C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="company_name"
-              DTS:DTSID="{2A22D232-E791-4069-A300-07391A74957E}"
+              DTS:DTSID="{F9A53661-EDD8-46A9-834E-3A333FB73E97}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -111,16 +111,16 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="company_url"
-              DTS:DTSID="{A614DF29-55B7-4760-BBB8-2BD822AFAB92}"
+              DTS:DTSID="{723A9F65-5DD9-4FC8-B7F5-92BA2F2A21D0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="255"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="company_size"
-              DTS:DTSID="{1FC5C887-986F-4062-AEE5-AB4CEED4F187}"
+              DTS:DTSID="{104A9CBD-B98F-4B27-8BBA-BE4FFD00C707}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -129,7 +129,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="experience_level"
-              DTS:DTSID="{2F52DDA3-EA44-483B-9DA7-5782E8F9244A}"
+              DTS:DTSID="{3AFD2C0B-79DE-445F-95EF-86B552BE4BBB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -138,7 +138,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="latitude"
-              DTS:DTSID="{14BFBD63-2B2E-4253-B154-B64CD8D5D7D6}"
+              DTS:DTSID="{76C3832F-D42E-46C6-B386-F44733F76B95}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -147,7 +147,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="longitude"
-              DTS:DTSID="{EDEF0B94-A676-4002-AC52-32E760788EC4}"
+              DTS:DTSID="{1505C02D-37EE-4DE6-A964-3197C22CB91B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -156,7 +156,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="published_at"
-              DTS:DTSID="{1C009C32-225F-47F6-AE5C-0FBBEEED5C02}"
+              DTS:DTSID="{92C6A992-ECF6-4DA0-BB25-105EFB99F542}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -165,7 +165,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="remote_interview"
-              DTS:DTSID="{0D08B1D7-75D0-4A17-95A5-B2D0C3A7C777}"
+              DTS:DTSID="{B86A7F1B-7B5B-48B4-B6D2-575CCDE11B70}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -174,7 +174,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="id"
-              DTS:DTSID="{67B26987-9CE1-403A-BC37-634882DD3800}"
+              DTS:DTSID="{45328222-4FF5-428B-8DD8-F77D5E7AF7C2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -183,7 +183,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="employment_types"
-              DTS:DTSID="{C5AF5B51-717C-4A45-93E6-DEBDECFF8EF6}"
+              DTS:DTSID="{06D9704A-21B9-4159-B715-3E2ED4E04AD0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -192,7 +192,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="company_logo_url"
-              DTS:DTSID="{63BA68A1-6FAF-4812-AB64-15C73DB6CC93}"
+              DTS:DTSID="{0C97C17A-A51B-415B-873F-214BC1764D39}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -201,7 +201,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="skills"
-              DTS:DTSID="{2393CDE2-F2C7-4868-B500-3F781703EB5C}"
+              DTS:DTSID="{2768879B-8C17-403A-976F-1ADF4008D2E2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -210,7 +210,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="remote"
-              DTS:DTSID="{BF0CDA41-6439-4606-BA85-4BDB015E647B}"
+              DTS:DTSID="{AE646DAA-82CD-4906-8F55-04DD22A3F9F0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -219,7 +219,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="open_to_hire_ukrainians"
-              DTS:DTSID="{CEB94281-0663-42B0-B24C-F766FF67CE6A}"
+              DTS:DTSID="{A67DDE89-2C81-4E12-B05D-41759886FD26}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -228,7 +228,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="display_offer"
-              DTS:DTSID="{06469FFF-1AA9-4822-85B3-35586913ACE2}"
+              DTS:DTSID="{699316B2-B7C7-4596-B0BD-A35DD8862677}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -237,7 +237,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="multilocation"
-              DTS:DTSID="{FA14CD87-3974-4092-B026-99DBD57B891F}"
+              DTS:DTSID="{BED7E2C4-75E3-41A5-A27C-E0A30DF10857}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -246,7 +246,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="way_of_apply"
-              DTS:DTSID="{160C55F2-B123-427F-AFF8-7397D6833E42}"
+              DTS:DTSID="{3F4A29DF-D298-4EB7-89FD-52EC962B29B6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -255,7 +255,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="type"
-              DTS:DTSID="{4053C915-B886-4ED1-91D2-200A8A3D63D1}"
+              DTS:DTSID="{B748101E-1119-40CB-8FC6-B182C4847203}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -264,7 +264,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="salary_from"
-              DTS:DTSID="{128319B6-B8CC-438A-B5A1-938B624B5DAE}"
+              DTS:DTSID="{011B72CA-9F19-4B30-9382-2BD1D576F67F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -273,7 +273,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="salary_to"
-              DTS:DTSID="{9A069A35-BD8E-46B9-9AF3-6AAEEE411E61}"
+              DTS:DTSID="{7FD29EAB-32E4-48E3-8C2E-64D91D4E9CC8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -282,7 +282,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="currency"
-              DTS:DTSID="{5F530D4F-A123-431A-9675-211C14CEA5EE}"
+              DTS:DTSID="{F51CAD3B-BCBD-4F3D-888B-0333A246C513}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -323,7 +323,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Exchange"
-              DTS:DTSID="{78E110AD-9BFE-42CF-9D38-13A13B541E41}"
+              DTS:DTSID="{59300278-7194-45DE-8F1B-C545BB19B07E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -332,7 +332,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Symbol"
-              DTS:DTSID="{711B9435-9C23-42F6-9EF4-13174D18E9FF}"
+              DTS:DTSID="{FF760BF6-8D26-47BB-88D2-0D9F2E3FE1FF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -341,7 +341,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Shortname"
-              DTS:DTSID="{74CD5892-62E0-47E7-8BF6-1B3AF60FB348}"
+              DTS:DTSID="{E52D6D4E-B5A5-4BA6-BB91-5C2078CE4E38}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -350,7 +350,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Longname"
-              DTS:DTSID="{80992708-4FCB-4862-BC9A-83AE9A84A6A4}"
+              DTS:DTSID="{7F5C398E-0CED-40EC-A7AE-AE0890755AA8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -359,7 +359,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Sector"
-              DTS:DTSID="{602569A8-1174-4F80-93D0-92079CC9E0AD}"
+              DTS:DTSID="{EB7C57A8-328B-4792-88FA-6869A08F21BF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -368,7 +368,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Industry"
-              DTS:DTSID="{B4F2D5B8-D0D0-441C-B92B-B7FAAB332C93}"
+              DTS:DTSID="{EF0D3216-1CBD-446E-9F5D-8350F2FB1DBC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -377,7 +377,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Currentprice"
-              DTS:DTSID="{0DF48D01-9F81-4937-AC78-F483EBEBC5FA}"
+              DTS:DTSID="{6B2F38A0-DBEC-4EAF-B667-01980811775A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -386,7 +386,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Marketcap"
-              DTS:DTSID="{2ECEC8FF-8EEC-45B3-B6A0-2353ACB92EF0}"
+              DTS:DTSID="{8C040360-3430-4467-9C00-2CF2E2A653AA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -395,7 +395,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Ebitda"
-              DTS:DTSID="{28A324AB-0E14-46E4-B13C-1EBEF24352D4}"
+              DTS:DTSID="{3AD5BFEA-1A3E-4019-9C77-B280AF23CD4B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -404,7 +404,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Revenuegrowth"
-              DTS:DTSID="{9A2FC8E7-CFF7-41E4-9AE3-E021914FFA5B}"
+              DTS:DTSID="{3A31CACD-85AA-4304-BD3B-F5CDF6376F7D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -413,7 +413,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="City"
-              DTS:DTSID="{0A390D37-0ADD-43F9-8249-1F3D0B4A95B0}"
+              DTS:DTSID="{F8BCF801-B070-4F13-9FEF-74E6A29A2F9E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -422,7 +422,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="State"
-              DTS:DTSID="{688DA981-2860-4331-B706-6CFB26F58D2B}"
+              DTS:DTSID="{900BAEB3-CF4E-4E0B-9CD8-EA0A72CF6357}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -431,7 +431,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Country"
-              DTS:DTSID="{4B0C1E43-B570-4FA6-AD62-030DEF5F5935}"
+              DTS:DTSID="{CD16DA3C-CADE-4085-AA32-F21F87E4F585}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -440,7 +440,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Fulltimeemployees"
-              DTS:DTSID="{468094D5-58AA-4C65-A481-D71AEE39CF9C}"
+              DTS:DTSID="{11A0965D-6F87-460B-BF70-B2CC88390DFD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -449,7 +449,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Longbusinesssummary"
-              DTS:DTSID="{B5D82A59-4615-40EC-BFBA-BD79EA2CE779}"
+              DTS:DTSID="{4C2431A1-56B5-44C4-9D61-627B9E3878D8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -458,7 +458,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Weight"
-              DTS:DTSID="{F3D505F1-A71F-43BB-A5FA-B3BC71187069}"
+              DTS:DTSID="{A7FFCAF1-8B39-4C2C-B06D-4C4C2F00721E}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -709,7 +709,7 @@
                       refId="Package\Load DimCompany\Clear CompanySize.Inputs[Derived Column Input].Columns[company_size]"
                       cachedCodepage="65001"
                       cachedDataType="str"
-                      cachedLength="255"
+                      cachedLength="50"
                       cachedName="company_size"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
@@ -805,14 +805,14 @@
                       refId="Package\Load DimCompany\Data Conversion.Inputs[Data Conversion Input].Columns[company_name]"
                       cachedCodepage="65001"
                       cachedDataType="str"
-                      cachedLength="255"
+                      cachedLength="50"
                       cachedName="company_name"
                       lineageId="Package\Load DimCompany\Inner Join Companies.Outputs[Merge Join Output].Columns[company_name]" />
                     <inputColumn
                       refId="Package\Load DimCompany\Data Conversion.Inputs[Data Conversion Input].Columns[company_size]"
                       cachedCodepage="65001"
                       cachedDataType="str"
-                      cachedLength="255"
+                      cachedLength="50"
                       cachedName="company_size"
                       lineageId="Package\Load DimCompany\Inner Join Companies.Outputs[Merge Join Output].Columns[company_size]" />
                   </inputColumns>
@@ -1456,13 +1456,13 @@ WHERE CompanyKey = ?;
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[LOWER]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE](#{Package\Load DimCompany\SP500_companies.Outputs[Flat File Source Output].Columns[Longname]}," Corporation",""),", Ltd.","")," Ltd.","")," Incorporated","")," &amp; Company","")," Company",""),"The ",""),".com","")," plc","")," US","")," Global",""))</property>
+                          name="Expression">[REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE](#{Package\Load DimCompany\SP500_companies.Outputs[Flat File Source Output].Columns[Longname]}," Corporation",""),", Ltd.","")," Ltd.","")," Incorporated","")," &amp; Company","")," Company",""),"The ",""),".com","")," plc","")," US","")," Global","")</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">LOWER(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(Longname," Corporation",""),", Ltd.","")," Ltd.","")," Incorporated","")," &amp; Company","")," Company",""),"The ",""),".com","")," plc","")," US","")," Global",""))</property>
+                          name="FriendlyExpression">REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(Longname," Corporation",""),", Ltd.","")," Ltd.","")," Incorporated","")," &amp; Company","")," Company",""),"The ",""),".com","")," plc","")," US","")," Global","")</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -1510,7 +1510,7 @@ WHERE CompanyKey = ?;
                       refId="Package\Load DimCompany\Extrant Company Name 2.Inputs[Derived Column Input].Columns[company_name]"
                       cachedCodepage="65001"
                       cachedDataType="str"
-                      cachedLength="255"
+                      cachedLength="50"
                       cachedName="company_name"
                       lineageId="Package\Load DimCompany\JustIT.Outputs[Flat File Source Output].Columns[company_name]" />
                   </inputColumns>
@@ -1530,7 +1530,7 @@ WHERE CompanyKey = ?;
                       dataType="wstr"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      length="1973"
+                      length="50"
                       lineageId="Package\Load DimCompany\Extrant Company Name 2.Outputs[Derived Column Output].Columns[company_name_new]"
                       name="company_name_new"
                       truncationRowDisposition="FailComponent">
@@ -1539,13 +1539,13 @@ WHERE CompanyKey = ?;
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[LOWER]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE](#{Package\Load DimCompany\JustIT.Outputs[Flat File Source Output].Columns[company_name]}," &amp; Company","")," Company",""),"The ","")," S.A.","")," SA","")," Sp. z o.o.","")," z o.o","")," sp. z o. o.","")," sp. z.o.o","")," Ltd.","")," Ltd","")," Inc.","")," Inc","")," Polska","")," Poland",""),"Disney","Walt Disney"),"Uber","Uber Technologies"),"Citi Handlowy","Citigroup"),"Citi Handlowy 10","Citigroup"),"Boeing Netherlands B.V.","Boeing"),"FedEx Dataworks","Fedex"),"3M Service Center","3M"))</property>
+                          name="Expression">[REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE](#{Package\Load DimCompany\JustIT.Outputs[Flat File Source Output].Columns[company_name]}," &amp; Company","")," Company",""),"The ","")," S.A.","")," SA","")," Sp. z o.o.","")," z o.o","")," sp. z o. o.","")," sp. z.o.o","")," Ltd.","")," Ltd","")," Inc.","")," Inc","")," Polska","")," Poland","")</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">LOWER(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(company_name," &amp; Company","")," Company",""),"The ","")," S.A.","")," SA","")," Sp. z o.o.","")," z o.o","")," sp. z o. o.","")," sp. z.o.o","")," Ltd.","")," Ltd","")," Inc.","")," Inc","")," Polska","")," Poland",""),"Disney","Walt Disney"),"Uber","Uber Technologies"),"Citi Handlowy","Citigroup"),"Citi Handlowy 10","Citigroup"),"Boeing Netherlands B.V.","Boeing"),"FedEx Dataworks","Fedex"),"3M Service Center","3M"))</property>
+                          name="FriendlyExpression">REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(company_name," &amp; Company","")," Company",""),"The ","")," S.A.","")," SA","")," Sp. z o.o.","")," z o.o","")," sp. z o. o.","")," sp. z.o.o","")," Ltd.","")," Ltd","")," Inc.","")," Inc","")," Polska","")," Poland","")</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -1654,7 +1654,7 @@ WHERE CompanyKey = ?;
                     <inputColumn
                       refId="Package\Load DimCompany\Inner Join Companies.Inputs[Merge Join Right Input].Columns[company_name_new]"
                       cachedDataType="wstr"
-                      cachedLength="1973"
+                      cachedLength="50"
                       cachedName="company_name_new"
                       cachedSortKeyPosition="1"
                       lineageId="Package\Load DimCompany\Sort By Company Name 2.Outputs[Sort Output].Columns[company_name_new]" />
@@ -1662,14 +1662,14 @@ WHERE CompanyKey = ?;
                       refId="Package\Load DimCompany\Inner Join Companies.Inputs[Merge Join Right Input].Columns[company_name]"
                       cachedCodepage="65001"
                       cachedDataType="str"
-                      cachedLength="255"
+                      cachedLength="50"
                       cachedName="company_name"
                       lineageId="Package\Load DimCompany\Sort By Company Name 2.Outputs[Sort Output].Columns[company_name]" />
                     <inputColumn
                       refId="Package\Load DimCompany\Inner Join Companies.Inputs[Merge Join Right Input].Columns[company_size]"
                       cachedCodepage="65001"
                       cachedDataType="str"
-                      cachedLength="255"
+                      cachedLength="50"
                       cachedName="company_size"
                       lineageId="Package\Load DimCompany\Sort By Company Name 2.Outputs[Sort Output].Columns[company_size]" />
                   </inputColumns>
@@ -1761,7 +1761,7 @@ WHERE CompanyKey = ?;
                       refId="Package\Load DimCompany\Inner Join Companies.Outputs[Merge Join Output].Columns[company_name]"
                       codePage="65001"
                       dataType="str"
-                      length="255"
+                      length="50"
                       lineageId="Package\Load DimCompany\Inner Join Companies.Outputs[Merge Join Output].Columns[company_name]"
                       name="company_name">
                       <properties>
@@ -1776,7 +1776,7 @@ WHERE CompanyKey = ?;
                       refId="Package\Load DimCompany\Inner Join Companies.Outputs[Merge Join Output].Columns[company_size]"
                       codePage="65001"
                       dataType="str"
-                      length="255"
+                      length="50"
                       lineageId="Package\Load DimCompany\Inner Join Companies.Outputs[Merge Join Output].Columns[company_size]"
                       name="company_size">
                       <properties>
@@ -1830,7 +1830,7 @@ WHERE CompanyKey = ?;
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Load DimCompany\JustIT.Outputs[Flat File Source Output].ExternalColumns[company_name]"
-                      length="255"
+                      length="50"
                       lineageId="Package\Load DimCompany\JustIT.Outputs[Flat File Source Output].Columns[company_name]"
                       name="company_name"
                       truncationRowDisposition="FailComponent">
@@ -1852,7 +1852,7 @@ WHERE CompanyKey = ?;
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Load DimCompany\JustIT.Outputs[Flat File Source Output].ExternalColumns[company_size]"
-                      length="255"
+                      length="50"
                       lineageId="Package\Load DimCompany\JustIT.Outputs[Flat File Source Output].Columns[company_size]"
                       name="company_size"
                       truncationRowDisposition="FailComponent">
@@ -1880,7 +1880,7 @@ WHERE CompanyKey = ?;
                       refId="Package\Load DimCompany\JustIT.Outputs[Flat File Source Output].ExternalColumns[street]"
                       codePage="65001"
                       dataType="str"
-                      length="255"
+                      length="50"
                       name="street" />
                     <externalMetadataColumn
                       refId="Package\Load DimCompany\JustIT.Outputs[Flat File Source Output].ExternalColumns[city]"
@@ -1916,7 +1916,7 @@ WHERE CompanyKey = ?;
                       refId="Package\Load DimCompany\JustIT.Outputs[Flat File Source Output].ExternalColumns[company_name]"
                       codePage="65001"
                       dataType="str"
-                      length="255"
+                      length="50"
                       name="company_name" />
                     <externalMetadataColumn
                       refId="Package\Load DimCompany\JustIT.Outputs[Flat File Source Output].ExternalColumns[company_url]"
@@ -1928,7 +1928,7 @@ WHERE CompanyKey = ?;
                       refId="Package\Load DimCompany\JustIT.Outputs[Flat File Source Output].ExternalColumns[company_size]"
                       codePage="65001"
                       dataType="str"
-                      length="255"
+                      length="50"
                       name="company_size" />
                     <externalMetadataColumn
                       refId="Package\Load DimCompany\JustIT.Outputs[Flat File Source Output].ExternalColumns[experience_level]"
@@ -2086,7 +2086,7 @@ WHERE CompanyKey = ?;
                       refId="Package\Load DimCompany\Manage CompanySize.Inputs[Derived Column Input].Columns[company_size]"
                       cachedCodepage="65001"
                       cachedDataType="str"
-                      cachedLength="255"
+                      cachedLength="50"
                       cachedName="company_size"
                       lineageId="Package\Load DimCompany\Inner Join Companies.Outputs[Merge Join Output].Columns[company_size]" />
                   </inputColumns>
@@ -2190,7 +2190,7 @@ WHERE CompanyKey = ?;
                       refId="Package\Load DimCompany\Manage CompanySize 2.Inputs[Derived Column Input].Columns[company_size]"
                       cachedCodepage="65001"
                       cachedDataType="str"
-                      cachedLength="255"
+                      cachedLength="50"
                       cachedName="company_size"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
@@ -2624,7 +2624,7 @@ WHERE CompanyKey = ?;
                   expressionType="Notify"
                   name="SqlCommandParam"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DimCompany]) [refTable]
-where [refTable].[CompanyKey] = ? and [refTable].[Symbol] = ? and [refTable].[CompanyName] = ? and [refTable].[CompanySize] = ? and [refTable].[Sector] = ? and [refTable].[Industry] = ?</property>
+where [refTable].[Symbol] = ? and [refTable].[Sector] = ? and [refTable].[Industry] = ? and [refTable].[CompanyName] = ? and [refTable].[CompanySize] = ? and [refTable].[CompanyKey] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the type of connection used to access the reference dataset."
@@ -2660,7 +2660,7 @@ where [refTable].[CompanyKey] = ? and [refTable].[Symbol] = ? and [refTable].[Co
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Match Output].Columns[CompanyKey]};#{Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Match Output].Columns[SymbolOld]};#{Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Match Output].Columns[CompanyNameOld]};#{Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Match Output].Columns[CompanySizeOld]};#{Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Match Output].Columns[SectorOld]};#{Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Match Output].Columns[IndustryOld]};</property>
+                  name="ParameterMap">#{Package\Load DimCompany\Data Conversion.Outputs[Data Conversion Output].Columns[Symbol]};#{Package\Load DimCompany\Data Conversion.Outputs[Data Conversion Output].Columns[Sector]};#{Package\Load DimCompany\Data Conversion.Outputs[Data Conversion Output].Columns[Industry]};#{Package\Load DimCompany\Data Conversion.Outputs[Data Conversion Output].Columns[CompanyName]};#{Package\Load DimCompany\Data Conversion.Outputs[Data Conversion Output].Columns[CompanySize]};#{Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Match Output].Columns[CompanyKey]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -2700,11 +2700,11 @@ where [refTable].[CompanyKey] = ? and [refTable].[Symbol] = ? and [refTable].[Co
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Load DimCompany\Select Modified Companies.Inputs[Lookup Input].Columns[SymbolOld]"
+                      refId="Package\Load DimCompany\Select Modified Companies.Inputs[Lookup Input].Columns[Symbol]"
                       cachedDataType="wstr"
                       cachedLength="50"
-                      cachedName="SymbolOld"
-                      lineageId="Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Match Output].Columns[SymbolOld]">
+                      cachedName="Symbol"
+                      lineageId="Package\Load DimCompany\Data Conversion.Outputs[Data Conversion Output].Columns[Symbol]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -2717,11 +2717,11 @@ where [refTable].[CompanyKey] = ? and [refTable].[Symbol] = ? and [refTable].[Co
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Load DimCompany\Select Modified Companies.Inputs[Lookup Input].Columns[CompanyNameOld]"
+                      refId="Package\Load DimCompany\Select Modified Companies.Inputs[Lookup Input].Columns[CompanyName]"
                       cachedDataType="wstr"
                       cachedLength="50"
-                      cachedName="CompanyNameOld"
-                      lineageId="Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Match Output].Columns[CompanyNameOld]">
+                      cachedName="CompanyName"
+                      lineageId="Package\Load DimCompany\Data Conversion.Outputs[Data Conversion Output].Columns[CompanyName]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -2734,10 +2734,10 @@ where [refTable].[CompanyKey] = ? and [refTable].[Symbol] = ? and [refTable].[Co
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Load DimCompany\Select Modified Companies.Inputs[Lookup Input].Columns[CompanySizeOld]"
+                      refId="Package\Load DimCompany\Select Modified Companies.Inputs[Lookup Input].Columns[CompanySize]"
                       cachedDataType="i4"
-                      cachedName="CompanySizeOld"
-                      lineageId="Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Match Output].Columns[CompanySizeOld]">
+                      cachedName="CompanySize"
+                      lineageId="Package\Load DimCompany\Data Conversion.Outputs[Data Conversion Output].Columns[CompanySize]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -2750,11 +2750,11 @@ where [refTable].[CompanyKey] = ? and [refTable].[Symbol] = ? and [refTable].[Co
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Load DimCompany\Select Modified Companies.Inputs[Lookup Input].Columns[SectorOld]"
+                      refId="Package\Load DimCompany\Select Modified Companies.Inputs[Lookup Input].Columns[Sector]"
                       cachedDataType="wstr"
                       cachedLength="50"
-                      cachedName="SectorOld"
-                      lineageId="Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Match Output].Columns[SectorOld]">
+                      cachedName="Sector"
+                      lineageId="Package\Load DimCompany\Data Conversion.Outputs[Data Conversion Output].Columns[Sector]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -2767,11 +2767,11 @@ where [refTable].[CompanyKey] = ? and [refTable].[Symbol] = ? and [refTable].[Co
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Load DimCompany\Select Modified Companies.Inputs[Lookup Input].Columns[IndustryOld]"
+                      refId="Package\Load DimCompany\Select Modified Companies.Inputs[Lookup Input].Columns[Industry]"
                       cachedDataType="wstr"
                       cachedLength="50"
-                      cachedName="IndustryOld"
-                      lineageId="Package\Load DimCompany\Select Unique Rows.Outputs[Lookup Match Output].Columns[IndustryOld]">
+                      cachedName="Industry"
+                      lineageId="Package\Load DimCompany\Data Conversion.Outputs[Data Conversion Output].Columns[Industry]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -3321,7 +3321,7 @@ where [refTable].[Symbol] = ? and [refTable].[CompanyName] = ?</property>
                       refId="Package\Load DimCompany\Sort By Company Name 2.Inputs[Sort Input].Columns[company_name]"
                       cachedCodepage="65001"
                       cachedDataType="str"
-                      cachedLength="255"
+                      cachedLength="50"
                       cachedName="company_name"
                       lineageId="Package\Load DimCompany\JustIT.Outputs[Flat File Source Output].Columns[company_name]">
                       <properties>
@@ -3339,7 +3339,7 @@ where [refTable].[Symbol] = ? and [refTable].[CompanyName] = ?</property>
                       refId="Package\Load DimCompany\Sort By Company Name 2.Inputs[Sort Input].Columns[company_size]"
                       cachedCodepage="65001"
                       cachedDataType="str"
-                      cachedLength="255"
+                      cachedLength="50"
                       cachedName="company_size"
                       lineageId="Package\Load DimCompany\JustIT.Outputs[Flat File Source Output].Columns[company_size]">
                       <properties>
@@ -3356,7 +3356,7 @@ where [refTable].[Symbol] = ? and [refTable].[CompanyName] = ?</property>
                     <inputColumn
                       refId="Package\Load DimCompany\Sort By Company Name 2.Inputs[Sort Input].Columns[company_name_new]"
                       cachedDataType="wstr"
-                      cachedLength="1973"
+                      cachedLength="50"
                       cachedName="company_name_new"
                       lineageId="Package\Load DimCompany\Extrant Company Name 2.Outputs[Derived Column Output].Columns[company_name_new]">
                       <properties>
@@ -3384,7 +3384,7 @@ where [refTable].[Symbol] = ? and [refTable].[CompanyName] = ?</property>
                       refId="Package\Load DimCompany\Sort By Company Name 2.Outputs[Sort Output].Columns[company_name]"
                       codePage="65001"
                       dataType="str"
-                      length="255"
+                      length="50"
                       lineageId="Package\Load DimCompany\Sort By Company Name 2.Outputs[Sort Output].Columns[company_name]"
                       name="company_name">
                       <properties>
@@ -3399,7 +3399,7 @@ where [refTable].[Symbol] = ? and [refTable].[CompanyName] = ?</property>
                       refId="Package\Load DimCompany\Sort By Company Name 2.Outputs[Sort Output].Columns[company_size]"
                       codePage="65001"
                       dataType="str"
-                      length="255"
+                      length="50"
                       lineageId="Package\Load DimCompany\Sort By Company Name 2.Outputs[Sort Output].Columns[company_size]"
                       name="company_size">
                       <properties>
@@ -3413,7 +3413,7 @@ where [refTable].[Symbol] = ? and [refTable].[CompanyName] = ?</property>
                     <outputColumn
                       refId="Package\Load DimCompany\Sort By Company Name 2.Outputs[Sort Output].Columns[company_name_new]"
                       dataType="wstr"
-                      length="1973"
+                      length="50"
                       lineageId="Package\Load DimCompany\Sort By Company Name 2.Outputs[Sort Output].Columns[company_name_new]"
                       name="company_name_new"
                       sortKeyPosition="1">
@@ -3779,7 +3779,6 @@ where [refTable].[Symbol] = ? and [refTable].[CompanyName] = ?</property>
       DTS:refId="Package\Load DimLocation"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:Disabled="True"
       DTS:DTSID="{4965F0FF-73BB-4AE3-8245-CC4CC9F4F7C2}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -3806,7 +3805,7 @@ where [refTable].[Symbol] = ? and [refTable].[CompanyName] = ?</property>
                       refId="Package\Load DimLocation\Data Conversion.Inputs[Data Conversion Input].Columns[street]"
                       cachedCodepage="65001"
                       cachedDataType="str"
-                      cachedLength="255"
+                      cachedLength="50"
                       cachedName="street"
                       lineageId="Package\Load DimLocation\JustIT.Outputs[Flat File Source Output].Columns[street]" />
                     <inputColumn
@@ -4381,7 +4380,7 @@ WHERE        (LocationKey = ?)</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Load DimLocation\JustIT.Outputs[Flat File Source Output].ExternalColumns[street]"
-                      length="255"
+                      length="50"
                       lineageId="Package\Load DimLocation\JustIT.Outputs[Flat File Source Output].Columns[street]"
                       name="street"
                       truncationRowDisposition="FailComponent">
@@ -4497,7 +4496,7 @@ WHERE        (LocationKey = ?)</property>
                       refId="Package\Load DimLocation\JustIT.Outputs[Flat File Source Output].ExternalColumns[street]"
                       codePage="65001"
                       dataType="str"
-                      length="255"
+                      length="50"
                       name="street" />
                     <externalMetadataColumn
                       refId="Package\Load DimLocation\JustIT.Outputs[Flat File Source Output].ExternalColumns[city]"
@@ -4533,7 +4532,7 @@ WHERE        (LocationKey = ?)</property>
                       refId="Package\Load DimLocation\JustIT.Outputs[Flat File Source Output].ExternalColumns[company_name]"
                       codePage="65001"
                       dataType="str"
-                      length="255"
+                      length="50"
                       name="company_name" />
                     <externalMetadataColumn
                       refId="Package\Load DimLocation\JustIT.Outputs[Flat File Source Output].ExternalColumns[company_url]"
@@ -4545,7 +4544,7 @@ WHERE        (LocationKey = ?)</property>
                       refId="Package\Load DimLocation\JustIT.Outputs[Flat File Source Output].ExternalColumns[company_size]"
                       codePage="65001"
                       dataType="str"
-                      length="255"
+                      length="50"
                       name="company_size" />
                     <externalMetadataColumn
                       refId="Package\Load DimLocation\JustIT.Outputs[Flat File Source Output].ExternalColumns[experience_level]"
@@ -4703,7 +4702,7 @@ WHERE        (LocationKey = ?)</property>
                       refId="Package\Load DimLocation\Manage Nulls.Inputs[Derived Column Input].Columns[street]"
                       cachedCodepage="65001"
                       cachedDataType="str"
-                      cachedLength="255"
+                      cachedLength="50"
                       cachedName="street"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
@@ -5382,609 +5381,6 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
           version="1">
           <components>
             <component
-              refId="Package\Load FactItOffers\Aggregate"
-              componentClassID="Microsoft.Aggregate"
-              contactInfo="Aggregate;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;3"
-              description="Aggregates data with functions such as Average, Sum, Count, Max, and Min. For example, group data to compute the sum of sales per product or the average visits per day."
-              name="Aggregate"
-              version="3">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the approximate number of group by keys that the aggregation produces. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no KeyScale value is used."
-                  name="KeyScale"
-                  typeConverter="KeyScaleType">0</property>
-                <property
-                  dataType="System.Null"
-                  description="Specifies the exact number of group by keys that the aggregation produces. If a KeyScale value is specified, the value in Keys takes precedence."
-                  name="Keys" />
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the approximate number of distinct values in a column that the aggregation counts distinctly. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no CountDistinctScale value is used."
-                  name="CountDistinctScale"
-                  typeConverter="KeyScaleType">0</property>
-                <property
-                  dataType="System.Null"
-                  description="Specifies the exact number of distinct values in a column that the aggregation counts distinctly. If a CountDistinctScale value is specified, the value in CountDistinctKeys takes precedence."
-                  name="CountDistinctKeys" />
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the percentage by which memory can be extended during the aggregation. Valid values are between 1 and 100."
-                  name="AutoExtendFactor">25</property>
-              </properties>
-              <inputs>
-                <input
-                  refId="Package\Load FactItOffers\Aggregate.Inputs[Aggregate Input 1]"
-                  name="Aggregate Input 1">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Load FactItOffers\Aggregate.Inputs[Aggregate Input 1].Columns[LocationKey]"
-                      cachedDataType="i4"
-                      cachedName="LocationKey"
-                      lineageId="Package\Load FactItOffers\Connect To Location.Outputs[Lookup Match Output].Columns[LocationKey]" />
-                    <inputColumn
-                      refId="Package\Load FactItOffers\Aggregate.Inputs[Aggregate Input 1].Columns[CountryCode]"
-                      cachedDataType="wstr"
-                      cachedLength="10"
-                      cachedName="CountryCode"
-                      lineageId="Package\Load FactItOffers\Convert Location Data.Outputs[Data Conversion Output].Columns[CountryCode]" />
-                    <inputColumn
-                      refId="Package\Load FactItOffers\Aggregate.Inputs[Aggregate Input 1].Columns[City]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="City"
-                      lineageId="Package\Load FactItOffers\Convert Location Data.Outputs[Data Conversion Output].Columns[City]" />
-                    <inputColumn
-                      refId="Package\Load FactItOffers\Aggregate.Inputs[Aggregate Input 1].Columns[Street]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="Street"
-                      lineageId="Package\Load FactItOffers\Convert Location Data.Outputs[Data Conversion Output].Columns[Street]" />
-                    <inputColumn
-                      refId="Package\Load FactItOffers\Aggregate.Inputs[Aggregate Input 1].Columns[DateKey]"
-                      cachedDataType="wstr"
-                      cachedLength="10"
-                      cachedName="DateKey"
-                      lineageId="Package\Load FactItOffers\Convert Date.Outputs[Data Conversion Output].Columns[DateKey]" />
-                    <inputColumn
-                      refId="Package\Load FactItOffers\Aggregate.Inputs[Aggregate Input 1].Columns[CompanyKey]"
-                      cachedDataType="i4"
-                      cachedName="CompanyKey"
-                      lineageId="Package\Load FactItOffers\Filter By Companies.Outputs[Lookup Match Output].Columns[CompanyKey]" />
-                    <inputColumn
-                      refId="Package\Load FactItOffers\Aggregate.Inputs[Aggregate Input 1].Columns[Remote]"
-                      cachedDataType="bool"
-                      cachedName="Remote"
-                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[Remote]" />
-                    <inputColumn
-                      refId="Package\Load FactItOffers\Aggregate.Inputs[Aggregate Input 1].Columns[RemoteInterview]"
-                      cachedDataType="bool"
-                      cachedName="RemoteInterview"
-                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[RemoteInterview]" />
-                    <inputColumn
-                      refId="Package\Load FactItOffers\Aggregate.Inputs[Aggregate Input 1].Columns[Currency]"
-                      cachedDataType="wstr"
-                      cachedLength="10"
-                      cachedName="Currency"
-                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[Currency]" />
-                    <inputColumn
-                      refId="Package\Load FactItOffers\Aggregate.Inputs[Aggregate Input 1].Columns[SalaryTo]"
-                      cachedDataType="i4"
-                      cachedName="SalaryTo"
-                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[SalaryTo]" />
-                    <inputColumn
-                      refId="Package\Load FactItOffers\Aggregate.Inputs[Aggregate Input 1].Columns[SalaryFrom]"
-                      cachedDataType="i4"
-                      cachedName="SalaryFrom"
-                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[SalaryFrom]" />
-                    <inputColumn
-                      refId="Package\Load FactItOffers\Aggregate.Inputs[Aggregate Input 1].Columns[Type]"
-                      cachedDataType="wstr"
-                      cachedLength="20"
-                      cachedName="Type"
-                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[Type]" />
-                    <inputColumn
-                      refId="Package\Load FactItOffers\Aggregate.Inputs[Aggregate Input 1].Columns[ExperienceLevel]"
-                      cachedDataType="wstr"
-                      cachedLength="20"
-                      cachedName="ExperienceLevel"
-                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[ExperienceLevel]" />
-                    <inputColumn
-                      refId="Package\Load FactItOffers\Aggregate.Inputs[Aggregate Input 1].Columns[CompanyName]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="CompanyName"
-                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[CompanyName]" />
-                    <inputColumn
-                      refId="Package\Load FactItOffers\Aggregate.Inputs[Aggregate Input 1].Columns[WorkplaceType]"
-                      cachedDataType="wstr"
-                      cachedLength="20"
-                      cachedName="WorkplaceType"
-                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[WorkplaceType]" />
-                    <inputColumn
-                      refId="Package\Load FactItOffers\Aggregate.Inputs[Aggregate Input 1].Columns[Title]"
-                      cachedDataType="wstr"
-                      cachedLength="100"
-                      cachedName="Title"
-                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[Title]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1]"
-                  name="Aggregate Output 1">
-                  <properties>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the approximate number of group by keys that the aggregation produces. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no KeyScale value is used."
-                      name="KeyScale"
-                      typeConverter="KeyScaleType">0</property>
-                    <property
-                      dataType="System.Null"
-                      description="Specifies the exact number of group by keys that the aggregation produces. If a KeyScale value is specified, the value in Keys takes precedence."
-                      name="Keys" />
-                  </properties>
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[LocationKey]"
-                      dataType="i4"
-                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[LocationKey]"
-                      name="LocationKey">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the ID of the input column used in the aggregation."
-                          name="AggregationColumnId">#{Package\Load FactItOffers\Connect To Location.Outputs[Lookup Match Output].Columns[LocationKey]}</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the type of aggregation."
-                          name="AggregationType"
-                          typeConverter="AggregationType">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
-                          name="IsBig">1</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the string comparison options."
-                          name="AggregationComparisonFlags">0</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[CountryCode]"
-                      dataType="wstr"
-                      length="10"
-                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[CountryCode]"
-                      name="CountryCode">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the ID of the input column used in the aggregation."
-                          name="AggregationColumnId">#{Package\Load FactItOffers\Convert Location Data.Outputs[Data Conversion Output].Columns[CountryCode]}</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the type of aggregation."
-                          name="AggregationType"
-                          typeConverter="AggregationType">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
-                          name="IsBig">1</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the string comparison options."
-                          name="AggregationComparisonFlags">0</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[City]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[City]"
-                      name="City">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the ID of the input column used in the aggregation."
-                          name="AggregationColumnId">#{Package\Load FactItOffers\Convert Location Data.Outputs[Data Conversion Output].Columns[City]}</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the type of aggregation."
-                          name="AggregationType"
-                          typeConverter="AggregationType">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
-                          name="IsBig">1</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the string comparison options."
-                          name="AggregationComparisonFlags">0</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[Street]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[Street]"
-                      name="Street">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the ID of the input column used in the aggregation."
-                          name="AggregationColumnId">#{Package\Load FactItOffers\Convert Location Data.Outputs[Data Conversion Output].Columns[Street]}</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the type of aggregation."
-                          name="AggregationType"
-                          typeConverter="AggregationType">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
-                          name="IsBig">1</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the string comparison options."
-                          name="AggregationComparisonFlags">0</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[DateKey]"
-                      dataType="wstr"
-                      length="10"
-                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[DateKey]"
-                      name="DateKey">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the ID of the input column used in the aggregation."
-                          name="AggregationColumnId">#{Package\Load FactItOffers\Convert Date.Outputs[Data Conversion Output].Columns[DateKey]}</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the type of aggregation."
-                          name="AggregationType"
-                          typeConverter="AggregationType">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
-                          name="IsBig">1</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the string comparison options."
-                          name="AggregationComparisonFlags">0</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[CompanyKey]"
-                      dataType="i4"
-                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[CompanyKey]"
-                      name="CompanyKey">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the ID of the input column used in the aggregation."
-                          name="AggregationColumnId">#{Package\Load FactItOffers\Filter By Companies.Outputs[Lookup Match Output].Columns[CompanyKey]}</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the type of aggregation."
-                          name="AggregationType"
-                          typeConverter="AggregationType">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
-                          name="IsBig">1</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the string comparison options."
-                          name="AggregationComparisonFlags">0</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[Remote]"
-                      dataType="bool"
-                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[Remote]"
-                      name="Remote">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the ID of the input column used in the aggregation."
-                          name="AggregationColumnId">#{Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[Remote]}</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the type of aggregation."
-                          name="AggregationType"
-                          typeConverter="AggregationType">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
-                          name="IsBig">1</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the string comparison options."
-                          name="AggregationComparisonFlags">0</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[RemoteInterview]"
-                      dataType="bool"
-                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[RemoteInterview]"
-                      name="RemoteInterview">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the ID of the input column used in the aggregation."
-                          name="AggregationColumnId">#{Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[RemoteInterview]}</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the type of aggregation."
-                          name="AggregationType"
-                          typeConverter="AggregationType">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
-                          name="IsBig">1</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the string comparison options."
-                          name="AggregationComparisonFlags">0</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[Currency]"
-                      dataType="wstr"
-                      length="10"
-                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[Currency]"
-                      name="Currency">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the ID of the input column used in the aggregation."
-                          name="AggregationColumnId">#{Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[Currency]}</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the type of aggregation."
-                          name="AggregationType"
-                          typeConverter="AggregationType">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
-                          name="IsBig">1</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the string comparison options."
-                          name="AggregationComparisonFlags">0</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[SalaryTo]"
-                      dataType="i4"
-                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[SalaryTo]"
-                      name="SalaryTo">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the ID of the input column used in the aggregation."
-                          name="AggregationColumnId">#{Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[SalaryTo]}</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the type of aggregation."
-                          name="AggregationType"
-                          typeConverter="AggregationType">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
-                          name="IsBig">1</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the string comparison options."
-                          name="AggregationComparisonFlags">0</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[SalaryFrom]"
-                      dataType="i4"
-                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[SalaryFrom]"
-                      name="SalaryFrom">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the ID of the input column used in the aggregation."
-                          name="AggregationColumnId">#{Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[SalaryFrom]}</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the type of aggregation."
-                          name="AggregationType"
-                          typeConverter="AggregationType">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
-                          name="IsBig">1</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the string comparison options."
-                          name="AggregationComparisonFlags">0</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[Type]"
-                      dataType="wstr"
-                      length="20"
-                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[Type]"
-                      name="Type">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the ID of the input column used in the aggregation."
-                          name="AggregationColumnId">#{Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[Type]}</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the type of aggregation."
-                          name="AggregationType"
-                          typeConverter="AggregationType">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
-                          name="IsBig">1</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the string comparison options."
-                          name="AggregationComparisonFlags">0</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[ExperienceLevel]"
-                      dataType="wstr"
-                      length="20"
-                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[ExperienceLevel]"
-                      name="ExperienceLevel">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the ID of the input column used in the aggregation."
-                          name="AggregationColumnId">#{Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[ExperienceLevel]}</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the type of aggregation."
-                          name="AggregationType"
-                          typeConverter="AggregationType">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
-                          name="IsBig">1</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the string comparison options."
-                          name="AggregationComparisonFlags">0</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[CompanyName]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[CompanyName]"
-                      name="CompanyName">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the ID of the input column used in the aggregation."
-                          name="AggregationColumnId">#{Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[CompanyName]}</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the type of aggregation."
-                          name="AggregationType"
-                          typeConverter="AggregationType">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
-                          name="IsBig">1</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the string comparison options."
-                          name="AggregationComparisonFlags">0</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[WorkplaceType]"
-                      dataType="wstr"
-                      length="20"
-                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[WorkplaceType]"
-                      name="WorkplaceType">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the ID of the input column used in the aggregation."
-                          name="AggregationColumnId">#{Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[WorkplaceType]}</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the type of aggregation."
-                          name="AggregationType"
-                          typeConverter="AggregationType">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
-                          name="IsBig">1</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the string comparison options."
-                          name="AggregationComparisonFlags">0</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[Title]"
-                      dataType="wstr"
-                      length="100"
-                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[Title]"
-                      name="Title">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the ID of the input column used in the aggregation."
-                          name="AggregationColumnId">#{Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[Title]}</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the type of aggregation."
-                          name="AggregationType"
-                          typeConverter="AggregationType">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
-                          name="IsBig">1</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the string comparison options."
-                          name="AggregationComparisonFlags">0</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[Count all]"
-                      dataType="ui8"
-                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[Count all]"
-                      name="Count all">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the ID of the input column used in the aggregation."
-                          name="AggregationColumnId">#{Package\Load FactItOffers\0:invalid}</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the type of aggregation."
-                          name="AggregationType"
-                          typeConverter="AggregationType">2</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
-                          name="IsBig">1</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the string comparison options."
-                          name="AggregationComparisonFlags">0</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
               refId="Package\Load FactItOffers\Connect To Date"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
@@ -6413,7 +5809,7 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
                       refId="Package\Load FactItOffers\Convert Location Data.Inputs[Data Conversion Input].Columns[street]"
                       cachedCodepage="65001"
                       cachedDataType="str"
-                      cachedLength="255"
+                      cachedLength="50"
                       cachedName="street"
                       lineageId="Package\Load FactItOffers\JustIT.Outputs[Flat File Source Output].Columns[street]" />
                     <inputColumn
@@ -6561,7 +5957,7 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
                       refId="Package\Load FactItOffers\Data Conversion.Inputs[Data Conversion Input].Columns[company_name]"
                       cachedCodepage="65001"
                       cachedDataType="str"
-                      cachedLength="255"
+                      cachedLength="50"
                       cachedName="company_name"
                       lineageId="Package\Load FactItOffers\JustIT.Outputs[Flat File Source Output].Columns[company_name]" />
                     <inputColumn
@@ -6671,7 +6067,7 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      length="255"
+                      length="50"
                       lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[CompanyName]"
                       name="CompanyName"
                       truncationRowDisposition="FailComponent">
@@ -7011,78 +6407,78 @@ where [refTable].[Street] = ? and [refTable].[City] = ? and [refTable].[CountryC
                       cachedLength="100"
                       cachedName="Title"
                       externalMetadataColumnId="Package\Load FactItOffers\FactItOffers.Inputs[OLE DB Destination Input].ExternalColumns[Title]"
-                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[Title]" />
+                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[Title]" />
                     <inputColumn
                       refId="Package\Load FactItOffers\FactItOffers.Inputs[OLE DB Destination Input].Columns[WorkplaceType]"
                       cachedDataType="wstr"
                       cachedLength="20"
                       cachedName="WorkplaceType"
                       externalMetadataColumnId="Package\Load FactItOffers\FactItOffers.Inputs[OLE DB Destination Input].ExternalColumns[WorkplaceType]"
-                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[WorkplaceType]" />
+                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[WorkplaceType]" />
                     <inputColumn
                       refId="Package\Load FactItOffers\FactItOffers.Inputs[OLE DB Destination Input].Columns[ExperienceLevel]"
                       cachedDataType="wstr"
                       cachedLength="20"
                       cachedName="ExperienceLevel"
                       externalMetadataColumnId="Package\Load FactItOffers\FactItOffers.Inputs[OLE DB Destination Input].ExternalColumns[ExperienceLevel]"
-                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[ExperienceLevel]" />
+                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[ExperienceLevel]" />
                     <inputColumn
                       refId="Package\Load FactItOffers\FactItOffers.Inputs[OLE DB Destination Input].Columns[Type]"
                       cachedDataType="wstr"
                       cachedLength="20"
                       cachedName="Type"
                       externalMetadataColumnId="Package\Load FactItOffers\FactItOffers.Inputs[OLE DB Destination Input].ExternalColumns[Type]"
-                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[Type]" />
+                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[Type]" />
                     <inputColumn
                       refId="Package\Load FactItOffers\FactItOffers.Inputs[OLE DB Destination Input].Columns[SalaryFrom]"
                       cachedDataType="i4"
                       cachedName="SalaryFrom"
                       externalMetadataColumnId="Package\Load FactItOffers\FactItOffers.Inputs[OLE DB Destination Input].ExternalColumns[SalaryFrom]"
-                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[SalaryFrom]" />
+                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[SalaryFrom]" />
                     <inputColumn
                       refId="Package\Load FactItOffers\FactItOffers.Inputs[OLE DB Destination Input].Columns[SalaryTo]"
                       cachedDataType="i4"
                       cachedName="SalaryTo"
                       externalMetadataColumnId="Package\Load FactItOffers\FactItOffers.Inputs[OLE DB Destination Input].ExternalColumns[SalaryTo]"
-                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[SalaryTo]" />
+                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[SalaryTo]" />
                     <inputColumn
                       refId="Package\Load FactItOffers\FactItOffers.Inputs[OLE DB Destination Input].Columns[Currency]"
                       cachedDataType="wstr"
                       cachedLength="10"
                       cachedName="Currency"
                       externalMetadataColumnId="Package\Load FactItOffers\FactItOffers.Inputs[OLE DB Destination Input].ExternalColumns[Currency]"
-                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[Currency]" />
+                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[Currency]" />
                     <inputColumn
                       refId="Package\Load FactItOffers\FactItOffers.Inputs[OLE DB Destination Input].Columns[RemoteInterview]"
                       cachedDataType="bool"
                       cachedName="RemoteInterview"
                       externalMetadataColumnId="Package\Load FactItOffers\FactItOffers.Inputs[OLE DB Destination Input].ExternalColumns[RemoteInterview]"
-                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[RemoteInterview]" />
+                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[RemoteInterview]" />
                     <inputColumn
                       refId="Package\Load FactItOffers\FactItOffers.Inputs[OLE DB Destination Input].Columns[Remote]"
                       cachedDataType="bool"
                       cachedName="Remote"
                       externalMetadataColumnId="Package\Load FactItOffers\FactItOffers.Inputs[OLE DB Destination Input].ExternalColumns[Remote]"
-                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[Remote]" />
+                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[Remote]" />
                     <inputColumn
                       refId="Package\Load FactItOffers\FactItOffers.Inputs[OLE DB Destination Input].Columns[CompanyKey]"
                       cachedDataType="i4"
                       cachedName="CompanyKey"
                       externalMetadataColumnId="Package\Load FactItOffers\FactItOffers.Inputs[OLE DB Destination Input].ExternalColumns[CompanyKey]"
-                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[CompanyKey]" />
+                      lineageId="Package\Load FactItOffers\Filter By Companies.Outputs[Lookup Match Output].Columns[CompanyKey]" />
                     <inputColumn
                       refId="Package\Load FactItOffers\FactItOffers.Inputs[OLE DB Destination Input].Columns[DateKey]"
                       cachedDataType="wstr"
                       cachedLength="10"
                       cachedName="DateKey"
                       externalMetadataColumnId="Package\Load FactItOffers\FactItOffers.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
-                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[DateKey]" />
+                      lineageId="Package\Load FactItOffers\Convert Date.Outputs[Data Conversion Output].Columns[DateKey]" />
                     <inputColumn
                       refId="Package\Load FactItOffers\FactItOffers.Inputs[OLE DB Destination Input].Columns[LocationKey]"
                       cachedDataType="i4"
                       cachedName="LocationKey"
                       externalMetadataColumnId="Package\Load FactItOffers\FactItOffers.Inputs[OLE DB Destination Input].ExternalColumns[LocationKey]"
-                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[LocationKey]" />
+                      lineageId="Package\Load FactItOffers\Connect To Location.Outputs[Lookup Match Output].Columns[LocationKey]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -7255,7 +6651,7 @@ where [refTable].[CompanyName] = ?</property>
                     <inputColumn
                       refId="Package\Load FactItOffers\Filter By Companies.Inputs[Lookup Input].Columns[CompanyName]"
                       cachedDataType="wstr"
-                      cachedLength="255"
+                      cachedLength="50"
                       cachedName="CompanyName"
                       lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[CompanyName]">
                       <properties>
@@ -7412,7 +6808,7 @@ where [refTable].[CompanyName] = ?</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Load FactItOffers\JustIT.Outputs[Flat File Source Output].ExternalColumns[company_name]"
-                      length="255"
+                      length="50"
                       lineageId="Package\Load FactItOffers\JustIT.Outputs[Flat File Source Output].Columns[company_name]"
                       name="company_name"
                       truncationRowDisposition="IgnoreFailure">
@@ -7610,7 +7006,7 @@ where [refTable].[CompanyName] = ?</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Load FactItOffers\JustIT.Outputs[Flat File Source Output].ExternalColumns[street]"
-                      length="255"
+                      length="50"
                       lineageId="Package\Load FactItOffers\JustIT.Outputs[Flat File Source Output].Columns[street]"
                       name="street"
                       truncationRowDisposition="FailComponent">
@@ -7726,7 +7122,7 @@ where [refTable].[CompanyName] = ?</property>
                       refId="Package\Load FactItOffers\JustIT.Outputs[Flat File Source Output].ExternalColumns[street]"
                       codePage="65001"
                       dataType="str"
-                      length="255"
+                      length="50"
                       name="street" />
                     <externalMetadataColumn
                       refId="Package\Load FactItOffers\JustIT.Outputs[Flat File Source Output].ExternalColumns[city]"
@@ -7762,7 +7158,7 @@ where [refTable].[CompanyName] = ?</property>
                       refId="Package\Load FactItOffers\JustIT.Outputs[Flat File Source Output].ExternalColumns[company_name]"
                       codePage="65001"
                       dataType="str"
-                      length="255"
+                      length="50"
                       name="company_name" />
                     <externalMetadataColumn
                       refId="Package\Load FactItOffers\JustIT.Outputs[Flat File Source Output].ExternalColumns[company_url]"
@@ -7774,7 +7170,7 @@ where [refTable].[CompanyName] = ?</property>
                       refId="Package\Load FactItOffers\JustIT.Outputs[Flat File Source Output].ExternalColumns[company_size]"
                       codePage="65001"
                       dataType="str"
-                      length="255"
+                      length="50"
                       name="company_size" />
                     <externalMetadataColumn
                       refId="Package\Load FactItOffers\JustIT.Outputs[Flat File Source Output].ExternalColumns[experience_level]"
@@ -8047,7 +7443,7 @@ where [refTable].[CompanyName] = ?</property>
                       refId="Package\Load FactItOffers\Remove Nulls.Inputs[Conditional Split Input].Columns[company_name]"
                       cachedCodepage="65001"
                       cachedDataType="str"
-                      cachedLength="255"
+                      cachedLength="50"
                       cachedName="company_name"
                       lineageId="Package\Load FactItOffers\JustIT.Outputs[Flat File Source Output].Columns[company_name]" />
                     <inputColumn
@@ -8184,7 +7580,7 @@ where [refTable].[CompanyName] = ?</property>
                   expressionType="Notify"
                   name="SqlCommandParam"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[FactItOffers]) [refTable]
-where [refTable].[LocationKey] = ? and [refTable].[DateKey] = ? and [refTable].[CompanyKey] = ? and [refTable].[Remote] = ? and [refTable].[RemoteInterview] = ? and [refTable].[Currency] = ? and [refTable].[SalaryTo] = ? and [refTable].[SalaryFrom] = ? and [refTable].[Type] = ? and [refTable].[ExperienceLevel] = ? and [refTable].[WorkplaceType] = ? and [refTable].[Title] = ?</property>
+where [refTable].[Title] = ? and [refTable].[WorkplaceType] = ? and [refTable].[ExperienceLevel] = ? and [refTable].[Type] = ? and [refTable].[SalaryFrom] = ? and [refTable].[SalaryTo] = ? and [refTable].[Currency] = ? and [refTable].[RemoteInterview] = ? and [refTable].[Remote] = ? and [refTable].[CompanyKey] = ? and [refTable].[DateKey] = ? and [refTable].[LocationKey] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the type of connection used to access the reference dataset."
@@ -8220,7 +7616,7 @@ where [refTable].[LocationKey] = ? and [refTable].[DateKey] = ? and [refTable].[
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[LocationKey]};#{Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[DateKey]};#{Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[CompanyKey]};#{Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[Remote]};#{Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[RemoteInterview]};#{Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[Currency]};#{Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[SalaryTo]};#{Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[SalaryFrom]};#{Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[Type]};#{Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[ExperienceLevel]};#{Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[WorkplaceType]};#{Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[Title]};</property>
+                  name="ParameterMap">#{Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[Title]};#{Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[WorkplaceType]};#{Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[ExperienceLevel]};#{Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[Type]};#{Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[SalaryFrom]};#{Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[SalaryTo]};#{Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[Currency]};#{Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[RemoteInterview]};#{Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[Remote]};#{Package\Load FactItOffers\Filter By Companies.Outputs[Lookup Match Output].Columns[CompanyKey]};#{Package\Load FactItOffers\Convert Date.Outputs[Data Conversion Output].Columns[DateKey]};#{Package\Load FactItOffers\Connect To Location.Outputs[Lookup Match Output].Columns[LocationKey]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -8248,7 +7644,7 @@ where [refTable].[LocationKey] = ? and [refTable].[DateKey] = ? and [refTable].[
                       cachedDataType="wstr"
                       cachedLength="100"
                       cachedName="Title"
-                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[Title]">
+                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[Title]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -8265,7 +7661,7 @@ where [refTable].[LocationKey] = ? and [refTable].[DateKey] = ? and [refTable].[
                       cachedDataType="wstr"
                       cachedLength="20"
                       cachedName="WorkplaceType"
-                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[WorkplaceType]">
+                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[WorkplaceType]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -8281,7 +7677,7 @@ where [refTable].[LocationKey] = ? and [refTable].[DateKey] = ? and [refTable].[
                       refId="Package\Load FactItOffers\Retain New Data.Inputs[Lookup Input].Columns[CompanyKey]"
                       cachedDataType="i4"
                       cachedName="CompanyKey"
-                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[CompanyKey]">
+                      lineageId="Package\Load FactItOffers\Filter By Companies.Outputs[Lookup Match Output].Columns[CompanyKey]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -8298,7 +7694,7 @@ where [refTable].[LocationKey] = ? and [refTable].[DateKey] = ? and [refTable].[
                       cachedDataType="wstr"
                       cachedLength="10"
                       cachedName="DateKey"
-                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[DateKey]">
+                      lineageId="Package\Load FactItOffers\Convert Date.Outputs[Data Conversion Output].Columns[DateKey]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -8315,7 +7711,7 @@ where [refTable].[LocationKey] = ? and [refTable].[DateKey] = ? and [refTable].[
                       cachedDataType="wstr"
                       cachedLength="10"
                       cachedName="Currency"
-                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[Currency]">
+                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[Currency]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -8331,7 +7727,7 @@ where [refTable].[LocationKey] = ? and [refTable].[DateKey] = ? and [refTable].[
                       refId="Package\Load FactItOffers\Retain New Data.Inputs[Lookup Input].Columns[SalaryTo]"
                       cachedDataType="i4"
                       cachedName="SalaryTo"
-                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[SalaryTo]">
+                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[SalaryTo]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -8347,7 +7743,7 @@ where [refTable].[LocationKey] = ? and [refTable].[DateKey] = ? and [refTable].[
                       refId="Package\Load FactItOffers\Retain New Data.Inputs[Lookup Input].Columns[SalaryFrom]"
                       cachedDataType="i4"
                       cachedName="SalaryFrom"
-                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[SalaryFrom]">
+                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[SalaryFrom]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -8364,7 +7760,7 @@ where [refTable].[LocationKey] = ? and [refTable].[DateKey] = ? and [refTable].[
                       cachedDataType="wstr"
                       cachedLength="20"
                       cachedName="Type"
-                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[Type]">
+                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[Type]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -8380,7 +7776,7 @@ where [refTable].[LocationKey] = ? and [refTable].[DateKey] = ? and [refTable].[
                       refId="Package\Load FactItOffers\Retain New Data.Inputs[Lookup Input].Columns[Remote]"
                       cachedDataType="bool"
                       cachedName="Remote"
-                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[Remote]">
+                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[Remote]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -8396,7 +7792,7 @@ where [refTable].[LocationKey] = ? and [refTable].[DateKey] = ? and [refTable].[
                       refId="Package\Load FactItOffers\Retain New Data.Inputs[Lookup Input].Columns[RemoteInterview]"
                       cachedDataType="bool"
                       cachedName="RemoteInterview"
-                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[RemoteInterview]">
+                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[RemoteInterview]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -8413,7 +7809,7 @@ where [refTable].[LocationKey] = ? and [refTable].[DateKey] = ? and [refTable].[
                       cachedDataType="wstr"
                       cachedLength="20"
                       cachedName="ExperienceLevel"
-                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[ExperienceLevel]">
+                      lineageId="Package\Load FactItOffers\Data Conversion.Outputs[Data Conversion Output].Columns[ExperienceLevel]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -8429,7 +7825,7 @@ where [refTable].[LocationKey] = ? and [refTable].[DateKey] = ? and [refTable].[
                       refId="Package\Load FactItOffers\Retain New Data.Inputs[Lookup Input].Columns[LocationKey]"
                       cachedDataType="i4"
                       cachedName="LocationKey"
-                      lineageId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1].Columns[LocationKey]">
+                      lineageId="Package\Load FactItOffers\Connect To Location.Outputs[Lookup Match Output].Columns[LocationKey]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -8489,11 +7885,6 @@ where [refTable].[LocationKey] = ? and [refTable].[DateKey] = ? and [refTable].[
           </components>
           <paths>
             <path
-              refId="Package\Load FactItOffers.Paths[Aggregate Output 1]"
-              endId="Package\Load FactItOffers\Retain New Data.Inputs[Lookup Input]"
-              name="Aggregate Output 1"
-              startId="Package\Load FactItOffers\Aggregate.Outputs[Aggregate Output 1]" />
-            <path
               refId="Package\Load FactItOffers.Paths[Conditional Split Default Output]"
               endId="Package\Load FactItOffers\Data Conversion.Inputs[Data Conversion Input]"
               name="Conditional Split Default Output"
@@ -8540,7 +7931,7 @@ where [refTable].[LocationKey] = ? and [refTable].[DateKey] = ? and [refTable].[
               startId="Package\Load FactItOffers\Connect To Date.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Load FactItOffers.Paths[Lookup Match Output2]"
-              endId="Package\Load FactItOffers\Aggregate.Inputs[Aggregate Input 1]"
+              endId="Package\Load FactItOffers\Retain New Data.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\Load FactItOffers\Connect To Location.Outputs[Lookup Match Output]" />
             <path
@@ -8556,7 +7947,6 @@ where [refTable].[LocationKey] = ? and [refTable].[DateKey] = ? and [refTable].[
       DTS:refId="Package\Load FactStockResults"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:Disabled="True"
       DTS:DTSID="{12F20E61-242A-445D-8218-2CA82E0131F8}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -10203,6 +9593,32 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{F5ABD2A6-4FC5-430A-9122-D34F057E03CF}"
+      DTS:From="Package\Load DimCompany"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Load FactStockResults" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{BDABCC78-4755-435B-88EB-B62C0581B9EC}"
+      DTS:From="Package\Load DimCompany"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Load FactItOffers" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{0B26D731-D5AE-4720-9085-F52C39F65B38}"
+      DTS:From="Package\Load DimLocation"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Load FactItOffers" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -10214,23 +9630,125 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="167.2,41.6"
+          Size="167,42"
           Id="Package\Load DimCompany"
           TopLeft="240.000004087176,55.058824301591" />
         <NodeLayout
-          Size="161.6,41.6"
+          Size="162,42"
           Id="Package\Load DimLocation"
-          TopLeft="56.4285723895439,58.3529419808239" />
+          TopLeft="456.428572389544,64.3529419808239" />
         <NodeLayout
-          Size="160,41.6"
+          Size="160,42"
           Id="Package\Load FactItOffers"
-          TopLeft="436.428578860906,59.6470596600569" />
+          TopLeft="355.428578860906,182.647059660057" />
         <NodeLayout
-          Size="183.2,41.6"
+          Size="183,42"
           Id="Package\Load FactStockResults"
-          TopLeft="630.714296455286,62.7058832323675" />
+          TopLeft="120.714296455286,182.705883232368" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="297.000004087176,97.058824301591">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-84.78570763189,85.6470589307765"
+              Start="0,0"
+              End="-84.78570763189,78.1470589307765">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.7464936587492" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30.7464936587492"
+                    Point2="0,34.7464936587492"
+                    Point3="-4,34.7464936587492" />
+                  <mssgle:LineSegment
+                    End="-80.78570763189,34.7464936587492" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-80.78570763189,34.7464936587492"
+                    Point2="-84.78570763189,34.7464936587492"
+                    Point3="-84.78570763189,38.7464936587492" />
+                  <mssgle:LineSegment
+                    End="-84.78570763189,78.1470589307765" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="350.000004087176,97.058824301591">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="60.0952414403967,85.5882353584659"
+              Start="0,0"
+              End="60.0952414403967,78.0882353584659">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.7722313035659" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,38.7722313035659"
+                    Point2="0,42.7722313035659"
+                    Point3="4,42.7722313035659" />
+                  <mssgle:LineSegment
+                    End="56.0952414403967,42.7722313035659" />
+                  <mssgle:CubicBezierSegment
+                    Point1="56.0952414403967,42.7722313035659"
+                    Point2="60.0952414403967,42.7722313035659"
+                    Point3="60.0952414403967,46.7722313035659" />
+                  <mssgle:LineSegment
+                    End="60.0952414403967,78.0882353584659" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="537.428572389544,106.352941980824">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-76.6666601953046,76.294117679233"
+              Start="0,0"
+              End="-76.6666601953046,68.794117679233">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.3232382252869" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,41.3232382252869"
+                    Point2="0,45.3232382252869"
+                    Point3="-4,45.3232382252869" />
+                  <mssgle:LineSegment
+                    End="-72.6666601953046,45.3232382252869" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-72.6666601953046,45.3232382252869"
+                    Point2="-76.6666601953046,45.3232382252869"
+                    Point3="-76.6666601953046,49.3232382252869" />
+                  <mssgle:LineSegment
+                    End="-76.6666601953046,68.794117679233" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -10240,79 +9758,79 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
       <GraphLayout
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="184,41.6"
+          Size="184,42"
           Id="Package\Load DimCompany\Saving Old Companies"
           TopLeft="462.444444444445,1196.88888888889" />
         <NodeLayout
-          Size="172,41.6"
+          Size="172,42"
           Id="Package\Load DimCompany\Select Unique Rows"
           TopLeft="310,905.777777777778" />
         <NodeLayout
-          Size="204.8,41.6"
+          Size="205,42"
           Id="Package\Load DimCompany\Select Modified Companies"
           TopLeft="444.444444444444,975.555555555556" />
         <NodeLayout
-          Size="180.8,41.6"
+          Size="181,42"
           Id="Package\Load DimCompany\Inner Join Companies"
           TopLeft="314.333333333333,409" />
         <NodeLayout
-          Size="182.4,41.6"
+          Size="182,42"
           Id="Package\Load DimCompany\Manage CompanySize"
           TopLeft="310.111111111111,554.111111111111" />
         <NodeLayout
-          Size="200,41.6"
+          Size="200,42"
           Id="Package\Load DimCompany\Sort By Company Name 2"
           TopLeft="469,316" />
         <NodeLayout
-          Size="156,41.6"
+          Size="156,42"
           Id="Package\Load DimCompany\Data Conversion"
           TopLeft="321.555555555556,762.777777777778" />
         <NodeLayout
-          Size="108,41.6"
+          Size="108,42"
           Id="Package\Load DimCompany\JustIT"
           TopLeft="516.692300007894,116.769229029234" />
         <NodeLayout
-          Size="201.6,41.6"
+          Size="202,42"
           Id="Package\Load DimCompany\Modify Old SCD2 Columns"
           TopLeft="450.444444444445,1043.88888888889" />
         <NodeLayout
-          Size="200,41.6"
+          Size="200,42"
           Id="Package\Load DimCompany\Extrant Company Name 2"
           TopLeft="472.999992698431,215.384612175134" />
         <NodeLayout
-          Size="142.4,41.6"
+          Size="142,42"
           Id="Package\Load DimCompany\Manage Nulls"
           TopLeft="327.111111111111,691.222222222222" />
         <NodeLayout
-          Size="168.8,41.6"
+          Size="169,42"
           Id="Package\Load DimCompany\Clear CompanySize"
           TopLeft="319,477.333333333333" />
         <NodeLayout
-          Size="191.2,41.6"
+          Size="191,42"
           Id="Package\Load DimCompany\Extrant Company Name"
           TopLeft="189.307687951968,211.999996721745" />
         <NodeLayout
-          Size="172.8,41.6"
+          Size="173,42"
           Id="Package\Load DimCompany\DimCompany Insert"
           TopLeft="127,1003.77777777778" />
         <NodeLayout
-          Size="164,41.6"
+          Size="164,42"
           Id="Package\Load DimCompany\SP500_companies"
           TopLeft="201.999996051192,112.999998226762" />
         <NodeLayout
-          Size="177.6,41.6"
+          Size="178,42"
           Id="Package\Load DimCompany\DimCompany Update"
           TopLeft="461.444444444445,1125.88888888889" />
         <NodeLayout
-          Size="191.2,41.6"
+          Size="191,42"
           Id="Package\Load DimCompany\Manage CompanySize 2"
           TopLeft="303.777777777778,618.888888888889" />
         <NodeLayout
-          Size="169.6,41.6"
+          Size="170,42"
           Id="Package\Load DimCompany\Add SCD2 Columns"
           TopLeft="312.555555555556,831.555555555556" />
         <NodeLayout
-          Size="191.2,41.6"
+          Size="191,42"
           Id="Package\Load DimCompany\Sort By Company Name"
           TopLeft="184,317" />
         <EdgeLayout
@@ -10483,7 +10001,7 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-155.9250390625,33,129.350078125,16"
+              BoundingBox="-147.05638671875,33,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -10519,7 +10037,7 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="13.6141688368055,16.2647209421403,96.3827734375,11.609375"
+              BoundingBox="4.7455164930555,16.2647209421403,114.120078125,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -10568,94 +10086,6 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Load DimCompany.Paths[Derived Column Output7]"
-          TopLeft="550.944444444445,1085.88888888889">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,40"
-              Start="0,0"
-              End="0,32.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,32.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load DimCompany.Paths[Derived Column Output6]"
-          TopLeft="398.694444444444,660.888888888889">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,30.3333333333334"
-              Start="0,0"
-              End="0,22.8333333333334">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,22.8333333333334" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load DimCompany.Paths[Derived Column Output5]"
-          TopLeft="400.194444444444,596.111111111111">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,22.7777777777779"
-              Start="0,0"
-              End="0,15.2777777777779">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,15.2777777777779" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load DimCompany.Paths[Derived Column Output4]"
-          TopLeft="402.305555555556,519.333333333333">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,34.7777777777778"
-              Start="0,0"
-              End="0,27.2777777777778">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,27.2777777777778" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\Load DimCompany.Paths[Derived Column Output3]"
           TopLeft="282.153843975984,253.999996721745">
           <EdgeLayout.Curve>
@@ -10669,50 +10099,6 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,55.500003278255" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load DimCompany.Paths[Derived Column Output2]"
-          TopLeft="396.777777777778,873.555555555556">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,32.2222222222223"
-              Start="0,0"
-              End="0,24.7222222222223">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.7222222222223" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load DimCompany.Paths[Derived Column Output1]"
-          TopLeft="570.999996349216,257.384612175134">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,58.615387824866"
-              Start="0,0"
-              End="0,51.115387824866">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,51.115387824866" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10744,6 +10130,138 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Load DimCompany.Paths[Derived Column Output1]"
+          TopLeft="570.999996349216,257.384612175134">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58.615387824866"
+              Start="0,0"
+              End="0,51.115387824866">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,51.115387824866" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load DimCompany.Paths[Derived Column Output2]"
+          TopLeft="396.777777777778,873.555555555556">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,32.2222222222223"
+              Start="0,0"
+              End="0,24.7222222222223">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.7222222222223" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load DimCompany.Paths[Derived Column Output7]"
+          TopLeft="550.944444444445,1085.88888888889">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40"
+              Start="0,0"
+              End="0,32.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load DimCompany.Paths[Derived Column Output4]"
+          TopLeft="402.305555555556,519.333333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34.7777777777778"
+              Start="0,0"
+              End="0,27.2777777777778">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.2777777777778" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load DimCompany.Paths[Derived Column Output5]"
+          TopLeft="400.194444444444,596.111111111111">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,22.7777777777779"
+              Start="0,0"
+              End="0,15.2777777777779">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.2777777777779" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load DimCompany.Paths[Derived Column Output6]"
+          TopLeft="398.694444444444,660.888888888889">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,30.3333333333334"
+              Start="0,0"
+              End="0,22.8333333333334">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.8333333333334" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Load DimCompany.Paths[Data Conversion Output]"
           TopLeft="398.555555555556,804.777777777778">
           <EdgeLayout.Curve>
@@ -10765,41 +10283,6 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <AnnotationLayout
-          Text="Edytujemy nazwy firm z dwóch źródeł, żeby pokrywały się przed mergem"
-          ParentId="Package\Load DimCompany"
-          FontInfo="{assembly:Null}"
-          Size="129.6,104"
-          Id="68940ec9-1d44-4e39-ae2d-d0b8712ce0e1"
-          TopLeft="734.846143805064,186.76922878623" />
-        <AnnotationLayout
-          Text="trzeba zachować kolumny,&#xA;po których będziemy łączyć fakty z wymiarami,&#xA;dla ofert oryginalne company_name,&#xA;dla giełdy symbol&#xA;TODO: trzeba jeszcze dodać te dwie kolumny do hurtowni,&#xA;CompanyName już mamy, czyli company_name_new będzie tylko &#xA;na potrzeby merga, do dwh ładujemy zwykłe company_name"
-          ParentId="Package\Load DimCompany"
-          FontInfo="{assembly:Null}"
-          Size="377.6,136"
-          Id="00208c28-b080-45db-91ad-0a45ccbc4a15"
-          TopLeft="894.777777777778,459.333333333333" />
-        <AnnotationLayout
-          Text="TODO: obsłużyć nulle"
-          ParentId="Package\Load DimCompany"
-          FontInfo="{assembly:Null}"
-          Size="142.4,40"
-          Id="ff4800f1-50c4-41e8-9b5a-81d0e7f6e223"
-          TopLeft="474.555555555556,685.333333333333" />
-        <AnnotationLayout
-          Text="od razu przy sortowaniu usuwam duplikaty"
-          ParentId="Package\Load DimCompany"
-          FontInfo="{assembly:Null}"
-          Size="256,40"
-          Id="870db7b5-e8aa-43c5-96bf-1d19d2e6564a"
-          TopLeft="673,306" />
-        <AnnotationLayout
-          Text="wybrać tylko nowe rekordy i je dodać,&#xA;a na starych zrobić update (w sensie dodać nowe wiersze, ustawić na aktywne,&#xA;a stare na nieaktywne, trzeba chyba jeszcze jakiś kafelek tu dołożyć, żeby to zrobić),&#xA;wybór można robić lookupem (trochę sporo to trwa,&#xA;ale jest tylko jeden blok), ale można też chyba mergem &#xA;i później szukać jakichś nulli dla niezmergowanych"
-          ParentId="Package\Load DimCompany"
-          FontInfo="{assembly:Null}"
-          Size="468.8,120"
-          Id="833cc555-dc98-4fad-aaaf-c6cd2621d3b2"
-          TopLeft="883.222222222222,604.666666666667" />
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -10845,7 +10328,7 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -10879,37 +10362,37 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
     design-time-name="Package\Load DimLocation">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="108,41.6"
+          Size="108,42"
           Id="Package\Load DimLocation\JustIT"
           TopLeft="111.714287173991,7.8235296477083" />
         <NodeLayout
-          Size="216.8,41.6"
+          Size="217,42"
           Id="Package\Load DimLocation\Prepare Floats To Conversion"
           TopLeft="51,161" />
         <NodeLayout
-          Size="168,41.6"
+          Size="168,42"
           Id="Package\Load DimLocation\DimLocation Insert"
           TopLeft="78.857144012743,507.82353256483" />
         <NodeLayout
-          Size="160,41.6"
+          Size="160,42"
           Id="Package\Load DimLocation\Select New Rows"
           TopLeft="80.714287514589,408.294119502434" />
         <NodeLayout
-          Size="172,41.6"
+          Size="172,42"
           Id="Package\Load DimLocation\Select Unique Rows"
           TopLeft="80.5,322.648305084746" />
         <NodeLayout
-          Size="174.4,41.6"
+          Size="174,42"
           Id="Package\Load DimLocation\DimLocation Update"
           TopLeft="319,509" />
         <NodeLayout
-          Size="156,41.6"
+          Size="156,42"
           Id="Package\Load DimLocation\Data Conversion"
           TopLeft="82,240" />
         <NodeLayout
-          Size="142.4,41.6"
+          Size="142,42"
           Id="Package\Load DimLocation\Manage Nulls"
           TopLeft="88,90" />
         <EdgeLayout
@@ -11094,97 +10577,6 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <AnnotationLayout
-          Text="ustalić stałą nazwę źródła &#xA;i wybrać istotne kolumny - ok"
-          ParentId="Package\Load DimLocation"
-          FontInfo="{assembly:Null}"
-          Size="184.8,56"
-          Id="12e8263c-e38a-4880-8842-841d7106f026"
-          TopLeft="752.142861777423,88.7058826854072" />
-        <AnnotationLayout
-          Text="SCD1 - nie trzeba się martwić aktualizacją danych&#xA;trzeba wybrać tylko  nowe wiersze, resztę zignorować"
-          ParentId="Package\Load DimLocation"
-          FontInfo="{assembly:Null}"
-          Size="310.4,56"
-          Id="cd78e446-4787-425f-baad-198fec4303da"
-          TopLeft="259.428576561869,389.94117825089" />
-        <AnnotationLayout
-          Text="dogenerować klucz główny (jakoś), &#xA;trzeba by jeszcze podłączyć się pod bazkę i przeanalizować tamte klucze - ok"
-          ParentId="Package\Load DimLocation"
-          FontInfo="{assembly:Null}"
-          Size="435.2,56"
-          Id="2a1167fd-49cb-47ed-b246-178d76b2079f"
-          TopLeft="722.428578264859,193.376472904773" />
-        <AnnotationLayout
-          Text="połączyć się z bazką z DimLocation i załadować dane - ok"
-          ParentId="Package\Load DimLocation"
-          FontInfo="{assembly:Null}"
-          Size="332.8,40"
-          Id="cbf0e63d-5b4b-4926-938f-95f318c8fdd4"
-          TopLeft="756.142862373469,253.964709357159" />
-        <AnnotationLayout
-          Text="ustalić typy kolumn - ok"
-          ParentId="Package\Load DimLocation"
-          FontInfo="{assembly:Null}"
-          Size="156,40"
-          Id="46c85972-bbe2-4067-a342-d09b39f2e64b"
-          TopLeft="756,152" />
-        <AnnotationLayout
-          Text="jest problem z ładowaniem address_text - ok"
-          ParentId="Package\Load DimLocation"
-          FontInfo="{assembly:Null}"
-          Size="264.8,40"
-          Id="01d231b5-6147-44b6-861e-c15aab319b28"
-          TopLeft="719,48" />
-        <AnnotationLayout
-          Text="wybrać tylko unikalne wiersze spośród ładowanych - ok&#xA;"
-          ParentId="Package\Load DimLocation"
-          FontInfo="{assembly:Null}"
-          Size="321.6,56"
-          Id="7141b32c-e365-4d91-91de-8ba19e2508bd"
-          TopLeft="807,442" />
-        <AnnotationLayout
-          Text="UWAGA, rzuca mi błąd przy konwersji lat i long ze stringa do floata,&#xA;wynika to z różnicy w długości formatów&#xA;dodatkowo ignoruje przycinanie tych kolumn&#xA;ROZW: zmienić kropki na przecinki"
-          ParentId="Package\Load DimLocation"
-          FontInfo="{assembly:Null}"
-          Size="384.8,88"
-          Id="3214c7f8-987a-4bc9-aebb-75d73cc4fde6"
-          TopLeft="777,316" />
-        <AnnotationLayout
-          Text="w latitude i longitude na pewno nie ma nulli"
-          ParentId="Package\Load DimLocation"
-          FontInfo="{assembly:Null}"
-          Size="260.8,40"
-          Id="a81c2933-51a3-4538-b9ef-d191b8ac16de"
-          TopLeft="822,401" />
-        <AnnotationLayout
-          Text="sortuje po wszystkich kolumnach z zaznaczoną opcją usuwania duplikatów"
-          ParentId="Package\Load DimLocation"
-          FontInfo="{assembly:Null}"
-          Size="422.4,40"
-          Id="eff2bd21-7475-4941-89ee-628e22e85503"
-          TopLeft="256,432" />
-        <AnnotationLayout
-          Text="jest jakiś problem z lookupem, bo nie wykrywa duplikatów danych, &#xA;kilka razy może załadować te same dane,&#xA;jak zadziała, to zmatchowane rekordy trzeba będzie po prostu nadpisywać&#xA;bo to SCD1 &#xA;ROWZ: trzeba było zmienić z full cache na partial"
-          ParentId="Package\Load DimLocation"
-          FontInfo="{assembly:Null}"
-          Size="420.8,104"
-          Id="acca3ea8-03ce-4c1d-b71b-de65f1cd2818"
-          TopLeft="797,486" />
-        <AnnotationLayout
-          Text="nulle trzeba wyrzucic przed lookupem,&#xA;na razie po prostu zastępuje pustym tekstem"
-          ParentId="Package\Load DimLocation"
-          FontInfo="{assembly:Null}"
-          Size="265.6,56"
-          Id="98495b2b-c77a-4fae-8f6d-cf0af8d12dea"
-          TopLeft="272,71" />
-        <AnnotationLayout
-          Text="do unikalności wierszy nie uwzględniam koordynatów"
-          ParentId="Package\Load DimLocation"
-          FontInfo="{assembly:Null}"
-          Size="312.8,40"
-          Id="17483cbe-2a60-4e42-ad9d-5d52e4353e80"
-          TopLeft="296,315" />
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -11230,126 +10622,98 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="172,41.6"
+          Size="172,42"
           Id="Package\Load FactItOffers\Filter By Companies"
           TopLeft="352,384" />
         <NodeLayout
-          Size="158.4,41.6"
+          Size="158,42"
           Id="Package\Load FactItOffers\Prepare Integers"
           TopLeft="362,151" />
         <NodeLayout
-          Size="191.2,41.6"
+          Size="191,42"
           Id="Package\Load FactItOffers\Convert Location Data"
           TopLeft="342,684" />
         <NodeLayout
-          Size="135.2,41.6"
+          Size="135,42"
           Id="Package\Load FactItOffers\FactItOffers"
-          TopLeft="367,985" />
+          TopLeft="369,946" />
         <NodeLayout
-          Size="158.4,41.6"
+          Size="158,42"
           Id="Package\Load FactItOffers\Retain New Data"
-          TopLeft="109,894" />
+          TopLeft="354,846" />
         <NodeLayout
-          Size="175.2,41.6"
+          Size="175,42"
           Id="Package\Load FactItOffers\Connect To Location"
           TopLeft="344,753" />
         <NodeLayout
-          Size="140.8,41.6"
-          Id="Package\Load FactItOffers\Convert Date"
-          TopLeft="363,533" />
-        <NodeLayout
-          Size="108,41.6"
+          Size="108,42"
           Id="Package\Load FactItOffers\JustIT"
           TopLeft="390,66" />
         <NodeLayout
-          Size="136.8,41.6"
-          Id="Package\Load FactItOffers\Extract Date"
-          TopLeft="372,460" />
+          Size="141,42"
+          Id="Package\Load FactItOffers\Convert Date"
+          TopLeft="363,533" />
         <NodeLayout
-          Size="155.2,41.6"
+          Size="156,42"
           Id="Package\Load FactItOffers\Data Conversion"
           TopLeft="360,306" />
         <NodeLayout
-          Size="143.2,41.6"
+          Size="137,42"
+          Id="Package\Load FactItOffers\Extract Date"
+          TopLeft="372,460" />
+        <NodeLayout
+          Size="143,42"
           Id="Package\Load FactItOffers\Remove Nulls"
           TopLeft="371,226" />
         <NodeLayout
-          Size="158.4,41.6"
+          Size="158,42"
           Id="Package\Load FactItOffers\Connect To Date"
           TopLeft="361,601" />
-        <NodeLayout
-          Size="127.2,41.6"
-          Id="Package\Load FactItOffers\Aggregate"
-          TopLeft="381,880" />
         <EdgeLayout
           Id="Package\Load FactItOffers.Paths[Lookup No Match Output]"
-          TopLeft="188,936">
+          TopLeft="434.75,888">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="246.5,49"
+              EndConnector="0,58"
               Start="0,0"
-              End="246.5,41.5">
+              End="0,50.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.5"
-                    Point2="0,24.5"
-                    Point3="4,24.5" />
-                  <mssgle:LineSegment
-                    End="242.5,24.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="242.5,24.5"
-                    Point2="246.5,24.5"
-                    Point3="246.5,28.5" />
-                  <mssgle:LineSegment
-                    End="246.5,41.5" />
+                    End="0,50.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="67.44361328125,29.5,111.6127734375,11.609375"
+              BoundingBox="-55.80638671875,19.4453125,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load FactItOffers.Paths[Lookup Match Output2]"
-          TopLeft="431.5,795">
+          TopLeft="432.25,795">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="13,85"
+              EndConnector="0,51"
               Start="0,0"
-              End="13,77.5">
+              End="0,43.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,38.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,38.5"
-                    Point2="0,42.5"
-                    Point3="4,42.5" />
-                  <mssgle:LineSegment
-                    End="9,42.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="9,42.5"
-                    Point2="13,42.5"
-                    Point3="13,46.5" />
-                  <mssgle:LineSegment
-                    End="13,77.5" />
+                    End="0,43.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-41.69138671875,47.5,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,15.9453125,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -11513,18 +10877,18 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load FactItOffers.Paths[Data Conversion Output]"
-          TopLeft="437.8,347.6">
+          TopLeft="438,348">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,36.4"
+              EndConnector="0,36"
               Start="0,0"
-              End="0,28.9">
+              End="0,28.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,28.9" />
+                    End="0,28.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11535,107 +10899,54 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load FactItOffers.Paths[Conditional Split Default Output]"
-          TopLeft="440.1,267.6">
+          TopLeft="440.25,268">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,38.4"
+              EndConnector="0,38"
               Start="0,0"
-              End="0,30.9">
+              End="0,30.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,30.9" />
+                    End="0,30.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-70.61390625,9.62089843749999,141.2278125,11.658203125"
+              BoundingBox="-70.61390625,9.4208984375,141.2278125,11.658203125"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load FactItOffers.Paths[Aggregate Output 1]"
-          TopLeft="381,901">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-114,14"
-              Start="0,0"
-              End="-106.5,14">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-53,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-53,0"
-                    Point2="-57,0"
-                    Point3="-57,4" />
-                  <mssgle:LineSegment
-                    End="-57,10" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-57,10"
-                    Point2="-57,14"
-                    Point3="-61,14" />
-                  <mssgle:LineSegment
-                    End="-106.5,14" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <AnnotationLayout
-          Text="obsłużyć employment_types:&#xA;wydobyć typ, ceny i walutę,&#xA;obsłużyć wiele elementów"
-          ParentId="Package\Load FactItOffers"
-          FontInfo="{assembly:Null}"
-          Size="180.8,72"
-          Id="1b0e5cb5-3665-4ded-a352-dc9d8643250f"
-          TopLeft="631,88" />
-        <AnnotationLayout
-          Text="zwiększyłem długość dla employment_types i title (do 100, w bazie też)"
-          ParentId="Package\Load FactItOffers"
-          FontInfo="{assembly:Null}"
-          Size="404,40"
-          Id="41cab7e7-2f3e-4394-b07a-97216268fc6e"
-          TopLeft="673,206" />
-        <AnnotationLayout
-          Text="TODO: naprawić ten skrypt, bo nie działa albo jakoś inaczej to ogarnąć"
-          ParentId="Package\Load FactItOffers"
-          FontInfo="{assembly:Null}"
-          Size="400,40"
-          Id="3b8b848b-ccd1-421d-8f68-beae999a3193"
-          TopLeft="625,317" />
-        <AnnotationLayout
-          Text="sprawdzam nowe dane po nazwie firmy i dacie"
-          ParentId="Package\Load FactItOffers"
-          FontInfo="{assembly:Null}"
-          Size="275.2,40"
-          Id="8e439157-6fec-46b2-b911-f022bd88adab"
-          TopLeft="551,679" />
-        <AnnotationLayout
-          Text="dołączam klucz lokacji po ulicy, mieście i kodzie kraju"
-          ParentId="Package\Load FactItOffers"
-          FontInfo="{assembly:Null}"
-          Size="310.4,40"
-          Id="86669f82-bd33-4924-a0bd-5c2ffe7e03f6"
-          TopLeft="570,843" />
-        <AnnotationLayout
-          Text="usunąłem jeszcze MarkerIcon z dwh"
-          ParentId="Package\Load FactItOffers"
-          FontInfo="{assembly:Null}"
-          Size="219.2,40"
-          Id="491816d9-ac9c-4d23-8a3f-649bedbbc54b"
-          TopLeft="625,927" />
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load FactItOffers\Connect To Location">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimLocation]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Load FactItOffers\Filter By Companies">
     <Properties>
@@ -11673,52 +10984,6 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Load FactItOffers\Retain New Data">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[FactItOffers]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load FactItOffers\Connect To Location">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimLocation]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Load FactItOffers\Connect To Date">
     <Properties>
       <Property>
@@ -11730,6 +10995,29 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
         <Name>UsedTableName</Name>
         <Value
           type="q3:string">[dbo].[DimDate]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load FactItOffers\Retain New Data">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[FactItOffers]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -11869,9 +11157,7 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11893,9 +11179,7 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11917,9 +11201,7 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11946,13 +11228,6 @@ where [refTable].[Volume] = ? and [refTable].[CompanyKey] = ? and [refTable].[Da
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <AnnotationLayout
-          Text="powinno się chyba usunąć duplikaty,&#xA;sprawdzam to podacie i firmie"
-          ParentId="Package\Load FactStockResults"
-          FontInfo="{assembly:Null}"
-          Size="222,NaN"
-          Id="9fcd7fcb-7b9d-46f7-bfc5-202f9a64d441"
-          TopLeft="411,493" />
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
